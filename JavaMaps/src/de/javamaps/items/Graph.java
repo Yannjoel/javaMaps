@@ -15,9 +15,5 @@ public class Graph {
 				graph.put(e.getVertex2(), new Vertex(e.getVertex2()));
 		}
 		Map<Vertex,Long> tempMap = new HashMap<Vertex,Long>();
-		for (Edge e : edges) {
-			tempMap.put(graph.get(e.getVertex2()), e.getDistance());
-			graph.get(e.getVertex1()).setAdjacentVertex(tempMap);
-		}
 	}
 }
