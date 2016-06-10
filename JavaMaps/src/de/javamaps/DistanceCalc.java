@@ -1,5 +1,5 @@
 package de.javamaps;
 
-public class xmlreader {
+public class DistanceCalc {
 
 }
