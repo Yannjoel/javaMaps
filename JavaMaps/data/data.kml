@@ -18,7 +18,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>FÃ¼rth|Bamberg;Erlangen;Coburg;Schweinfurt</value>
+                    <value>Fürth|Bamberg;Erlangen;Coburg;Schweinfurt</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -52,7 +52,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Regensburg;MÃ¼nchen;WÃ¼rzburg;NÃ¼rnberg-Nord;NÃ¼rnberg;Messe</value>
+                    <value>Regensburg;München;Würzburg;Nürnberg-Nord;Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;none;white;none;white;none</value>
@@ -142,7 +142,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/3925572</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -192,7 +192,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen;Heilbronn;NÃ¼rnberg;Messe</value>
+                    <value>München;Heilbronn;Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;white</value>
@@ -376,7 +376,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/4054205</value>
                 </Data>
                 <Data name="destination">
-                    <value>Regensburg;Amberg;Berlin;MÃ¼nchen</value>
+                    <value>Regensburg;Amberg;Berlin;München</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -448,7 +448,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/4208075</value>
                 </Data>
                 <Data name="destination">
-                    <value>Erlangen;Dechsendorf;HeÃŸdorf;Weisendorf</value>
+                    <value>Erlangen;Dechsendorf;Heßdorf;Weisendorf</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -490,7 +490,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
             </ExtendedData>
         </Placemark>
         <Placemark>
-            <name>Werner-von-Siemens-StraÃŸe</name>
+            <name>Werner-von-Siemens-Straße</name>
             <LineString>
                 <coordinates>10.9964368,49.5908985 10.9963503,49.5909404</coordinates>
             </LineString>
@@ -499,7 +499,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/4319404</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg;Erlangen-West</value>
+                    <value>Nürnberg;Erlangen-West</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>;white</value>
@@ -523,7 +523,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="name">
-                    <value>Werner-von-Siemens-StraÃŸe</value>
+                    <value>Werner-von-Siemens-Straße</value>
                 </Data>
                 <Data name="oneway">
                     <value>yes</value>
@@ -534,7 +534,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
             </ExtendedData>
         </Placemark>
         <Placemark>
-            <name>Werner-von-Siemens-StraÃŸe</name>
+            <name>Werner-von-Siemens-Straße</name>
             <LineString>
                 <coordinates>10.9958302,49.5910468 10.9962674,49.5908553</coordinates>
             </LineString>
@@ -552,7 +552,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>white;white|white;white;white;white|white;white;white;white</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Erlangen-Zentrum; Innenstadt|Erlangen-Ost; Uni-Kliniken; Zentrum-SÃ¼d;Kongresszentrum|Erlangen-Ost; Uni-Kliniken; Zentrum-SÃ¼d;Kongresszentrum</value>
+                    <value>Erlangen-Zentrum; Innenstadt|Erlangen-Ost; Uni-Kliniken; Zentrum-Süd;Kongresszentrum|Erlangen-Ost; Uni-Kliniken; Zentrum-Süd;Kongresszentrum</value>
                 </Data>
                 <Data name="destination:symbol:lanes">
                     <value>;parking|;hospital;parking;|;hospital;parking;</value>
@@ -570,7 +570,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="name">
-                    <value>Werner-von-Siemens-StraÃŸe</value>
+                    <value>Werner-von-Siemens-Straße</value>
                 </Data>
                 <Data name="oneway">
                     <value>yes</value>
@@ -592,7 +592,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/4340726</value>
                 </Data>
                 <Data name="destination">
-                    <value>Erlangen-Tennelohe;Erlangen-Ost;Erlangen-SÃ¼d;NÃ¼rnberg</value>
+                    <value>Erlangen-Tennelohe;Erlangen-Ost;Erlangen-Süd;Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 4</value>
@@ -629,7 +629,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg;Feucht</value>
+                    <value>Nürnberg;Feucht</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -691,7 +691,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen;Ingolstadt</value>
+                    <value>München;Ingolstadt</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 9</value>
@@ -725,7 +725,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Heilbronn;Ansbach;Schwabach-SÃ¼d</value>
+                    <value>Heilbronn;Ansbach;Schwabach-Süd</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -756,7 +756,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/4383647</value>
                 </Data>
                 <Data name="destination">
-                    <value>Schwabach-SÃ¼d;Rednitzhembach</value>
+                    <value>Schwabach-Süd;Rednitzhembach</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 2</value>
@@ -875,7 +875,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/4416757</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth-Ronhof</value>
+                    <value>Fürth-Ronhof</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -900,7 +900,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/4584625</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -925,7 +925,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/4584626</value>
                 </Data>
                 <Data name="destination">
-                    <value>Erlangen;Dechsendorf;Weisendorf;HeÃŸdorf</value>
+                    <value>Erlangen;Dechsendorf;Weisendorf;Heßdorf</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -950,10 +950,10 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>CZ|</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Regensburg;MÃ¼nchen;Berlin;Prag|Erlangen-Tennenlohe;Erlangen-Ost;Erlangen-SÃ¼d</value>
+                    <value>Regensburg;München;Berlin;Prag|Erlangen-Tennenlohe;Erlangen-Ost;Erlangen-Süd</value>
                 </Data>
                 <Data name="destination:lang:cs:lanes">
-                    <value>Regensburg;MÃ¼nchen;Berlin;Praha|Erlangen-Tennenlohe;Erlangen-Ost;Erlangen-SÃ¼d</value>
+                    <value>Regensburg;München;Berlin;Praha|Erlangen-Tennenlohe;Erlangen-Ost;Erlangen-Süd</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 3|B 4</value>
@@ -1021,7 +1021,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>white;white|white;white;none|</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>FÃ¼rth; NÃ¼rnberg|NÃ¼rnberg-Zollhaus;NÃ¼rnberg-Messe|</value>
+                    <value>Fürth; Nürnberg|Nürnberg-Zollhaus;Nürnberg-Messe|</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -1089,7 +1089,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/4887068</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -1201,7 +1201,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/4887272</value>
                 </Data>
                 <Data name="destination">
-                    <value>Erlangen;-Bruck;-SÃ¼d;-West</value>
+                    <value>Erlangen;-Bruck;-Süd;-West</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>white;white;white</value>
@@ -1316,7 +1316,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/4912156</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth;-Poppenreuth;-Stadtmitte;Neustadt/Aisch</value>
+                    <value>Fürth;-Poppenreuth;-Stadtmitte;Neustadt/Aisch</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -1428,7 +1428,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/4988410</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -1459,7 +1459,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/5026228</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg-MÃ¶geldorf;RÃ¶thenbach an der Pegnitz;Schwaig</value>
+                    <value>Nürnberg-Mögeldorf;Röthenbach an der Pegnitz;Schwaig</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -1528,7 +1528,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/5035917</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -1640,7 +1640,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/5543808</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg-MÃ¶geldorf;RÃ¶thenbach an der Pegnitz;Schwaig</value>
+                    <value>Nürnberg-Mögeldorf;Röthenbach an der Pegnitz;Schwaig</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -1834,7 +1834,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/10157142</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 2</value>
@@ -1921,7 +1921,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/10578575</value>
                 </Data>
                 <Data name="destination">
-                    <value>Erlangen;-Bruck;-SÃ¼d</value>
+                    <value>Erlangen;-Bruck;-Süd</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>white;white</value>
@@ -1952,7 +1952,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>no</value>
                 </Data>
                 <Data name="destination">
-                    <value>Erlangen;-Bruck;-SÃ¼d;-West</value>
+                    <value>Erlangen;-Bruck;-Süd;-West</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>white;white;white</value>
@@ -2255,7 +2255,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/13996181</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg;GrÃ¤fenberg;Eckental;Heroldsberg</value>
+                    <value>Nürnberg;Gräfenberg;Eckental;Heroldsberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 2</value>
@@ -2364,7 +2364,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>no</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 4</value>
@@ -2404,7 +2404,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/15226023</value>
                 </Data>
                 <Data name="destination">
-                    <value>Regensburg;MÃ¼nchen;Berlin;Prag/Praha</value>
+                    <value>Regensburg;München;Berlin;Prag/Praha</value>
                 </Data>
                 <Data name="destination:country">
                     <value>CZ</value>
@@ -2438,7 +2438,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/15226024</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg;NÃ¼rnberg</value>
+                    <value>Nürnberg;Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 4</value>
@@ -2472,7 +2472,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/15228358</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 2</value>
@@ -2531,7 +2531,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/15228369</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 2</value>
@@ -2618,7 +2618,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/19782850</value>
                 </Data>
                 <Data name="destination">
-                    <value>WassertrÃ¼dingen;Gunzenhausen;Bechhofen</value>
+                    <value>Wassertrüdingen;Gunzenhausen;Bechhofen</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 13</value>
@@ -2646,7 +2646,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/19792852</value>
                 </Data>
                 <Data name="destination">
-                    <value>WeiÃŸenburg;WassertrÃ¼dingen;Gunzenhausen</value>
+                    <value>Weißenburg;Wassertrüdingen;Gunzenhausen</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 13</value>
@@ -2721,7 +2721,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -2749,7 +2749,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -2793,7 +2793,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/22561359</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg-Fischbach;NÃ¼rnberg-Zentrum;NÃ¼rnberg-Messe</value>
+                    <value>Nürnberg-Fischbach;Nürnberg-Zentrum;Nürnberg-Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;white</value>
@@ -2846,7 +2846,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/22727631</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¶hrendorf;Baiersdorf</value>
+                    <value>Möhrendorf;Baiersdorf</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -2905,7 +2905,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen</value>
+                    <value>München</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 9</value>
@@ -3010,7 +3010,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Berlin;Dresden;Bamberg;NÃ¼rnberg;Messe</value>
+                    <value>Berlin;Dresden;Bamberg;Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;none;white;none;none</value>
@@ -3128,7 +3128,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg;Messe</value>
+                    <value>Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;white</value>
@@ -3168,7 +3168,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen</value>
+                    <value>München</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -3230,7 +3230,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -3339,7 +3339,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -3389,7 +3389,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/23083649</value>
                 </Data>
                 <Data name="destination">
-                    <value>Erlangen;-Eltersdorf;FÃ¼rth;-Stadeln;-Vach</value>
+                    <value>Erlangen;-Eltersdorf;Fürth;-Stadeln;-Vach</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -3625,7 +3625,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/23248106</value>
                 </Data>
                 <Data name="destination">
-                    <value>Uferstadt FÃ¼rth</value>
+                    <value>Uferstadt Fürth</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>white</value>
@@ -4019,7 +4019,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen</value>
+                    <value>München</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 9</value>
@@ -4152,7 +4152,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>WÃ¼rzburg;Berlin;NÃ¼rnberg</value>
+                    <value>Würzburg;Berlin;Nürnberg</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;white</value>
@@ -4214,7 +4214,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>WÃ¼rzburg;NÃ¼rnberg-Nord;Berlin</value>
+                    <value>Würzburg;Nürnberg-Nord;Berlin</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -4276,7 +4276,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Regensburg;WÃ¼rzburg;NÃ¼rnberg-Nord;Berlin</value>
+                    <value>Regensburg;Würzburg;Nürnberg-Nord;Berlin</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -4347,10 +4347,10 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>CZ;|</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Prag;Amberg|WÃ¼rzburg;Berlin;NÃ¼rnberg</value>
+                    <value>Prag;Amberg|Würzburg;Berlin;Nürnberg</value>
                 </Data>
                 <Data name="destination:lang:cs:lanes">
-                    <value>Praha;Amberg|WÃ¼rzburg;Berlin;NÃ¼rnberg</value>
+                    <value>Praha;Amberg|Würzburg;Berlin;Nürnberg</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 6|A 3</value>
@@ -4390,7 +4390,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Prag;Amberg;Heilbronn;MÃ¼nchen</value>
+                    <value>Prag;Amberg;Heilbronn;München</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -4461,7 +4461,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Regensburg;Passau;WÃ¼rzburg;Berlin;NÃ¼rnberg</value>
+                    <value>Regensburg;Passau;Würzburg;Berlin;Nürnberg</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;none;white</value>
@@ -4641,7 +4641,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Heilbronn;Ansbach;Schwabach-SÃ¼d|Roth;Augsburg;WeiÃŸenburg</value>
+                    <value>Heilbronn;Ansbach;Schwabach-Süd|Roth;Augsburg;Weißenburg</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 6|B 2</value>
@@ -4681,7 +4681,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Heilbronn;Ansbach;Schwabach-SÃ¼d|Roth;Augsburg;WeiÃŸenburg</value>
+                    <value>Heilbronn;Ansbach;Schwabach-Süd|Roth;Augsburg;Weißenburg</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 6|B 2</value>
@@ -4715,7 +4715,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/23498263</value>
                 </Data>
                 <Data name="destination">
-                    <value>Rasthof NÃ¼rnberg/Feucht</value>
+                    <value>Rasthof Nürnberg/Feucht</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -4793,7 +4793,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>white</value>
                 </Data>
                 <Data name="destination">
-                    <value>Frankfurt am Main;WÃ¼rzburg;NÃ¼rnberg-Nord</value>
+                    <value>Frankfurt am Main;Würzburg;Nürnberg-Nord</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -4861,7 +4861,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/23699285</value>
                 </Data>
                 <Data name="destination">
-                    <value>Lauf-SÃ¼d;RÃ¼ckersdorf;RÃ¶thenbach an der Pegnitz</value>
+                    <value>Lauf-Süd;Rückersdorf;Röthenbach an der Pegnitz</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 14</value>
@@ -4908,7 +4908,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/23699287</value>
                 </Data>
                 <Data name="destination">
-                    <value>Lauf-SÃ¼d;RÃ¼ckersdorf;RÃ¶thenbach an der Pegnitz</value>
+                    <value>Lauf-Süd;Rückersdorf;Röthenbach an der Pegnitz</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 14</value>
@@ -5077,7 +5077,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/24498197</value>
                 </Data>
                 <Data name="destination">
-                    <value>WÃ¼rzburg</value>
+                    <value>Würzburg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -5105,7 +5105,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg;FÃ¼rth</value>
+                    <value>Nürnberg;Fürth</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -5170,7 +5170,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg-SÃ¼d;FÃ¼rth</value>
+                    <value>Nürnberg-Süd;Fürth</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -5220,7 +5220,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth;NÃ¼rnberg;Heilbronn;Feucht; NÃ¼rnberg;Messe</value>
+                    <value>Fürth;Nürnberg;Heilbronn;Feucht; Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;none;white;white;white</value>
@@ -5260,7 +5260,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth;NÃ¼rnberg;Heilbronn;Feucht; NÃ¼rnberg;Messe</value>
+                    <value>Fürth;Nürnberg;Heilbronn;Feucht; Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;none;white;white;white</value>
@@ -5365,7 +5365,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -5468,7 +5468,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>white;white|white;white;white;white</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Erlangen-Zentrum; Innenstadt|Erlangen-Ost; Uni-Kliniken; Zentrum-SÃ¼d;Kongresszentrum</value>
+                    <value>Erlangen-Zentrum; Innenstadt|Erlangen-Ost; Uni-Kliniken; Zentrum-Süd;Kongresszentrum</value>
                 </Data>
                 <Data name="destination:symbol:lanes">
                     <value>;parking|;hospital;parking;</value>
@@ -5508,7 +5508,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>no</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg;WÃ¼rzburg</value>
+                    <value>Nürnberg;Würzburg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -5662,10 +5662,10 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>|CZ;;</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>MÃ¼nchen;Feucht|Prag;Regensburg;Berlin</value>
+                    <value>München;Feucht|Prag;Regensburg;Berlin</value>
                 </Data>
                 <Data name="destination:lang:cs:lanes">
-                    <value>MÃ¼nchen;Feucht|Praha;Regensburg;Berlin</value>
+                    <value>München;Feucht|Praha;Regensburg;Berlin</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 73;B 8|A 6</value>
@@ -5708,10 +5708,10 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>|CZ;;</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>MÃ¼nchen;Feucht|Prag;Regensburg;Berlin</value>
+                    <value>München;Feucht|Prag;Regensburg;Berlin</value>
                 </Data>
                 <Data name="destination:lang:cs:lanes">
-                    <value>MÃ¼nchen;Feucht|Praha;Regensburg;Berlin</value>
+                    <value>München;Feucht|Praha;Regensburg;Berlin</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 73;B 8|A 6</value>
@@ -5751,7 +5751,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>white;white|white;white;none</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>FÃ¼rth; NÃ¼rnberg|NÃ¼rnberg-Zollhaus;NÃ¼rnberg-Messe</value>
+                    <value>Fürth; Nürnberg|Nürnberg-Zollhaus;Nürnberg-Messe</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -5828,7 +5828,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/25768900</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg-Kornburg</value>
+                    <value>Nürnberg-Kornburg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 8</value>
@@ -5881,7 +5881,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen;Feucht</value>
+                    <value>München;Feucht</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73;B 8</value>
@@ -5921,7 +5921,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen;Feucht</value>
+                    <value>München;Feucht</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73;B 8</value>
@@ -6073,7 +6073,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/26279689</value>
                 </Data>
                 <Data name="destination">
-                    <value>Wendelstein;-RÃ¶thenbach bei Sankt Wolfgang</value>
+                    <value>Wendelstein;-Röthenbach bei Sankt Wolfgang</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -6682,7 +6682,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/28372265</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen;NÃ¼rnberg</value>
+                    <value>München;Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 9</value>
@@ -6760,7 +6760,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Regensburg;MÃ¼nchen;NÃ¼rnberg-Nord;NÃ¼rnberg; ;Messe</value>
+                    <value>Regensburg;München;Nürnberg-Nord;Nürnberg; ;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;white;none;white;none</value>
@@ -6797,7 +6797,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Regensburg;MÃ¼nchen;NÃ¼rnberg-Nord;NÃ¼rnberg;Messe</value>
+                    <value>Regensburg;München;Nürnberg-Nord;Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;white;none;white;none</value>
@@ -6834,7 +6834,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>WÃ¼rzburg</value>
+                    <value>Würzburg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -6871,7 +6871,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>|none;none;none;white;none;white;none</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>NÃ¼rnberg;FÃ¼rth|Regensburg;MÃ¼nchen;NÃ¼rnberg-Nord;NÃ¼rnberg; ;Messe</value>
+                    <value>Nürnberg;Fürth|Regensburg;München;Nürnberg-Nord;Nürnberg; ;Messe</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 73|A 3</value>
@@ -6914,7 +6914,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Suhl|WÃ¼rzburg</value>
+                    <value>Suhl|Würzburg</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 73|A 3</value>
@@ -6957,7 +6957,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Suhl|WÃ¼rzburg</value>
+                    <value>Suhl|Würzburg</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 73|A 3</value>
@@ -7047,7 +7047,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>WÃ¼rzburg</value>
+                    <value>Würzburg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -7078,7 +7078,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg;FÃ¼rth</value>
+                    <value>Nürnberg;Fürth</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -7106,7 +7106,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>no</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg;WÃ¼rzburg</value>
+                    <value>Nürnberg;Würzburg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -7259,7 +7259,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>none;white;none;none|</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Regensburg;NÃ¼rnberg;Berlin;MÃ¼nchen|Suhl;Erlangen</value>
+                    <value>Regensburg;Nürnberg;Berlin;München|Suhl;Erlangen</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 3|A 73</value>
@@ -7315,7 +7315,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Heilbronn;MÃ¼nchen;NÃ¼rnberg-SÃ¼d;NÃ¼rnberg;Messe</value>
+                    <value>Heilbronn;München;Nürnberg-Süd;Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;none;white;none</value>
@@ -7459,7 +7459,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>none;none;none;white;none|</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Bamberg;NÃ¼rnberg-Fischbach;NÃ¼rnberg;Messe; ;|Heilbronn</value>
+                    <value>Bamberg;Nürnberg-Fischbach;Nürnberg;Messe; ;|Heilbronn</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 9|A 6</value>
@@ -7496,7 +7496,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Bamberg;NÃ¼rnberg-Fischbach;NÃ¼rnberg;Messe</value>
+                    <value>Bamberg;Nürnberg-Fischbach;Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;white;none</value>
@@ -7567,7 +7567,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/30031232</value>
                 </Data>
                 <Data name="destination">
-                    <value>Lauf-SÃ¼d;RÃ¼ckersdorf;RÃ¶thenbach an der Pegnitz</value>
+                    <value>Lauf-Süd;Rückersdorf;Röthenbach an der Pegnitz</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 14</value>
@@ -7623,7 +7623,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>white;white</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Erlangen;-Bruck;-SÃ¼d</value>
+                    <value>Erlangen;-Bruck;-Süd</value>
                 </Data>
                 <Data name="foot">
                     <value>no</value>
@@ -7657,7 +7657,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>no</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg;WÃ¼rzburg</value>
+                    <value>Nürnberg;Würzburg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -7903,7 +7903,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Heilbronn;MÃ¼nchen</value>
+                    <value>Heilbronn;München</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -7950,7 +7950,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/32474795</value>
                 </Data>
                 <Data name="destination">
-                    <value>Erlangen-Tennenlohe;Erlangen-Ost;Erlangen-SÃ¼d</value>
+                    <value>Erlangen-Tennenlohe;Erlangen-Ost;Erlangen-Süd</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 4</value>
@@ -7978,7 +7978,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/32493514</value>
                 </Data>
                 <Data name="destination">
-                    <value>Erlangen-Tennenlohe;Erlangen-Ost;Erlangen-SÃ¼d</value>
+                    <value>Erlangen-Tennenlohe;Erlangen-Ost;Erlangen-Süd</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 4</value>
@@ -8043,7 +8043,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>no</value>
                 </Data>
                 <Data name="destination">
-                    <value>Erlangen-Tennelohe;Erlangen-Ost;Erlangen-SÃ¼d</value>
+                    <value>Erlangen-Tennelohe;Erlangen-Ost;Erlangen-Süd</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 4</value>
@@ -8080,7 +8080,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/32493520</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Frankfurt am Main;WÃ¼rzburg|NÃ¼rnberg</value>
+                    <value>Frankfurt am Main;Würzburg|Nürnberg</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 3|B 2</value>
@@ -8114,7 +8114,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/32493521</value>
                 </Data>
                 <Data name="destination">
-                    <value>Frankfurt am Main;WÃ¼rzburg</value>
+                    <value>Frankfurt am Main;Würzburg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -8139,7 +8139,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/32493522</value>
                 </Data>
                 <Data name="destination">
-                    <value>GrÃ¤fenberg;Eckental;Heroldsberg</value>
+                    <value>Gräfenberg;Eckental;Heroldsberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 2</value>
@@ -8167,7 +8167,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/32493525</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>WÃ¼rzburg;Suhl|NÃ¼rnberg;NÃ¼rnberg</value>
+                    <value>Würzburg;Suhl|Nürnberg;Nürnberg</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 3|B 4</value>
@@ -8233,7 +8233,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Regensburg;NÃ¼rnberg;Berlin;MÃ¼nchen</value>
+                    <value>Regensburg;Nürnberg;Berlin;München</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;white;none;none</value>
@@ -8270,7 +8270,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Suhl|WÃ¼rzburg</value>
+                    <value>Suhl|Würzburg</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 73|A 3</value>
@@ -8369,7 +8369,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/32810566</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -8394,7 +8394,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/32810567</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -8704,7 +8704,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen</value>
+                    <value>München</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 9</value>
@@ -8794,7 +8794,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen</value>
+                    <value>München</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 9</value>
@@ -8825,7 +8825,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Regensburg;Prag;Amberg;MÃ¼nchen</value>
+                    <value>Regensburg;Prag;Amberg;München</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -8899,7 +8899,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>|none;none;none;none;white;none</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>WÃ¼rzburg;Berlin|Heilbronn;MÃ¼nchen;NÃ¼rnberg-SÃ¼d;NÃ¼rnberg;Messe</value>
+                    <value>Würzburg;Berlin|Heilbronn;München;Nürnberg-Süd;Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 3|A 6</value>
@@ -8936,7 +8936,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>WÃ¼rzburg;Berlin</value>
+                    <value>Würzburg;Berlin</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -9044,7 +9044,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Heilbronn;MÃ¼nchen;NÃ¼rnberg-SÃ¼d;NÃ¼rnberg Hafen/Messe/Stadion</value>
+                    <value>Heilbronn;München;Nürnberg-Süd;Nürnberg Hafen/Messe/Stadion</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -9177,7 +9177,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen;Feucht</value>
+                    <value>München;Feucht</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73;B 8</value>
@@ -9248,7 +9248,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen;Feucht</value>
+                    <value>München;Feucht</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73;B 8</value>
@@ -9285,7 +9285,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Heilbronn;Ansbach;Schwabach-SÃ¼d|Roth;Augsburg;WeiÃŸenburg</value>
+                    <value>Heilbronn;Ansbach;Schwabach-Süd|Roth;Augsburg;Weißenburg</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 6|B 2</value>
@@ -9422,7 +9422,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen</value>
+                    <value>München</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 9</value>
@@ -9556,7 +9556,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Regensburg;NÃ¼rnberg;Berlin;MÃ¼nchen</value>
+                    <value>Regensburg;Nürnberg;Berlin;München</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;white;none;none</value>
@@ -9596,7 +9596,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>WÃ¼rzburg</value>
+                    <value>Würzburg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -9621,7 +9621,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/47328659</value>
                 </Data>
                 <Data name="destination">
-                    <value>WÃ¼rzburg;Suhl</value>
+                    <value>Würzburg;Suhl</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -9702,7 +9702,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Berlin;Dresden;Bamberg;NÃ¼rnberg;Messe</value>
+                    <value>Berlin;Dresden;Bamberg;Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;none;white;none;none</value>
@@ -9739,7 +9739,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth;NÃ¼rnberg; NÃ¼rnberg</value>
+                    <value>Fürth;Nürnberg; Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -9776,7 +9776,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Frankfurt am Main;WÃ¼rzburg;Bamberg;NÃ¼rnberg-Nord</value>
+                    <value>Frankfurt am Main;Würzburg;Bamberg;Nürnberg-Nord</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -9870,7 +9870,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/59285613</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¶rdlingen;Gunzenhausen;Abenberg;Kammerstein</value>
+                    <value>Nördlingen;Gunzenhausen;Abenberg;Kammerstein</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 466</value>
@@ -9895,7 +9895,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/60132143</value>
                 </Data>
                 <Data name="destination">
-                    <value>Rasthof NÃ¼rnberg/Feucht</value>
+                    <value>Rasthof Nürnberg/Feucht</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -9970,7 +9970,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/71177945</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg-Hafen;NÃ¼rnberg-Eibach;NÃ¼rnberg-Gartenstadt</value>
+                    <value>Nürnberg-Hafen;Nürnberg-Eibach;Nürnberg-Gartenstadt</value>
                 </Data>
                 <Data name="destination:symbol">
                     <value>harbour;none;none</value>
@@ -10130,7 +10130,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/93637270</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -10214,7 +10214,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/93637306</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -10286,7 +10286,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/122161369</value>
                 </Data>
                 <Data name="destination:forward">
-                    <value>WÃ¼rzburg</value>
+                    <value>Würzburg</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -10336,7 +10336,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/122161401</value>
                 </Data>
                 <Data name="destination">
-                    <value>WÃ¼rzburg</value>
+                    <value>Würzburg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -10671,7 +10671,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/135229680</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -10758,7 +10758,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -10880,7 +10880,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/135229738</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -11021,7 +11021,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/138787164</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg-Hafen;NÃ¼rnberg-Eibach;NÃ¼rnberg-Gartenstadt</value>
+                    <value>Nürnberg-Hafen;Nürnberg-Eibach;Nürnberg-Gartenstadt</value>
                 </Data>
                 <Data name="destination:symbol">
                     <value>harbour;none;none</value>
@@ -11102,7 +11102,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/138953015</value>
                 </Data>
                 <Data name="destination">
-                    <value>GrÃ¤fenberg;Eckental;Heroldsberg</value>
+                    <value>Gräfenberg;Eckental;Heroldsberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 2</value>
@@ -11183,7 +11183,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/139321093</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg;Behringersdorf;Lauf</value>
+                    <value>Nürnberg;Behringersdorf;Lauf</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 14</value>
@@ -11211,7 +11211,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/139321094</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg;Behringersdorf;Lauf</value>
+                    <value>Nürnberg;Behringersdorf;Lauf</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 14</value>
@@ -11239,7 +11239,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/139580350</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg-Westring;NÃ¼rnberg-Flughafen</value>
+                    <value>Nürnberg-Westring;Nürnberg-Flughafen</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 4R</value>
@@ -11308,7 +11308,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/139715086</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg-FÃ¼rth;NÃ¼rnberg-Doos;FÃ¼rth-SÃ¼dstadt</value>
+                    <value>Nürnberg-Fürth;Nürnberg-Doos;Fürth-Südstadt</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 8</value>
@@ -11405,7 +11405,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/140463316</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg-Langwasser</value>
+                    <value>Nürnberg-Langwasser</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -11427,7 +11427,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/140463319</value>
                 </Data>
                 <Data name="destination">
-                    <value>Wendelstein;RÃ¶thenbach bei Sankt Wolfgang;Pyrbaum</value>
+                    <value>Wendelstein;Röthenbach bei Sankt Wolfgang;Pyrbaum</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -11493,7 +11493,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/141193650</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 9</value>
@@ -11571,7 +11571,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/141504538</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg-Fischbach;NÃ¼rnberg-Zentrum;NÃ¼rnberg-Messe</value>
+                    <value>Nürnberg-Fischbach;Nürnberg-Zentrum;Nürnberg-Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;white</value>
@@ -11680,7 +11680,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/141574326</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>;MÃ¼nchen;FÃ¼rth; NÃ¼rnberg|;FÃ¼rth; NÃ¼rnberg</value>
+                    <value>;München;Fürth; Nürnberg|;Fürth; Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -11754,7 +11754,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>;MÃ¼nchen;FÃ¼rth; NÃ¼rnberg|;FÃ¼rth; NÃ¼rnberg</value>
+                    <value>;München;Fürth; Nürnberg|;Fürth; Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -11925,7 +11925,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/141691906</value>
                 </Data>
                 <Data name="destination">
-                    <value>Schnaittach;GrÃ¤fenberg;Eckental;Simmelsdorf</value>
+                    <value>Schnaittach;Gräfenberg;Eckental;Simmelsdorf</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -11950,7 +11950,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/141691908</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen;NÃ¼rnberg</value>
+                    <value>München;Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 9</value>
@@ -12000,7 +12000,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/142460156</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth</value>
+                    <value>Fürth</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -12034,7 +12034,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>white|white</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>NÃ¼rnberg-SÃ¼dfriedhof|NÃ¼rnberg-Weiherhaus</value>
+                    <value>Nürnberg-Südfriedhof|Nürnberg-Weiherhaus</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -12059,7 +12059,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/142460167</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg-Hafen-SÃ¼d;NÃ¼rnberg-Weiherhaus;NÃ¼rnberg-SÃ¼dfriedhof</value>
+                    <value>Nürnberg-Hafen-Süd;Nürnberg-Weiherhaus;Nürnberg-Südfriedhof</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -12081,7 +12081,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/142460169</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen</value>
+                    <value>München</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -12174,7 +12174,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/142493095</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg-Kornburg;Messe</value>
+                    <value>Nürnberg-Kornburg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;white;none</value>
@@ -12255,7 +12255,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Regensburg;Heilbronn;NÃ¼rnberg;Messe</value>
+                    <value>Regensburg;Heilbronn;Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;white;none</value>
@@ -12375,7 +12375,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Berlin;NÃ¼rnberg</value>
+                    <value>Berlin;Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 9</value>
@@ -12412,10 +12412,10 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>CZ;;|</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Prag;Amberg;Regensburg|Berlin;Dresden;Bamberg;NÃ¼rnberg;Messe; ;</value>
+                    <value>Prag;Amberg;Regensburg|Berlin;Dresden;Bamberg;Nürnberg;Messe; ;</value>
                 </Data>
                 <Data name="destination:lang:cs:lanes">
-                    <value>Praha;Amberg;Regensburg|Berlin;Dresden;Bamberg;NÃ¼rnberg;Messe; ;</value>
+                    <value>Praha;Amberg;Regensburg|Berlin;Dresden;Bamberg;Nürnberg;Messe; ;</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 6|A 9</value>
@@ -12452,7 +12452,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Berlin;Dresden;Bamberg;NÃ¼rnberg;Messe; ;MÃ¼nchen</value>
+                    <value>Berlin;Dresden;Bamberg;Nürnberg;Messe; ;München</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;none;white;none;none</value>
@@ -12489,7 +12489,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Prag;Regensburg;Heilbronn;NÃ¼rnberg;Messe</value>
+                    <value>Prag;Regensburg;Heilbronn;Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;none;white;none</value>
@@ -12498,7 +12498,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>CZ;;;;;;</value>
                 </Data>
                 <Data name="destination:lang:cs">
-                    <value>Praha;Regensburg;Heilbronn;NÃ¼rnberg;Messe; ;</value>
+                    <value>Praha;Regensburg;Heilbronn;Nürnberg;Messe; ;</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -12616,7 +12616,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>MÃ¼nchen;Berlin;Dresden</value>
+                    <value>München;Berlin;Dresden</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 9</value>
@@ -12644,7 +12644,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen;Berlin;NÃ¼rnberg</value>
+                    <value>München;Berlin;Nürnberg</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -12706,7 +12706,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>WÃ¼rzburg;Regensburg;NÃ¼rnberg;Berlin;MÃ¼nchen</value>
+                    <value>Würzburg;Regensburg;Nürnberg;Berlin;München</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;white;none;none</value>
@@ -12740,7 +12740,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Suhl;Erlangen;NÃ¼rnberg-SÃ¼d;FÃ¼rth</value>
+                    <value>Suhl;Erlangen;Nürnberg-Süd;Fürth</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -12802,7 +12802,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth;NÃ¼rnberg;Heilbronn;Feucht; NÃ¼rnberg;Messe</value>
+                    <value>Fürth;Nürnberg;Heilbronn;Feucht; Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;none;white;white;white</value>
@@ -12967,7 +12967,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
             </ExtendedData>
         </Placemark>
         <Placemark>
-            <name>Poppenreuther StraÃŸe</name>
+            <name>Poppenreuther Straße</name>
             <LineString>
                 <coordinates>11.0047131,49.4816902 11.0049058,49.4813785</coordinates>
             </LineString>
@@ -12985,7 +12985,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>50</value>
                 </Data>
                 <Data name="name">
-                    <value>Poppenreuther StraÃŸe</value>
+                    <value>Poppenreuther Straße</value>
                 </Data>
                 <Data name="oneway">
                     <value>yes</value>
@@ -12993,7 +12993,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
             </ExtendedData>
         </Placemark>
         <Placemark>
-            <name>Poppenreuther StraÃŸe</name>
+            <name>Poppenreuther Straße</name>
             <LineString>
                 <coordinates>11.0057958,49.4815253 11.0055844,49.4818339</coordinates>
             </LineString>
@@ -13011,7 +13011,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>50</value>
                 </Data>
                 <Data name="name">
-                    <value>Poppenreuther StraÃŸe</value>
+                    <value>Poppenreuther Straße</value>
                 </Data>
                 <Data name="oneway">
                     <value>yes</value>
@@ -13030,7 +13030,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/146603997</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth-Ronhof;FÃ¼rth-Stadeln</value>
+                    <value>Fürth-Ronhof;Fürth-Stadeln</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -13061,7 +13061,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>no</value>
                 </Data>
                 <Data name="destination">
-                    <value>WÃ¼rzburg;Suhl</value>
+                    <value>Würzburg;Suhl</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -13098,7 +13098,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/147118549</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg-Zentrum</value>
+                    <value>Nürnberg-Zentrum</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 4</value>
@@ -13132,7 +13132,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/147118585</value>
                 </Data>
                 <Data name="destination">
-                    <value>Erlangen-Tennelohe;Erlangen-Ost;Erlangen-SÃ¼d;NÃ¼rnberg-Zentrum</value>
+                    <value>Erlangen-Tennelohe;Erlangen-Ost;Erlangen-Süd;Nürnberg-Zentrum</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 4</value>
@@ -13163,7 +13163,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/150032079</value>
                 </Data>
                 <Data name="destination">
-                    <value>WÃ¼rzburg</value>
+                    <value>Würzburg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -13188,7 +13188,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/150333772</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¶hrendorf;Bubenreuth</value>
+                    <value>Möhrendorf;Bubenreuth</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -13236,7 +13236,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
             </ExtendedData>
         </Placemark>
         <Placemark>
-            <name>Werner-von-Siemens-StraÃŸe</name>
+            <name>Werner-von-Siemens-Straße</name>
             <LineString>
                 <coordinates>10.995864,49.5911756 10.9956923,49.5912636</coordinates>
             </LineString>
@@ -13245,7 +13245,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/151038140</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg;Erlangen-West</value>
+                    <value>Nürnberg;Erlangen-West</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>;white</value>
@@ -13272,7 +13272,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="name">
-                    <value>Werner-von-Siemens-StraÃŸe</value>
+                    <value>Werner-von-Siemens-Straße</value>
                 </Data>
                 <Data name="oneway">
                     <value>yes</value>
@@ -13294,7 +13294,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/160835973</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg-Zentrum;NÃ¼rnberg-Kornburg;Messe</value>
+                    <value>Nürnberg-Zentrum;Nürnberg-Kornburg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;white</value>
@@ -13478,7 +13478,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -13584,7 +13584,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -13708,7 +13708,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>white;white|white;white;none|</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>FÃ¼rth; NÃ¼rnberg|NÃ¼rnberg-Zollhaus;NÃ¼rnberg-Messe|</value>
+                    <value>Fürth; Nürnberg|Nürnberg-Zollhaus;Nürnberg-Messe|</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -13751,7 +13751,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>MÃ¼nchen|FÃ¼rth; NÃ¼rnberg</value>
+                    <value>München|Fürth; Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -13853,7 +13853,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>white;white;white|white;white;white|white;white</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Erlangen-West;Hafen;Klinikum am Europakanal|Erlangen-West;Hafen;Klinikum am Europakanal|Erlangen;-Bruck;-SÃ¼d</value>
+                    <value>Erlangen-West;Hafen;Klinikum am Europakanal|Erlangen-West;Hafen;Klinikum am Europakanal|Erlangen;-Bruck;-Süd</value>
                 </Data>
                 <Data name="destination:symbol:lanes">
                     <value>;harbour;hospital|;harbour;hospital|</value>
@@ -14068,7 +14068,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/196292740</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen;NÃ¼rnberg</value>
+                    <value>München;Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 9</value>
@@ -14167,10 +14167,10 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>|CZ;;</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>MÃ¼nchen;Feucht|Prag;Regensburg;Berlin</value>
+                    <value>München;Feucht|Prag;Regensburg;Berlin</value>
                 </Data>
                 <Data name="destination:lang:cs:lanes">
-                    <value>MÃ¼nchen;Feucht|Praha;Regensburg;Berlin</value>
+                    <value>München;Feucht|Praha;Regensburg;Berlin</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 73;B 8|A 6</value>
@@ -14275,7 +14275,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>WÃ¼rzburg;Berlin;NÃ¼rnberg</value>
+                    <value>Würzburg;Berlin;Nürnberg</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;white</value>
@@ -14387,7 +14387,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/196328934</value>
                 </Data>
                 <Data name="destination">
-                    <value>Schwabach-SÃ¼d;Rednitzhembach</value>
+                    <value>Schwabach-Süd;Rednitzhembach</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -14611,7 +14611,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>white;white|white;white;white;white</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Erlangen-Zentrum; Innenstadt|Erlangen-Ost; Uni-Kliniken; Zentrum-SÃ¼d;Kongresszentrum</value>
+                    <value>Erlangen-Zentrum; Innenstadt|Erlangen-Ost; Uni-Kliniken; Zentrum-Süd;Kongresszentrum</value>
                 </Data>
                 <Data name="destination:symbol:lanes">
                     <value>;parking|;hospital;parking;</value>
@@ -14722,7 +14722,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>white;white|white;white|white;white;white;white</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Erlangen-Zentrum; Innenstadt|Erlangen-Zentrum; Innenstadt|Erlangen-Ost; Uni-Kliniken; Zentrum-SÃ¼d;Kongresszentrum</value>
+                    <value>Erlangen-Zentrum; Innenstadt|Erlangen-Zentrum; Innenstadt|Erlangen-Ost; Uni-Kliniken; Zentrum-Süd;Kongresszentrum</value>
                 </Data>
                 <Data name="destination:symbol:lanes">
                     <value>;parking|;parking|;hospital;parking;</value>
@@ -14748,7 +14748,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
             </ExtendedData>
         </Placemark>
         <Placemark>
-            <name>Werner-von-Siemens-StraÃŸe</name>
+            <name>Werner-von-Siemens-Straße</name>
             <LineString>
                 <coordinates>10.9961218,49.5910509 10.995864,49.5911756</coordinates>
             </LineString>
@@ -14763,7 +14763,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>beam</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg;Erlangen-West</value>
+                    <value>Nürnberg;Erlangen-West</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>;white</value>
@@ -14790,7 +14790,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="name">
-                    <value>Werner-von-Siemens-StraÃŸe</value>
+                    <value>Werner-von-Siemens-Straße</value>
                 </Data>
                 <Data name="oneway">
                     <value>yes</value>
@@ -14846,7 +14846,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>WÃ¼rzburg</value>
+                    <value>Würzburg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -14937,7 +14937,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/203424039</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth</value>
+                    <value>Fürth</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -14965,7 +14965,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/203424040</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen</value>
+                    <value>München</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -14993,7 +14993,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/203653957</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 2</value>
@@ -15027,7 +15027,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/203653958</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 2</value>
@@ -15149,7 +15149,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/205902871</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen;NÃ¼rnberg</value>
+                    <value>München;Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 9</value>
@@ -15196,7 +15196,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/205902873</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen;NÃ¼rnberg</value>
+                    <value>München;Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 9</value>
@@ -15246,7 +15246,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen</value>
+                    <value>München</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 9</value>
@@ -15280,10 +15280,10 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>|none;CZ</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>MÃ¼nchen|Regensburg;Prag</value>
+                    <value>München|Regensburg;Prag</value>
                 </Data>
                 <Data name="destination:lang:cs:lanes">
-                    <value>MÃ¼nchen|Regensburg;Praha</value>
+                    <value>München|Regensburg;Praha</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 9|A 3</value>
@@ -15314,7 +15314,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/207484111</value>
                 </Data>
                 <Data name="destination">
-                    <value>WÃ¼rzburg</value>
+                    <value>Würzburg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -15339,7 +15339,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/207484112</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -15364,7 +15364,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/207484113</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Erlangen;Dechsendorf|HeÃŸdorf;Weisendorf</value>
+                    <value>Erlangen;Dechsendorf|Heßdorf;Weisendorf</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -15389,7 +15389,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/207484114</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Erlangen;Dechsendorf|HeÃŸdorf;Weisendorf</value>
+                    <value>Erlangen;Dechsendorf|Heßdorf;Weisendorf</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -15417,10 +15417,10 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>no|no</value>
                 </Data>
                 <Data name="destination:backward">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:forward">
-                    <value>Erlangen;Dechsendorf;HeÃŸdorf;Weisendorf</value>
+                    <value>Erlangen;Dechsendorf;Heßdorf;Weisendorf</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -15445,10 +15445,10 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>no|no</value>
                 </Data>
                 <Data name="destination:backward">
-                    <value>WÃ¼rzburg</value>
+                    <value>Würzburg</value>
                 </Data>
                 <Data name="destination:forward">
-                    <value>Erlangen;Dechsendorf;HeÃŸdorf;Weisendorf</value>
+                    <value>Erlangen;Dechsendorf;Heßdorf;Weisendorf</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -15514,7 +15514,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/217002475</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -15539,7 +15539,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/217002476</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth;-Steinach;-Herboldshof;NÃ¼rnberg;-GroÃŸgrÃ¼ndlach;-Schmalau</value>
+                    <value>Fürth;-Steinach;-Herboldshof;Nürnberg;-Großgründlach;-Schmalau</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -15561,7 +15561,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/217002478</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth;-Steinach;-Herboldshof;NÃ¼rnberg;-GroÃŸgrÃ¼ndlach;-Schmalau</value>
+                    <value>Fürth;-Steinach;-Herboldshof;Nürnberg;-Großgründlach;-Schmalau</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -15611,7 +15611,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yellow;white;white;white|white</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>NÃ¼rnberg;;Arena;Messe|N-Kornburg</value>
+                    <value>Nürnberg;;Arena;Messe|N-Kornburg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 8</value>
@@ -15689,7 +15689,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>Erlangen;-Nord;-Dechsendorf</value>
                 </Data>
                 <Data name="destination:forward">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -15711,7 +15711,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/219089754</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -15773,13 +15773,13 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Regensburg;Prag;WÃ¼rzburg;NÃ¼rnberg-Nord</value>
+                    <value>Regensburg;Prag;Würzburg;Nürnberg-Nord</value>
                 </Data>
                 <Data name="destination:country">
                     <value>none;CZ;none;none</value>
                 </Data>
                 <Data name="destination:lang:cs">
-                    <value>Regensburg;Praha;WÃ¼rzburg;NÃ¼rnberg-Nord</value>
+                    <value>Regensburg;Praha;Würzburg;Nürnberg-Nord</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -15810,13 +15810,13 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Regensburg;Prag;WÃ¼rzburg;NÃ¼rnberg-Nord</value>
+                    <value>Regensburg;Prag;Würzburg;Nürnberg-Nord</value>
                 </Data>
                 <Data name="destination:country">
                     <value>none;CZ;none;none</value>
                 </Data>
                 <Data name="destination:lang:cs">
-                    <value>Regensburg;Praha;WÃ¼rzburg;NÃ¼rnberg-Nord</value>
+                    <value>Regensburg;Praha;Würzburg;Nürnberg-Nord</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -15959,7 +15959,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth;NÃ¼rnberg;Heilbronn;Feucht; NÃ¼rnberg;Messe</value>
+                    <value>Fürth;Nürnberg;Heilbronn;Feucht; Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;none;white;white;white</value>
@@ -16021,13 +16021,13 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/223093079</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen;Feucht;Prag;Regensburg;Heilbronn</value>
+                    <value>München;Feucht;Prag;Regensburg;Heilbronn</value>
                 </Data>
                 <Data name="destination:country">
                     <value>none;none;CZ;none;none</value>
                 </Data>
                 <Data name="destination:lang:cs">
-                    <value>MÃ¼nchen;Feucht;Praha;Regensburg;Heilbronn</value>
+                    <value>München;Feucht;Praha;Regensburg;Heilbronn</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -16055,7 +16055,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/223120619</value>
                 </Data>
                 <Data name="destination">
-                    <value>WÃ¼rzburg;Suhl</value>
+                    <value>Würzburg;Suhl</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -16120,7 +16120,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/223120626</value>
                 </Data>
                 <Data name="destination">
-                    <value>WÃ¼rzburg;Suhl</value>
+                    <value>Würzburg;Suhl</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -16154,7 +16154,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/223120635</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>NÃ¼rnberg;NÃ¼rnberg|Erlangen-Tennelohe;Erlangen-Ost;Erlangen-SÃ¼d</value>
+                    <value>Nürnberg;Nürnberg|Erlangen-Tennelohe;Erlangen-Ost;Erlangen-Süd</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 4</value>
@@ -16194,7 +16194,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/223120636</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Erlangen-Tennelohe;Erlangen-Ost;Erlangen-SÃ¼d|NÃ¼rnberg-Zentrum</value>
+                    <value>Erlangen-Tennelohe;Erlangen-Ost;Erlangen-Süd|Nürnberg-Zentrum</value>
                 </Data>
                 <Data name="destination:symbol:lanes">
                     <value>|airport</value>
@@ -16228,7 +16228,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/223229559</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth-Poppenreuth;FÃ¼rth-Zentrum</value>
+                    <value>Fürth-Poppenreuth;Fürth-Zentrum</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -16281,7 +16281,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/223229561</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth;-Poppenreuth;-Stadtmitte;Neustadt/Aisch</value>
+                    <value>Fürth;-Poppenreuth;-Stadtmitte;Neustadt/Aisch</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -16306,7 +16306,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/223262085</value>
                 </Data>
                 <Data name="destination">
-                    <value>Erlangen;-Bruck;-SÃ¼d;-West</value>
+                    <value>Erlangen;-Bruck;-Süd;-West</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>white;white;white</value>
@@ -16340,7 +16340,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/223262086</value>
                 </Data>
                 <Data name="destination">
-                    <value>Erlangen;-Bruck;-SÃ¼d;-West</value>
+                    <value>Erlangen;-Bruck;-Süd;-West</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>white;white;white</value>
@@ -16371,7 +16371,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen;FÃ¼rth;NÃ¼rnberg; NÃ¼rnberg;Messe</value>
+                    <value>München;Fürth;Nürnberg; Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;white;none</value>
@@ -16551,7 +16551,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/226040093</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>NÃ¼rnberg|GrÃ¤fenberg;Eckental;Heroldsberg</value>
+                    <value>Nürnberg|Gräfenberg;Eckental;Heroldsberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 2</value>
@@ -16782,7 +16782,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>white;white|white;white;none</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>FÃ¼rth; NÃ¼rnberg|NÃ¼rnberg-Zollhaus;NÃ¼rnberg-Messe</value>
+                    <value>Fürth; Nürnberg|Nürnberg-Zollhaus;Nürnberg-Messe</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -16819,7 +16819,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen;Feucht</value>
+                    <value>München;Feucht</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73;B 8</value>
@@ -16853,7 +16853,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>white;white|white;white;none</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>FÃ¼rth; NÃ¼rnberg|NÃ¼rnberg-Zollhaus;NÃ¼rnberg-Messe</value>
+                    <value>Fürth; Nürnberg|Nürnberg-Zollhaus;Nürnberg-Messe</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -17184,7 +17184,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/228532507</value>
                 </Data>
                 <Data name="destination">
-                    <value>WÃ¼rzburg</value>
+                    <value>Würzburg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -17464,7 +17464,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
             </ExtendedData>
         </Placemark>
         <Placemark>
-            <name>Werner-von-Siemens-StraÃŸe</name>
+            <name>Werner-von-Siemens-Straße</name>
             <LineString>
                 <coordinates>10.995181,49.591342 10.9958302,49.5910468</coordinates>
             </LineString>
@@ -17476,7 +17476,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>white;white|white;white;white;white|white;white;white;white</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Erlangen-Zentrum; Innenstadt|Erlangen-Ost; Uni-Kliniken; Zentrum-SÃ¼d;Kongresszentrum|Erlangen-Ost; Uni-Kliniken; Zentrum-SÃ¼d;Kongresszentrum</value>
+                    <value>Erlangen-Zentrum; Innenstadt|Erlangen-Ost; Uni-Kliniken; Zentrum-Süd;Kongresszentrum|Erlangen-Ost; Uni-Kliniken; Zentrum-Süd;Kongresszentrum</value>
                 </Data>
                 <Data name="destination:symbol:lanes">
                     <value>;parking|;hospital;parking;|;hospital;parking;</value>
@@ -17494,7 +17494,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="name">
-                    <value>Werner-von-Siemens-StraÃŸe</value>
+                    <value>Werner-von-Siemens-Straße</value>
                 </Data>
                 <Data name="oneway">
                     <value>yes</value>
@@ -17511,7 +17511,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
             </ExtendedData>
         </Placemark>
         <Placemark>
-            <name>Werner-von-Siemens-StraÃŸe</name>
+            <name>Werner-von-Siemens-Straße</name>
             <LineString>
                 <coordinates>10.9962674,49.5908553 10.9964338,49.5907806</coordinates>
             </LineString>
@@ -17523,7 +17523,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>white;white|white;white;white;white|white;white;white;white</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Erlangen-Zentrum; Innenstadt|Erlangen-Ost; Uni-Kliniken; Zentrum-SÃ¼d;Kongresszentrum|Erlangen-Ost; Uni-Kliniken; Zentrum-SÃ¼d;Kongresszentrum</value>
+                    <value>Erlangen-Zentrum; Innenstadt|Erlangen-Ost; Uni-Kliniken; Zentrum-Süd;Kongresszentrum|Erlangen-Ost; Uni-Kliniken; Zentrum-Süd;Kongresszentrum</value>
                 </Data>
                 <Data name="destination:symbol:lanes">
                     <value>;parking|;hospital;parking;|;hospital;parking;</value>
@@ -17538,7 +17538,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="name">
-                    <value>Werner-von-Siemens-StraÃŸe</value>
+                    <value>Werner-von-Siemens-Straße</value>
                 </Data>
                 <Data name="oneway">
                     <value>yes</value>
@@ -17679,7 +17679,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Regensburg;Heilbronn;NÃ¼rnberg;Messe</value>
+                    <value>Regensburg;Heilbronn;Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;white;none</value>
@@ -17733,7 +17733,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
             </ExtendedData>
         </Placemark>
         <Placemark>
-            <name>Werner-von-Siemens-StraÃŸe</name>
+            <name>Werner-von-Siemens-Straße</name>
             <LineString>
                 <coordinates>10.9963503,49.5909404 10.9961218,49.5910509</coordinates>
             </LineString>
@@ -17748,7 +17748,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>beam</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg;Erlangen-West</value>
+                    <value>Nürnberg;Erlangen-West</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>;white</value>
@@ -17775,7 +17775,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="name">
-                    <value>Werner-von-Siemens-StraÃŸe</value>
+                    <value>Werner-von-Siemens-Straße</value>
                 </Data>
                 <Data name="oneway">
                     <value>yes</value>
@@ -17871,7 +17871,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>MÃ¼nchen|Berlin;Dresden</value>
+                    <value>München|Berlin;Dresden</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 9</value>
@@ -17902,7 +17902,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth;NÃ¼rnberg;Heilbronn;Feucht; NÃ¼rnberg;Messe</value>
+                    <value>Fürth;Nürnberg;Heilbronn;Feucht; Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;none;white;white;white</value>
@@ -18645,7 +18645,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/252700871</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -18676,7 +18676,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/252700872</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -18986,7 +18986,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>white;white|white;white;none</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>FÃ¼rth; NÃ¼rnberg|NÃ¼rnberg-Zollhaus;NÃ¼rnberg-Messe</value>
+                    <value>Fürth; Nürnberg|Nürnberg-Zollhaus;Nürnberg-Messe</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -19023,7 +19023,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>FÃ¼rth;NÃ¼rnberg; NÃ¼rnberg;|FÃ¼rth;NÃ¼rnberg; NÃ¼rnberg;|MÃ¼nchen</value>
+                    <value>Fürth;Nürnberg; Nürnberg;|Fürth;Nürnberg; Nürnberg;|München</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 73|A 73|A 73</value>
@@ -19063,7 +19063,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth;NÃ¼rnberg; NÃ¼rnberg;MÃ¼nchen</value>
+                    <value>Fürth;Nürnberg; Nürnberg;München</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -19135,7 +19135,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/269802063</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>NÃ¼rnberg|Suhl;Bamberg;Erlangen</value>
+                    <value>Nürnberg|Suhl;Bamberg;Erlangen</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -19175,7 +19175,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>|none;white;none;none</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>WÃ¼rzburg|Regensburg;NÃ¼rnberg;Berlin;MÃ¼nchen</value>
+                    <value>Würzburg|Regensburg;Nürnberg;Berlin;München</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -19215,7 +19215,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>|white|</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Schwabach|Autohof|NÃ¶rdlingen;Gunzenhausen;Abenberg;Kammerstein</value>
+                    <value>Schwabach|Autohof|Nördlingen;Gunzenhausen;Abenberg;Kammerstein</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>B 466||B 466</value>
@@ -19492,7 +19492,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>white;white|white;white|white;white;white;white</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Erlangen-Zentrum; Innenstadt|Erlangen-Zentrum; Innenstadt|Erlangen-Ost; Uni-Kliniken; Zentrum-SÃ¼d;Kongresszentrum</value>
+                    <value>Erlangen-Zentrum; Innenstadt|Erlangen-Zentrum; Innenstadt|Erlangen-Ost; Uni-Kliniken; Zentrum-Süd;Kongresszentrum</value>
                 </Data>
                 <Data name="destination:symbol:lanes">
                     <value>;parking|;parking|;hospital;parking;</value>
@@ -19575,13 +19575,13 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg;Prag</value>
+                    <value>Nürnberg;Prag</value>
                 </Data>
                 <Data name="destination:country">
                     <value>;CZ</value>
                 </Data>
                 <Data name="destination:lang:cs">
-                    <value>NÃ¼rnberg;Praha</value>
+                    <value>Nürnberg;Praha</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -19640,7 +19640,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Roth;Augsburg;WeiÃŸenburg</value>
+                    <value>Roth;Augsburg;Weißenburg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 2</value>
@@ -19671,7 +19671,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Heilbronn;Ansbach;Schwabach-SÃ¼d</value>
+                    <value>Heilbronn;Ansbach;Schwabach-Süd</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -19699,7 +19699,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Roth;Augsburg;WeiÃŸenburg</value>
+                    <value>Roth;Augsburg;Weißenburg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 2</value>
@@ -19727,7 +19727,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth;NÃ¼rnberg; NÃ¼rnberg;MÃ¼nchen</value>
+                    <value>Fürth;Nürnberg; Nürnberg;München</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -19758,7 +19758,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen</value>
+                    <value>München</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -19823,10 +19823,10 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>CZ;;|</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Prag;Regensburg;Berlin|NÃ¼rnberg;NÃ¼rnberg-Zollhaus;Messe</value>
+                    <value>Prag;Regensburg;Berlin|Nürnberg;Nürnberg-Zollhaus;Messe</value>
                 </Data>
                 <Data name="destination:lang:cs:lanes">
-                    <value>Praha;Regensburg;Berlin|NÃ¼rnberg;NÃ¼rnberg-Zollhaus;Messe</value>
+                    <value>Praha;Regensburg;Berlin|Nürnberg;Nürnberg-Zollhaus;Messe</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 6|A 73</value>
@@ -19857,7 +19857,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg;NÃ¼rnberg-Zollhaus;Messe</value>
+                    <value>Nürnberg;Nürnberg-Zollhaus;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;white;none</value>
@@ -19891,7 +19891,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth; NÃ¼rnberg</value>
+                    <value>Fürth; Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -19969,7 +19969,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/274807559</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg-Langwasser;Feucht;NÃ¼rnberg-;Messe</value>
+                    <value>Nürnberg-Langwasser;Feucht;Nürnberg-;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;white;none</value>
@@ -20040,7 +20040,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen</value>
+                    <value>München</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 9</value>
@@ -20148,10 +20148,10 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>CZ;;|</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Prag;Amberg;Regensburg|Berlin;Dresden;Bamberg;NÃ¼rnberg;Messe; ;</value>
+                    <value>Prag;Amberg;Regensburg|Berlin;Dresden;Bamberg;Nürnberg;Messe; ;</value>
                 </Data>
                 <Data name="destination:lang:cs:lanes">
-                    <value>Praha;Amberg;Regensburg|Berlin;Dresden;Bamberg;NÃ¼rnberg;Messe; ;</value>
+                    <value>Praha;Amberg;Regensburg|Berlin;Dresden;Bamberg;Nürnberg;Messe; ;</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 6|A 9</value>
@@ -20200,10 +20200,10 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>CZ;;|</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Prag;Amberg;Regensburg|Berlin;Dresden;Bamberg;NÃ¼rnberg;Messe; ;</value>
+                    <value>Prag;Amberg;Regensburg|Berlin;Dresden;Bamberg;Nürnberg;Messe; ;</value>
                 </Data>
                 <Data name="destination:lang:cs:lanes">
-                    <value>Praha;Amberg;Regensburg|Berlin;Dresden;Bamberg;NÃ¼rnberg;Messe; ;</value>
+                    <value>Praha;Amberg;Regensburg|Berlin;Dresden;Bamberg;Nürnberg;Messe; ;</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 6|A 9</value>
@@ -20243,7 +20243,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>MÃ¼nchen|Berlin;NÃ¼rnberg</value>
+                    <value>München|Berlin;Nürnberg</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -20277,7 +20277,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen</value>
+                    <value>München</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -20405,7 +20405,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/275620774</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen;NÃ¼rnberg</value>
+                    <value>München;Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 9</value>
@@ -20544,10 +20544,10 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>|none;CZ</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>MÃ¼nchen|Regensburg;Prag</value>
+                    <value>München|Regensburg;Prag</value>
                 </Data>
                 <Data name="destination:lang:cs:lanes">
-                    <value>MÃ¼nchen|Regensburg;Praha</value>
+                    <value>München|Regensburg;Praha</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 9|A 3</value>
@@ -20615,10 +20615,10 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>none;CZ|</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Regensburg;Prag|WÃ¼rzburg;NÃ¼rnberg-Nord</value>
+                    <value>Regensburg;Prag|Würzburg;Nürnberg-Nord</value>
                 </Data>
                 <Data name="destination:lang:cs:lanes">
-                    <value>Regensburg;Praha|WÃ¼rzburg;NÃ¼rnberg-Nord</value>
+                    <value>Regensburg;Praha|Würzburg;Nürnberg-Nord</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -20851,7 +20851,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Prag/Praha;Amberg;Heilbronn;MÃ¼nchen</value>
+                    <value>Prag/Praha;Amberg;Heilbronn;München</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -20931,10 +20931,10 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>CZ;|</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Prag;Amberg|WÃ¼rzburg;Berlin;NÃ¼rnberg</value>
+                    <value>Prag;Amberg|Würzburg;Berlin;Nürnberg</value>
                 </Data>
                 <Data name="destination:lang:cs:lanes">
-                    <value>Praha;Amberg|WÃ¼rzburg;Berlin;NÃ¼rnberg</value>
+                    <value>Praha;Amberg|Würzburg;Berlin;Nürnberg</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 6|A 3</value>
@@ -20983,10 +20983,10 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>CZ;|</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Prag;Amberg|WÃ¼rzburg;Berlin;NÃ¼rnberg</value>
+                    <value>Prag;Amberg|Würzburg;Berlin;Nürnberg</value>
                 </Data>
                 <Data name="destination:lang:cs:lanes">
-                    <value>Praha;Amberg|WÃ¼rzburg;Berlin;NÃ¼rnberg</value>
+                    <value>Praha;Amberg|Würzburg;Berlin;Nürnberg</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 6|A 3</value>
@@ -21026,7 +21026,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Amberg;Heilbronn;MÃ¼nchen;NÃ¼rnberg-SÃ¼d;NÃ¼rnberg;Messe</value>
+                    <value>Amberg;Heilbronn;München;Nürnberg-Süd;Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;none;none;white;none</value>
@@ -21063,7 +21063,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Regensburg|WÃ¼rzburg;NÃ¼rnberg-Nord;Berlin</value>
+                    <value>Regensburg|Würzburg;Nürnberg-Nord;Berlin</value>
                 </Data>
                 <Data name="destination:symbol:lanes">
                     <value>|none;airport;none</value>
@@ -21103,7 +21103,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>none;none;white|</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>WÃ¼rzburg;Berlin;NÃ¼rnberg|Regensburg;Passau</value>
+                    <value>Würzburg;Berlin;Nürnberg|Regensburg;Passau</value>
                 </Data>
                 <Data name="destination:symbol:lanes">
                     <value>none;none;airport|</value>
@@ -21137,7 +21137,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Heilbronn;MÃ¼nchen;NÃ¼rnberg-SÃ¼d;NÃ¼rnberg;Messe</value>
+                    <value>Heilbronn;München;Nürnberg-Süd;Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;none;white;none</value>
@@ -21326,7 +21326,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>|none;none;none;none;white;none</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>WÃ¼rzburg;Berlin|Heilbronn;MÃ¼nchen;NÃ¼rnberg-SÃ¼d;NÃ¼rnberg;Messe</value>
+                    <value>Würzburg;Berlin|Heilbronn;München;Nürnberg-Süd;Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 3|A 6</value>
@@ -21385,7 +21385,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/304511495</value>
                 </Data>
                 <Data name="destination">
-                    <value>WÃ¼rzburg</value>
+                    <value>Würzburg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -21413,7 +21413,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -21588,7 +21588,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/317143256</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth-Ronhof</value>
+                    <value>Fürth-Ronhof</value>
                 </Data>
                 <Data name="hazard">
                     <value>traffic_signals</value>
@@ -21777,7 +21777,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Heilbronn;Ansbach|MÃ¼nchen</value>
+                    <value>Heilbronn;Ansbach|München</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 6|A 73</value>
@@ -21817,7 +21817,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>||none;white</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>MÃ¼nchen|FÃ¼rth; NÃ¼rnberg|NÃ¼rnberg;Messe</value>
+                    <value>München|Fürth; Nürnberg|Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73|A 73|A 73;B 8</value>
@@ -21863,7 +21863,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen</value>
+                    <value>München</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -21937,7 +21937,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth;NÃ¼rnberg;Heilbronn;Feucht; NÃ¼rnberg;Messe</value>
+                    <value>Fürth;Nürnberg;Heilbronn;Feucht; Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;none;white;white;white</value>
@@ -21980,7 +21980,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes|no</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth;NÃ¼rnberg;Heilbronn;Feucht; NÃ¼rnberg;Messe</value>
+                    <value>Fürth;Nürnberg;Heilbronn;Feucht; Nürnberg;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;none;none;none;white;white;white</value>
@@ -22078,7 +22078,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
             </ExtendedData>
         </Placemark>
         <Placemark>
-            <name>Werner-von-Siemens-StraÃŸe</name>
+            <name>Werner-von-Siemens-Straße</name>
             <LineString>
                 <coordinates>10.9956923,49.5912636 10.9955038,49.5913532</coordinates>
             </LineString>
@@ -22087,7 +22087,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/326487556</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg;Erlangen-West</value>
+                    <value>Nürnberg;Erlangen-West</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>;white</value>
@@ -22114,7 +22114,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="name">
-                    <value>Werner-von-Siemens-StraÃŸe</value>
+                    <value>Werner-von-Siemens-Straße</value>
                 </Data>
                 <Data name="oneway">
                     <value>yes</value>
@@ -22140,7 +22140,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/326487557</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg;Erlangen-West</value>
+                    <value>Nürnberg;Erlangen-West</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>;white</value>
@@ -22449,7 +22449,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Suhl;Erlangen|NÃ¼rnberg-SÃ¼d;FÃ¼rth</value>
+                    <value>Suhl;Erlangen|Nürnberg-Süd;Fürth</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -22508,7 +22508,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>none;none;none;white;none;white;none|</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Regensburg;MÃ¼nchen;NÃ¼rnberg-Nord;NÃ¼rnberg;Messe|WÃ¼rzburg</value>
+                    <value>Regensburg;München;Nürnberg-Nord;Nürnberg;Messe|Würzburg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
@@ -22929,7 +22929,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>|CZ</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Heilbronn;MÃ¼nchen;NÃ¼rnberg-SÃ¼d;NÃ¼rnberg;Messe|Amberg</value>
+                    <value>Heilbronn;München;Nürnberg-Süd;Nürnberg;Messe|Amberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 6</value>
@@ -23566,7 +23566,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Roth;Augsburg;WeiÃŸenburg</value>
+                    <value>Roth;Augsburg;Weißenburg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>B 2</value>
@@ -23631,7 +23631,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>none;none;none;none;white;none|</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>Berlin;Dresden;Bamberg;NÃ¼rnberg;Messe; |MÃ¼nchen</value>
+                    <value>Berlin;Dresden;Bamberg;Nürnberg;Messe; |München</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 9</value>
@@ -23819,7 +23819,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>Regensburg;NÃ¼rnberg;Berlin;MÃ¼nchen</value>
+                    <value>Regensburg;Nürnberg;Berlin;München</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;white;none;none</value>
@@ -23863,7 +23863,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/352472128</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg;Erlangen-West</value>
+                    <value>Nürnberg;Erlangen-West</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>;white</value>
@@ -23909,7 +23909,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/355961665</value>
                 </Data>
                 <Data name="destination">
-                    <value>FÃ¼rth-SÃ¼dstadt;Stadtmitte;NÃ¼rnberg</value>
+                    <value>Fürth-Südstadt;Stadtmitte;Nürnberg</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>white;white</value>
@@ -24046,10 +24046,10 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>|none;CZ</value>
                 </Data>
                 <Data name="destination:lanes">
-                    <value>MÃ¼nchen|Regensburg;Prag</value>
+                    <value>München|Regensburg;Prag</value>
                 </Data>
                 <Data name="destination:lang:cs:lanes">
-                    <value>MÃ¼nchen|Regensburg;Praha</value>
+                    <value>München|Regensburg;Praha</value>
                 </Data>
                 <Data name="destination:ref:lanes">
                     <value>A 9|A 3</value>
@@ -24083,7 +24083,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/373876075</value>
                 </Data>
                 <Data name="destination">
-                    <value>Erlangen;-Eltersdorf;FÃ¼rth;-Stadeln;-Vach</value>
+                    <value>Erlangen;-Eltersdorf;Fürth;-Stadeln;-Vach</value>
                 </Data>
                 <Data name="highway">
                     <value>motorway_link</value>
@@ -24149,7 +24149,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/384882495</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg-Zentrum;Messe</value>
+                    <value>Nürnberg-Zentrum;Messe</value>
                 </Data>
                 <Data name="destination:colour">
                     <value>none;white</value>
@@ -24269,7 +24269,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>yes</value>
                 </Data>
                 <Data name="destination">
-                    <value>MÃ¼nchen</value>
+                    <value>München</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 73</value>
@@ -24328,7 +24328,7 @@ Timestamp: 2016-06-10T09:40:04Z</description>
                     <value>way/409970832</value>
                 </Data>
                 <Data name="destination">
-                    <value>NÃ¼rnberg</value>
+                    <value>Nürnberg</value>
                 </Data>
                 <Data name="destination:ref">
                     <value>A 3</value>
