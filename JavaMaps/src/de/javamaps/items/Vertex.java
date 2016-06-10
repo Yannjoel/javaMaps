@@ -7,6 +7,8 @@ import java.util.Map;
 
 public class Vertex {
 	private final String name;
+	private final float Lat;
+	private final float Lon;
 	private Vertex previous = null;	
 	private int dist = Integer.MAX_VALUE; /// ersatz für unendlich //bisheriger Weg zu diesem Knoten
 	private Map<Vertex, Long> adjacentVertex = new HashMap<>();
