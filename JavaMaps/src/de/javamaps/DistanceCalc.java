@@ -6,8 +6,8 @@ import java.util.*;
 public class DistanceCalc {
 	//Genauigkeit: 1m; Returnwert: short (16bit);
 	public short distance(Edge edge) {
-		String
-		short distance;
+		
+		short distance = 0;
 		return distance;
 	}
 }
