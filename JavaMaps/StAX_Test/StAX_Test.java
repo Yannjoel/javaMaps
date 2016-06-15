@@ -1,5 +1,6 @@
 import java.io.*;
 import javax.xml.stream.*;
+import java.util.*;
 
 public class StAX_Test {
 	public static void main(String [ ] args) throws XMLStreamException, FileNotFoundException, UnsupportedEncodingException{
@@ -9,15 +10,19 @@ public class StAX_Test {
 		XMLInputFactory factory = XMLInputFactory.newInstance();
 		XMLStreamReader parser = factory.createXMLStreamReader(stream);
 		
-		String spacer = "";
+		List elements = new ArrayList();
+		
 		
 		while(parser.hasNext()){
 			if(parser.getEventType() == XMLStreamConstants.START_ELEMENT){
-				System.out.println(spacer+"<"+parser.getLocalName()+">");
+				System.out.println(parser.getLocalName());
+				if(parser.getLocalName() == "Placemark"){
+					while(parser.getLocalName() != "Placemark"){
+						
+					}
+				}
 			}
-			else if(parser.getEventType() == XMLStreamConstants.END_ELEMENT){
-				System.out.println(spacer+"</"+parser.getLocalName()+">");
-			}
+
 			parser.next();
 		}
 		System.out.println("Ende");
