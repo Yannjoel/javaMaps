@@ -1,26 +1,60 @@
 package de.javamaps.items;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Vertex {
 	
+	class Neighbor {
+		final private String name;
+		final private int dis;
 
-	private final int locCode;
+		Neighbor(String nameIn, int disIn) {
+			this.name = nameIn;
+			this.dis = disIn;
+		}
+		
+		public String getName(){
+			return this.name;
+		}
+		public int getDis(){
+			return this.dis;
+		}
+	}
+
+	private final int id;
+	private final int lat;
+	private final int lon;
 	private final String name;
 	private Vertex previous = null;
 	private int way_dist = Integer.MAX_VALUE; /// ersatz für unendlich
 												/// //bisheriger Weg zu diesem
 												/// Knoten
 	private boolean visited;
-	
-	public void setAsStart(){
+	private List<Neighbor> neighbors = new ArrayList<Neighbor>();
+
+	public void setAsStart() {
 		this.way_dist = 0;
 	}
-	
-	public Vertex(String NameIn, int locCodeIn) {
+
+	public Vertex(String NameIn, int idIn, int lonIn, int latIn) {
 		this.name = NameIn;
-		this.locCode = locCodeIn;
+		this.lat = latIn;
+		this.lon = lonIn;
+		this.id = idIn;
+		this.visited = false;
 	}
+
 	public Vertex getPrevious() {
 		return previous;
+	}
+
+	public int getLat() {
+		return lat;
+	}
+
+	public int getLon() {
+		return lon;
 	}
 
 	public void setPrevious(Vertex previous) {
@@ -43,14 +77,24 @@ public class Vertex {
 		this.visited = visited;
 	}
 
-	public int getLocCode() {
-		return locCode;
+	public int getId() {
+		return id;
 	}
 
 	public String getName() {
 		return name;
 	}
-	
-}
 
+	public List<Neighbor> getNeighbors() {
+		return neighbors;
+	}
+
+	public void setNeighbors(List<Neighbor> neighbors) {
+		this.neighbors = neighbors;
+	}
 	
+	public void addNeighbor(Neighbor newNeighbor) {
+		this.neighbors.add(newNeighbor);;
+	}
+
+}
