@@ -94,6 +94,7 @@ public class Vertex {
 		for(Neighbor n :this.neighbors){
 			if (n.getDis() < min){
 				out = n;
+				min = n.getDis();
 			}
 		}
 		this.neighbors.remove(out);
