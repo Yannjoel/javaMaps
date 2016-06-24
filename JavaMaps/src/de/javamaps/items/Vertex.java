@@ -4,29 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Vertex {
-	
-	class Neighbor {
-		final private String name;
-		final private int dis;
-
-		Neighbor(String nameIn, int disIn) {
-			this.name = nameIn;
-			this.dis = disIn;
-		}
-		
-		public String getName(){
-			return this.name;
-		}
-		public int getDis(){
-			return this.dis;
-		}
-	}
 
 	private final int id;
 	private final int lat;
 	private final int lon;
 	private final String name;
-	private Vertex previous = null;
+	private String previous = null;
 	private int way_dist = Integer.MAX_VALUE; /// ersatz für unendlich
 												/// //bisheriger Weg zu diesem
 												/// Knoten
@@ -45,7 +28,7 @@ public class Vertex {
 		this.visited = false;
 	}
 
-	public Vertex getPrevious() {
+	public String getPrevious() {
 		return previous;
 	}
 
@@ -57,7 +40,7 @@ public class Vertex {
 		return lon;
 	}
 
-	public void setPrevious(Vertex previous) {
+	public void setPrevious(String previous) {
 		this.previous = previous;
 	}
 
