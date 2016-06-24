@@ -96,7 +96,7 @@ public class Vertex {
 				out = n;
 			}
 		}
+		this.neighbors.remove(out);
 		return out;
 	}
-
 }
