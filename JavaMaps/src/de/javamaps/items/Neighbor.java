@@ -2,7 +2,7 @@ package de.javamaps.items;
 
 public class Neighbor {
 	final private String name;
-	final private int dis;
+	private int dis;
 
 	public Neighbor(String nameIn, int disIn) {
 		this.name = nameIn;
@@ -14,5 +14,8 @@ public class Neighbor {
 	}
 	public int getDis(){
 		return this.dis;
+	}
+	public void setDis(int disIn){
+		this.dis = disIn;
 	}
 }
