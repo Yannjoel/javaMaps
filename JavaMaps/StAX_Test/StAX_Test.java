@@ -2,6 +2,7 @@ import java.io.*;
 import javax.xml.stream.*;
 
 import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream;
+import org.apache.commons.compress.utils.IOUtils;
 
 import java.util.*;
 
@@ -15,14 +16,18 @@ public class StAX_Test {
 		} catch (IOException e) {
 			throw e;
 		}
-
-		
+		FileOutputStream out = new FileOutputStream("data/Test.xml");
+		System.out.println("Start Copy");
+		IOUtils.copy(fin, out);
+		System.out.println("End Copy");
+		in.close();
+		out.close();
+	/*	
 		XMLInputFactory factory = XMLInputFactory.newInstance();
 		XMLStreamReader parser = factory.createXMLStreamReader(datastream);
 		
 		List<List<String>> elements = new ArrayList<List<String>>();
 		String text;
-		
 		
 		while(parser.hasNext()){
 			switch(parser.getEventType()){
@@ -63,5 +68,6 @@ public class StAX_Test {
 			}
 			parser.next();
 		}
+		*/
 	}
 }
