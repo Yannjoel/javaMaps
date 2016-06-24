@@ -88,12 +88,12 @@ public class Vertex {
 			return true;
 		}
 	}
-	public String nearestNeighbor(){
+	public Neighbor nearestNeighbor(){
 		int min = Integer.MAX_VALUE;
-		String out = null;
+		Neighbor out = null;
 		for(Neighbor n :this.neighbors){
 			if (n.getDis() < min){
-				out = n.getName();
+				out = n;
 			}
 		}
 		return out;
