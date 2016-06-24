@@ -1,13 +1,24 @@
 import java.io.*;
 import javax.xml.stream.*;
+
+import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream;
+
 import java.util.*;
 
 public class StAX_Test {
-	public static void main(String [ ] args) throws XMLStreamException, FileNotFoundException, UnsupportedEncodingException{
-		File file = new File("data/autobahn_bw.kml");
-		InputStreamReader stream = new InputStreamReader(new FileInputStream(file),"ISO-8859-1");
+	public static void main(String [ ] args) throws XMLStreamException, IOException{
+		FileInputStream fin = new FileInputStream("data/saarland.osm.bz2");
+		BufferedInputStream in = new BufferedInputStream(fin);
+		BZip2CompressorInputStream datastream;
+		try {
+			datastream = new BZip2CompressorInputStream(in);
+		} catch (IOException e) {
+			throw e;
+		}
+
+		
 		XMLInputFactory factory = XMLInputFactory.newInstance();
-		XMLStreamReader parser = factory.createXMLStreamReader(stream);
+		XMLStreamReader parser = factory.createXMLStreamReader(datastream);
 		
 		List<List<String>> elements = new ArrayList<List<String>>();
 		String text;
@@ -21,13 +32,13 @@ public class StAX_Test {
 						singleElement.add(parser.getLocalName());
 						singleElement.add(parser.getAttributeLocalName(0));						
 						singleElement.add(parser.getAttributeValue(0));
-						/*try {
+						try {
 							text = parser.getElementText();
 				          
 				        } catch (XMLStreamException e) {
 				        	text = null;
 				        }
-						singleElement.add(text);*/
+						singleElement.add(text);
 						elements.add(singleElement);
 					}
 				break;
