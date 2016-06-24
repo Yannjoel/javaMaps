@@ -8,10 +8,10 @@ import de.javamaps.items.Neighbor;
 import de.javamaps.items.Vertex;
 
 public class javaMap {
-	public static HashMap<String, Vertex> getTestData() {
+	public static HashMap<String, Vertex> getTestgraph() {
 
 		HashMap<String, Vertex> testData = new HashMap<String, Vertex>();
-		// Testdaten
+		// Testgraph
 		testData.put("a", new Vertex("A", 0, 0, 0));
 		testData.put("b", new Vertex("A", 0, 0, 0));
 		testData.put("c", new Vertex("A", 0, 0, 0));
@@ -31,10 +31,9 @@ public class javaMap {
 		return testData;
 
 	}
-	private static final ArrayList<Edge> edgeList = new ArrayList<Edge>();
 
 	public static void main(String[] args) {
-		Dijkstra.getshortestWay("A","B", getTestData());
+		Dijkstra.getshortestWay("A","B", getTestgraph());
 	}
 
 }
