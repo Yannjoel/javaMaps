@@ -16,13 +16,7 @@ public class StAX_Test {
 		} catch (IOException e) {
 			throw e;
 		}
-		FileOutputStream out = new FileOutputStream("data/Test.xml");
-		System.out.println("Start Copy");
-		IOUtils.copy(fin, out);
-		System.out.println("End Copy");
-		in.close();
-		out.close();
-	/*	
+		System.out.println("Start");
 		XMLInputFactory factory = XMLInputFactory.newInstance();
 		XMLStreamReader parser = factory.createXMLStreamReader(datastream);
 		
@@ -32,30 +26,11 @@ public class StAX_Test {
 		while(parser.hasNext()){
 			switch(parser.getEventType()){
 				case XMLStreamReader.START_ELEMENT:
-					if(parser.getLocalName() != "Placemark"){
-						ArrayList<String> singleElement = new ArrayList<String>();
-						singleElement.add(parser.getLocalName());
-						singleElement.add(parser.getAttributeLocalName(0));						
-						singleElement.add(parser.getAttributeValue(0));
-						try {
-							text = parser.getElementText();
-				          
-				        } catch (XMLStreamException e) {
-				        	text = null;
-				        }
-						singleElement.add(text);
-						elements.add(singleElement);
-					}
+					System.out.println(parser.getLocalName());
 				break;
 				
 				case XMLStreamReader.END_ELEMENT:
-					if(parser.getLocalName() == "Placemark"){
-						System.out.println("");
-						for(int i = 0; i < elements.size(); i++){
-							System.out.println(elements.get(i).toString());
-						}
-						elements.clear();
-					}
+
 				break;
 				
 				case XMLStreamReader.END_DOCUMENT:
@@ -68,6 +43,6 @@ public class StAX_Test {
 			}
 			parser.next();
 		}
-		*/
+		
 	}
 }
