@@ -6,8 +6,8 @@ import java.util.List;
 public class Vertex {
 
 	private final int id;
-	private final int lat;
-	private final int lon;
+	private final float lat;
+	private final float lon;
 	private final String name;
 	private String previous = null;
 	private int way_dist = Integer.MAX_VALUE; /// ersatz für unendlich
@@ -20,7 +20,7 @@ public class Vertex {
 		this.way_dist = 0;
 	}
 
-	public Vertex(String NameIn, int idIn, int lonIn, int latIn) {
+	public Vertex(String NameIn, int idIn, float latIn, float lonIn) {
 		this.name = NameIn;
 		this.lat = latIn;
 		this.lon = lonIn;
@@ -32,11 +32,11 @@ public class Vertex {
 		return previous;
 	}
 
-	public int getLat() {
+	public float getLat() {
 		return lat;
 	}
 
-	public int getLon() {
+	public float getLon() {
 		return lon;
 	}
 
@@ -79,5 +79,25 @@ public class Vertex {
 	public void addNeighbor(Neighbor newNeighbor) {
 		this.neighbors.add(newNeighbor);;
 	}
-
+	
+	public boolean hasNeighbors(){
+		if (this.neighbors.isEmpty()){
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
+	public Neighbor nearestNeighbor(){
+		int min = Integer.MAX_VALUE;
+		Neighbor out = null;
+		for(Neighbor n :this.neighbors){
+			if (n.getDis() < min){
+				out = n;
+				min = n.getDis();
+			}
+		}
+		this.neighbors.remove(out);
+		return out;
+	}
 }
