@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Vertex {
 
-	private final int id;
+	private final long id;
 	private final float lat;
 	private final float lon;
 	private final String name;
@@ -20,7 +20,7 @@ public class Vertex {
 		this.way_dist = 0;
 	}
 
-	public Vertex(String NameIn, int idIn, float latIn, float lonIn) {
+	public Vertex(String NameIn, long idIn, float latIn, float lonIn) {
 		this.name = NameIn;
 		this.lat = latIn;
 		this.lon = lonIn;
@@ -60,7 +60,7 @@ public class Vertex {
 		this.visited = visited;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
