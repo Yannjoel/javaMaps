@@ -1,16 +1,16 @@
 package de.javamaps.items;
 
 public class Neighbor {
-	final private String name;
+	final private long id;	// long ID anstatt String Name
 	private int dis;
 
-	public Neighbor(String nameIn, int disIn) {
-		this.name = nameIn;
+	public Neighbor(long idIn, int disIn) {
+		this.id = idIn;
 		this.dis = disIn;
 	}
 	
-	public String getName(){
-		return this.name;
+	public long getName(){
+		return this.id;
 	}
 	public int getDis(){
 		return this.dis;
