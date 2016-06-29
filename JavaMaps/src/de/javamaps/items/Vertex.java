@@ -9,7 +9,7 @@ public class Vertex {
 	private final float lat;
 	private final float lon;
 	private final String name;
-	private String previous = null;
+	private String previous = "";
 	private int way_dist = Integer.MAX_VALUE; /// ersatz für unendlich
 												/// //bisheriger Weg zu diesem
 												/// Knoten
