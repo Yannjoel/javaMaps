@@ -9,7 +9,7 @@ import de.javamaps.items.*;
 
 public class Dijkstra {
 
-	public static void getshortestWay(String start, String end, HashMap<String, Vertex> graphMap) {
+	public static void getshortestWay(Long start, Long end, HashMap<Long, Vertex> graphMap) {
 		StringBuffer output = new StringBuffer();
 		try {
 			graphMap.get(start).setAsStart();
@@ -37,7 +37,7 @@ public class Dijkstra {
 						int newDis = inuse.getWay_dist() + nextN.getDis();
 						if (newDis < nextV.getWay_dist()) {
 							nextV.setWay_dist(inuse.getWay_dist() + nextN.getDis());
-							nextV.setPrevious(inuse.getName());
+							nextV.setPrevious(inuse.getPrevious()+" - " + inuse.getName());
 						}
 					}
 				}
@@ -46,12 +46,15 @@ public class Dijkstra {
 				}
 			}
 			output.append("Total Distance from ");
-			output.append(start);
+			output.append(graphMap.get(start).getName());
 			output.append(" to ");
-			output.append(end);
+			output.append(graphMap.get(end).getName());
 			output.append(" is: ");
 			output.append(graphMap.get(end).getWay_dist());
 			output.append("\n");
+			output.append("Way was");
+			output.append(graphMap.get(end).getPrevious());
+			output.append(" - "+(graphMap.get(end).getName()));
 
 		} catch (Exception e) {
 			output.append("cant reach ");
@@ -61,10 +64,12 @@ public class Dijkstra {
 		System.out.println(output);
 	}
 
-	private static String getNext(HashMap<String, Vertex> graphMap) {
-		String out = null;
+
+
+	private static Long getNext(HashMap<Long, Vertex> graphMap) {
+		Long out = null;
 		int min = Integer.MAX_VALUE;
-		for (Entry<String, Vertex> e : graphMap.entrySet()) {
+		for (Entry<Long, Vertex> e : graphMap.entrySet()) {
 			/// Wenn noch offene Knoten bestehen kleinsten weg ermitteln
 			if (!e.getValue().isVisited() && e.getValue().getWay_dist() < min) {
 				min = e.getValue().getWay_dist();
