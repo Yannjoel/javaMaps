@@ -9,7 +9,7 @@ public class Vertex {
 	private final float lat;
 	private final float lon;
 	private final String name;
-	private String previous = "";
+	private Long previous = null;
 	private int way_dist = Integer.MAX_VALUE; /// ersatz für unendlich
 												/// //bisheriger Weg zu diesem
 												/// Knoten
@@ -28,7 +28,7 @@ public class Vertex {
 		this.visited = false;
 	}
 
-	public String getPrevious() {
+	public Long getPrevious() {
 		return previous;
 	}
 
@@ -40,7 +40,7 @@ public class Vertex {
 		return lon;
 	}
 
-	public void setPrevious(String previous) {
+	public void setPrevious(Long previous) {
 		this.previous = previous;
 	}
 
