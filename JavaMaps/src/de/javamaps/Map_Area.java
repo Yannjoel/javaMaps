@@ -50,10 +50,10 @@ class Map_Area extends JPanel {
     }
     int height = 728;
     int width = 574;
-    float minLon = 6.35017f;
-	float minLat = 49.10868f;
-	float lon_diff = 7.40979f - 6.35017f;
-	float lat_diff = 49.64072f - 49.10868f;
+    float minLon = 5.8667f;
+   	float minLat = 	47.2703f;
+   	float lon_diff = 15.0419f - minLon;
+   	float lat_diff = 55.0585f - minLat;
 	float scaleLon = height/lon_diff;
 	float scaleLat = width/lat_diff;
     

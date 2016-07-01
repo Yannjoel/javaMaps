@@ -28,7 +28,7 @@ public class XmlReader {
 	private static List<Long> ndList = new ArrayList<Long>();
 
 	public static void XmlReader(Gui gui) throws XMLStreamException, IOException {
-		FileInputStream fin = new FileInputStream("data/saarland.osm.bz2");
+		FileInputStream fin = new FileInputStream("C:/Users/Jan-Laptop/Downloads/germany-latest.osm.bz2");
 		BufferedInputStream in = new BufferedInputStream(fin);
 		BZip2CompressorInputStream datastream;
 		try {
