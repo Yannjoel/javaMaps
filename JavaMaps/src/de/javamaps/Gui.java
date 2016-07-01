@@ -68,8 +68,11 @@ public class Gui {
 		
 	}
 	
-	public void drawLine(Vertex x1, Vertex x2){
-		map.drawLine(x1.getLon(), x1.getLat(),x2.getLon(), x2.getLat());
+	public void addLine(Vertex x1, Vertex x2){
+		map.addLine(x1.getLon(), x1.getLat(),x2.getLon(), x2.getLat());
+	}
+	public void drawLines(){
+		map.drawLines();
 	}
 	public void setVisible(boolean b) {
 		frame.setVisible(b);

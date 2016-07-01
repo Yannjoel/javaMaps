@@ -40,13 +40,13 @@ class Map_Area extends JPanel {
         
         
     }
-    public void drawLine(int x1, int y1, int x2, int y2){
+    public void addLine(int x1, int y1, int x2, int y2){
     	lines.add(new Line(x1,y1,x2,y2));
-    	repaint();
+    	
     }
-    public void drawLine(int x1, int y1, int x2, int y2,Color color){
+    public void addLine(int x1, int y1, int x2, int y2,Color color){
     	lines.add(new Line(x1,y1,x2,y2, color));
-    	repaint();
+    	
     }
     int height = 728;
     int width = 574;
@@ -57,17 +57,18 @@ class Map_Area extends JPanel {
 	float scaleLon = height/lon_diff;
 	float scaleLat = width/lat_diff;
     
-	public void drawLine(float lon, float lat, float lon2, float lat2) {
+	public void addLine(float lon, float lat, float lon2, float lat2) {
 		
 		int x1 = (int)(scaleLon*(lon - minLon));
 		int y1 = (int)(scaleLat*(lat - minLat));
 		int x2 = (int)(scaleLon*(lon2 - minLon));
 		int y2 = (int)(scaleLat*(lat2 - minLat));
 		lines.add(new Line(x1,y1,x2,y2, Color.blue));
-    	
+		
+	}
+	
+	public void drawLines(){
 		repaint();
-		
-		
 	}
 }
 
