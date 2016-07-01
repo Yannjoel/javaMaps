@@ -7,10 +7,15 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+/**
+ * @author Tim
+ * @version 1.01
+ * @since 1.8.0_91
+ */
 public class DistanceCalcTest {
 
-	@Test
 	public void test() {
+
 		HashMap<Long, Vertex> testmap = new HashMap<Long, Vertex>();
 		testmap.put((long) 0, new Vertex("C", (long) 0, 49.236444f, 6.9870489f));
 		testmap.put((long) 1, new Vertex("A", (long) 1, 49.2363241f, 6.9859112f));
