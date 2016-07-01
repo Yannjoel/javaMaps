@@ -32,7 +32,7 @@ public class javaMap {
 	}
 
 	public static void main(String[] args) {
-		Dijkstra.getshortestWay((long) 1,(long) 3,getTestgraph());
+		System.out.println(Dijkstra.getshortestWay((long) 1,(long) 3,getTestgraph()));
 	}
 
 }
