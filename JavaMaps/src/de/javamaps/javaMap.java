@@ -1,8 +1,11 @@
 package de.javamaps;
 
 import java.awt.EventQueue;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import javax.xml.stream.XMLStreamException;
 
 import de.javamaps.items.Neighbor;
 import de.javamaps.items.Vertex;
@@ -34,10 +37,11 @@ public class javaMap {
 	static Gui window;
 	public static void main(String[] args) {
 		System.out.println(Dijkstra.getshortestWay((long) 1,(long) 3,getTestgraph()));
+		window = new Gui();
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					window = new Gui();
+					
 					window.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -45,6 +49,16 @@ public class javaMap {
 			}
 		});
 	
+		try {
+			XmlReader.XmlReader(window);
+		} catch (XMLStreamException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 
 }

@@ -27,7 +27,7 @@ public class XmlReader {
 	
 	private static List<Long> ndList = new ArrayList<Long>();
 
-	public static void XmlReader() throws XMLStreamException, IOException {
+	public static void XmlReader(Gui gui) throws XMLStreamException, IOException {
 		FileInputStream fin = new FileInputStream("data/saarland.osm.bz2");
 		BufferedInputStream in = new BufferedInputStream(fin);
 		BZip2CompressorInputStream datastream;
@@ -66,6 +66,8 @@ public class XmlReader {
 							vertexMap.put(ndList.get(i), inputMap.get(ndList.get(i)));
 							if(i < ndList.size()-1){
 								vertexMap.get(ndList.get(i)).addNeighbor(new Neighbor(ndList.get(i+1),1));
+								gui.drawLine(vertexMap.get(ndList.get(i)), vertexMap.get(ndList.get(i)));
+
 							}
 						}
 					}
@@ -92,6 +94,7 @@ public class XmlReader {
 			Long id = iterator.next();
 			if(vertexMap.get(id) != null){
 				System.out.println(id +" "+ junctionMap.get(id).getName() +" "+ vertexMap.get(id).getLat() +" "+ vertexMap.get(id).getLon() +" "+ vertexMap.get(id).getNeighbors());
+				
 			}
 			else{
 				iterator.remove();	// etfernen von Junctions, die nicht auf einer Autobahn liegen.
