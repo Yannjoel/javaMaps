@@ -1,5 +1,6 @@
 package de.javamaps;
 
+import java.awt.EventQueue;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -30,9 +31,20 @@ public class javaMap {
 		return testData;
 
 	}
-
+	static Gui window;
 	public static void main(String[] args) {
 		Dijkstra.getshortestWay((long) 1,(long) 3,getTestgraph());
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					window = new Gui();
+					window.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	
 	}
 
 }
