@@ -1,4 +1,4 @@
-package de.javamaps;
+
 
 import java.io.*;
 import javax.xml.stream.*;
@@ -13,7 +13,7 @@ import java.util.*;
 
 import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream;
 
-public class XmlReader {
+public class XMLParser {
 
 	private static long id;
 	private static float lon;
@@ -27,7 +27,7 @@ public class XmlReader {
 	
 	private static List<Long> ndList = new ArrayList<Long>();
 
-	public static void XmlReader() throws XMLStreamException, IOException {
+	public static void main(String[] args) throws XMLStreamException, IOException {
 		FileInputStream fin = new FileInputStream("data/saarland.osm.bz2");
 		BufferedInputStream in = new BufferedInputStream(fin);
 		BZip2CompressorInputStream datastream;
@@ -108,7 +108,7 @@ public class XmlReader {
 	
 	private static void getChildElements(XMLStreamReader parser) throws XMLStreamException {
 		int stop = 0;
-		if (Objects.equals(parser.getLocalName(), "node")) {	// Ãœbergeordnetes Element ist node
+		if (Objects.equals(parser.getLocalName(), "node")) {	// Übergeordnetes Element ist node
 			
 			while (parser.hasNext() && stop == 0) {
 				switch (parser.getEventType()) {
@@ -150,7 +150,7 @@ public class XmlReader {
 		} 
 		
 		
-		else if (Objects.equals(parser.getLocalName(), "way")) {	//Ãœbergeordnetes Element ist way
+		else if (Objects.equals(parser.getLocalName(), "way")) {	//Übergeordnetes Element ist way
 			while (parser.hasNext() && stop == 0) {
 				switch (parser.getEventType()) {
 
@@ -190,4 +190,3 @@ public class XmlReader {
 		}
 	}
 }
-
