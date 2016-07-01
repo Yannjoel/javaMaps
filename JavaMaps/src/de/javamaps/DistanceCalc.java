@@ -7,16 +7,16 @@ import java.util.Map.Entry;
 
 public class DistanceCalc {
 	// Genauigkeit: 1m; Returnwert: int;
-	public HashMap distanceCalculation(HashMap<String, Vertex> graph) {
+	public static HashMap distanceCalculation(HashMap<Long, Vertex> graph) {
 
-		int distance = 0;
-		for (Entry<String, Vertex> e : graph.entrySet()) {
+		double distance = 0;
+		for (Entry<Long, Vertex> e : graph.entrySet()) {
 			Vertex vertex = e.getValue(); // Vertex
 			for (Neighbor neighbor : vertex.getNeighbors()) {
 				Vertex nvertex = graph.get(neighbor.getName());
-				distance = (int) Math.sqrt(Math.pow(71.5 * (vertex.getLon() - nvertex.getLon()), 2)
-						+ Math.pow(111.3 * (vertex.getLat() - nvertex.getLat()), 2)) / 1000;
-				neighbor.setDis(distance);
+				distance = Math.sqrt(Math.pow(71.5 * (vertex.getLon() - nvertex.getLon()), 2)
+						+ Math.pow(111.3 * (vertex.getLat() - nvertex.getLat()), 2)) * 1000;
+				neighbor.setDis((int) distance);
 			}
 		}
 		return graph;
