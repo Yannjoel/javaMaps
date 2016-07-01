@@ -66,7 +66,7 @@ public class XmlReader {
 							vertexMap.put(ndList.get(i), inputMap.get(ndList.get(i)));
 							if(i < ndList.size()-1){
 								vertexMap.get(ndList.get(i)).addNeighbor(new Neighbor(ndList.get(i+1),1));
-								gui.drawLine(vertexMap.get(ndList.get(i)), vertexMap.get(ndList.get(i)));
+								gui.addLine(vertexMap.get(ndList.get(i)), vertexMap.get(ndList.get(i)));
 
 							}
 						}
@@ -77,6 +77,7 @@ public class XmlReader {
 			}
 			parser.next();
 		}
+		gui.drawLines();
 		System.out.println(inputMap.size());
 		
 		fin.close();
