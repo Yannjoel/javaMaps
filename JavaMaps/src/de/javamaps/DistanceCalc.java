@@ -30,13 +30,14 @@ public class DistanceCalc {
 			Vertex vertex = e.getValue(); // Vertex
 			for (Neighbor neighbor : vertex.getNeighbors()) {
 				Vertex nvertex = graph.get(neighbor.getName());
-				lat1 = vertex.getLat();
-				lat2 = nvertex.getLat();
 				lon1 = vertex.getLon();
 				lon2 = nvertex.getLon();
-				lat = (lat1 + lat2) / 2 * 0.01745;
-				dx = 111.3 * Math.cos(Math.toRadians(lat)) * (lon1 - lon2);
-				dy = 111.3 * (lat1 - lat2); 
+				lat1 = vertex.getLat();
+				lat2 = nvertex.getLat();
+				lat = Math.toRadians((lon1 + lon2) / 2);
+				dx = 111.3 * Math.cos(lat) * (lat1 - lat2);
+				System.out.println(dx);
+				dy = 111.3 * (lon1 - lon2); 
 				distance = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
 				distance = distance * 1000;
 				//distance = Math.sqrt(Math.pow(71.5 * (vertex.getLon() - nvertex.getLon()), 2)

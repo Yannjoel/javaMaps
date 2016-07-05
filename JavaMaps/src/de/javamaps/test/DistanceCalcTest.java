@@ -4,7 +4,6 @@ import de.javamaps.DistanceCalc;
 import de.javamaps.items.*;
 import java.util.*;
 import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 /**
@@ -33,7 +32,5 @@ public class DistanceCalcTest {
 		vsolution = (Vertex) DistanceCalc.distanceCalculation(testmap).get((long) 1);
 		solution = vsolution.getNeighbors().get(0).getDis();
 		assertEquals(33, solution);
-
 	}
-
 }
