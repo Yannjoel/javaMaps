@@ -9,8 +9,6 @@ public class Vertex {
 	private final double lat;
 	private final double lon;
 	private final String name;
-	private long nb1;
-	private long nb2;
 	private Long previous = null;
 	private int way_dist = Integer.MAX_VALUE; /// ersatz für unendlich
 												/// //bisheriger Weg zu diesem
@@ -22,13 +20,11 @@ public class Vertex {
 		this.way_dist = 0;
 	}
 
-	public Vertex(String NameIn, long idIn, double lonIn, double latIn, long nb1, long nb2) {
+	public Vertex(String NameIn, long idIn, double lonIn, double latIn) {
 		this.name = NameIn;
 		this.lat = latIn;
 		this.lon = lonIn;
 		this.id = idIn;
-		this.nb1 = nb1;
-		this.nb2 = nb2;
 		this.visited = false;
 	}
 
@@ -82,6 +78,10 @@ public class Vertex {
 	
 	public void addNeighbor(Neighbor newNeighbor) {
 		this.neighbors.add(newNeighbor);;
+	}
+	
+	public void addNeighbor(long id) {
+		this.neighbors.add(new Neighbor(id,Integer.MAX_VALUE));
 	}
 	
 	public boolean hasNeighbors(){

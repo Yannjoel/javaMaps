@@ -32,9 +32,7 @@ public class XmlReader {
 							new Vertex(parser.getAttributeValue(7),
 									Long.parseLong(parser.getAttributeValue(0)),
 									Double.parseDouble(parser.getAttributeValue(1)),
-									Double.parseDouble(parser.getAttributeValue(2)),
-									Long.parseLong(parser.getAttributeValue(3)),
-									Long.parseLong(parser.getAttributeValue(3))));
+									Double.parseDouble(parser.getAttributeValue(2))));
 					
 				}
 				else if(parser.getLocalName() == "bounds"){

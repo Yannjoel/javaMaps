@@ -17,9 +17,9 @@ public class DistanceCalcTest {
 	public void test() {
 
 		HashMap<Long, Vertex> testmap = new HashMap<Long, Vertex>();
-		testmap.put((long) 0, new Vertex("C", (long) 0, 49.236444, 6.9870489, 1, 0));
-		testmap.put((long) 1, new Vertex("A", (long) 1, 49.2363241, 6.9859112, 2, 0));
-		testmap.put((long) 2, new Vertex("D", (long) 2, 49.2362993, 6.985448, 0, 0));
+		testmap.put((long) 0, new Vertex("C", (long) 0, 49.236444, 6.9870489));
+		testmap.put((long) 1, new Vertex("A", (long) 1, 49.2363241, 6.9859112));
+		testmap.put((long) 2, new Vertex("D", (long) 2, 49.2362993, 6.985448));
 		testmap.get((long) 0).addNeighbor(new Neighbor(1, 0));
 		testmap.get((long) 1).addNeighbor(new Neighbor(2, 0));
 		Vertex vsolution;

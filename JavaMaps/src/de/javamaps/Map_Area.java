@@ -40,8 +40,8 @@ class Map_Area extends JPanel {
         
         
     }
-    public void addLine(int x1, int y1, int x2, int y2){
-    	lines.add(new Line(x1,y1,x2,y2));
+    public void addLine(double d, double e, double f, double g){
+    	lines.add(new Line(d,e,f,g));
     	
     }
     public void addLine(int x1, int y1, int x2, int y2,Color color){
@@ -90,6 +90,9 @@ class Line{
 		this.x2 = x2;
 		this.y2 = y2;
 		this.color = color;
+	}
+	public Line(double d, double e, double f, double g) {
+		// TODO Auto-generated constructor stub
 	}
 	
 	
