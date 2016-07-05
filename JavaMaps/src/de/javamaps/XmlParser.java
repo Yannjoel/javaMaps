@@ -34,6 +34,9 @@ public class XmlParser {
 		}
 		XMLInputFactory factory = XMLInputFactory.newInstance();
 		XMLStreamReader parser = factory.createXMLStreamReader(datastream);
+		
+		XMLOutputFactory outfactory = XMLOutputFactory.newInstance();
+		XMLStreamWriter writer = outfactory.createXMLStreamWriter(new FileOutputStream("data/saarland.xml"), "UTF-8");
 
 		long id;
 		double lon;
@@ -89,9 +92,13 @@ public class XmlParser {
 		parser = factory.createXMLStreamReader(datastream);
 		
 //----------------NODES------------------------------------------------------------------------------
-		
+		writer.writeStartDocument("UTF-8", "1.0");
+		writer.writeCharacters(System.getProperty("line.separator"));
+		writer.writeStartElement("data");
+
+	    
 		while(parser.hasNext()){
-			name = null;
+			name = "null";
 			if (parser.getEventType() == XMLStreamReader.START_ELEMENT){
 				if (Objects.equals(parser.getLocalName(), "node")) {	// Element is node
 					id = Long.parseLong(parser.getAttributeValue(0));
@@ -101,12 +108,27 @@ public class XmlParser {
 						lon = Double.parseDouble(parser.getAttributeValue(1));
 						lat = Double.parseDouble(parser.getAttributeValue(2));
 						getChildElements(parser);
-						System.out.println(id +" "+ name +" "+ lon +" "+ lat +" "+ temp.id);
+						//System.out.println(id +" "+ name +" "+ lon +" "+ lat +" "+ temp.id);
+						writer.writeCharacters(System.getProperty("line.separator"));
+						writer.writeStartElement("node");
+					    writer.writeAttribute("id", String.valueOf(id));
+					    writer.writeAttribute("lon", String.valueOf(lon));
+					    writer.writeAttribute("lat", String.valueOf(lat));
+					    writer.writeAttribute("nb1", String.valueOf(temp.neighbor1));
+					    writer.writeAttribute("nb2", String.valueOf(temp.neighbor2));
+					    writer.writeAttribute("dis1", String.valueOf(temp.distance1));
+					    writer.writeAttribute("dis2", String.valueOf(temp.distance2));
+					    writer.writeAttribute("name", name);
+					    writer.writeEndElement();
 					}	
 				}
 			}
 			parser.next();
 		}
+		writer.writeEndElement();
+		writer.writeEndDocument();
+	    writer.flush();
+	    writer.close();
 	}
 		
 //----------------DEBUG------------------------------------------------------------------------------

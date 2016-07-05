@@ -2,10 +2,10 @@ package de.javamaps.items;
 
 public class Node {
 	public long id;
-	long neighbor1 = 0;
-	long neighbor2 = 0;
-	float distance1;
-	float distance2;
+	public long neighbor1 = 0;
+	public long neighbor2 = 0;
+	public float distance1 = 1;
+	public float distance2 = 1;
 	
 	public Node(long id, long neighbor){
 		this.id = id;
