@@ -20,7 +20,7 @@ public class Vertex {
 		this.way_dist = 0;
 	}
 
-	public Vertex(String NameIn, long idIn, double lonIn, double latIn) {
+	public Vertex(String NameIn, long idIn, double latIn, double lonIn) {
 		this.name = NameIn;
 		this.lat = latIn;
 		this.lon = lonIn;
