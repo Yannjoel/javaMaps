@@ -37,7 +37,7 @@ public class javaMap {
 			e.printStackTrace();
 		}
 		DistanceCalc.distanceCalculation(XmlReader.vertexMap);
-		long start = 259818712;
+		long start = 269182526;
 		long end = 489104;
 		/*
 		 * for(Vertex v : XmlReader.vertexMap){

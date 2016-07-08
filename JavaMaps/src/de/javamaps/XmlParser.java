@@ -105,15 +105,15 @@ public class XmlParser {
 					
 					if((temp = nodes.get(id)) != null){
 						isJunction = false;
-						lon = Double.parseDouble(parser.getAttributeValue(1));
-						lat = Double.parseDouble(parser.getAttributeValue(2));
+						lat = Double.parseDouble(parser.getAttributeValue(1));
+						lon = Double.parseDouble(parser.getAttributeValue(2));
 						getChildElements(parser);
 						//System.out.println(id +" "+ name +" "+ lon +" "+ lat +" "+ temp.id);
 						writer.writeCharacters(System.getProperty("line.separator"));
 						writer.writeStartElement("node");
 					    writer.writeAttribute("id", String.valueOf(id));
-					    writer.writeAttribute("lon", String.valueOf(lon));
 					    writer.writeAttribute("lat", String.valueOf(lat));
+					    writer.writeAttribute("lon", String.valueOf(lon));
 					    writer.writeAttribute("nb1", String.valueOf(temp.neighbor1));
 					    writer.writeAttribute("nb2", String.valueOf(temp.neighbor2));
 					    writer.writeAttribute("dis1", String.valueOf(temp.distance1));
