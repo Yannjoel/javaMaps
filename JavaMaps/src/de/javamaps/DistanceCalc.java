@@ -42,7 +42,7 @@ public class DistanceCalc {
 				neighbor.setDis((int) distance);
 			}
 		}
-		return graph;
+		return graph; //mit berechneter Länge
 
 	}
 }
