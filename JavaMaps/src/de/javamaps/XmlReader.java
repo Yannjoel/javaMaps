@@ -54,10 +54,12 @@ public class XmlReader {
 		Set<Long> set = vertexMap.keySet();
 		Iterator<Long> iterator = set.iterator();
 
-		/*while (iterator.hasNext()) {
+		while (iterator.hasNext()) {
 			Vertex tmp = vertexMap.get(iterator.next());
-			System.out.println(tmp.getId() + " " + tmp.getLon() + " " + tmp.getLat());
-		}*/
+			for(Neighbor neighbor : tmp.getNeighbors()){
+				gui.addLine(tmp, vertexMap.get(neighbor.getName()));
+			}
+		}
 		gui.drawLines();
 
 		//System.out.println(vertexMap.size());
