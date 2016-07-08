@@ -1,7 +1,7 @@
 package de.javamaps;
 
-import java.util.HashMap;
 import java.util.Map.Entry;
+import java.util.TreeMap;
 
 import de.javamaps.items.*;
 
@@ -15,30 +15,32 @@ public class Dijkstra {
 	/**
 	 * @param start = id of the Startvertex
 	 * @param end = id of the Endvertex
-	 * @param graphMap - with all Vertex + Neighbors and calculated Neighbor-Distance
+	 * @param treeMap - with all Vertex + Neighbors and calculated Neighbor-Distance
 	 * @return StringBuffer which contains the console output
 	 */
-	public static StringBuffer getshortestWay(Long start, Long end, HashMap<Long, Vertex> graphMap) {
+	public static StringBuffer getshortestWay(Long start, Long end, TreeMap<Long, Vertex> treeMap) {
 		StringBuffer output = new StringBuffer();
 		try {
 			/// start setzten - überprüft durch try catch auch automatisch on
 			/// der Punkt start überhaupt existiert
-			graphMap.get(start).setAsStart();
+			treeMap.get(start).setAsStart();
 
 			try {
 				// überprüfung ob end in der Map überhaupt existiert
-				graphMap.get(end).getName();
+				treeMap.get(end).getName();
 
 				try {
 					// solange der der end-Punkt noch nicht "besucht" wurde
 					// Funktion für
 					// Knoten mit der Kürzesten way_dist auswählen
-					while (!graphMap.get(end).isVisited()) {
-						Vertex inuse = graphMap.get(getNext(graphMap));
+					long i = 0;
+					while (!treeMap.get(end).isVisited()) {
+						i++;
+						Vertex inuse = treeMap.get(getNext(treeMap));
 						// nähsten Nachbarn auswählen
 						if (inuse.hasNeighbors()) {
 							Neighbor nextN = inuse.nearestNeighbor();
-							Vertex nextV = graphMap.get(nextN.getName());
+							Vertex nextV = treeMap.get(nextN.getName());
 							if (!nextV.isVisited()) {
 								int newDis = inuse.getWay_dist() + nextN.getDis();
 								if (newDis < nextV.getWay_dist()) {
@@ -54,17 +56,18 @@ public class Dijkstra {
 							inuse.setVisited(true);
 						}
 					}
+					System.out.println("Number of Steps: " + i);
 					// Ausgabe nach Abschluss des Algorithmus
 					output.append("Total Distance from ");
-					output.append(graphMap.get(start).getName());
+					output.append(treeMap.get(start).getName());
 					output.append(" to ");
-					output.append(graphMap.get(end).getName());
+					output.append(treeMap.get(end).getName());
 					output.append(" is: ");
-					output.append(graphMap.get(end).getWay_dist());
-					output.append("\n");
+					output.append((double) treeMap.get(end).getWay_dist() / 1000);
+					output.append(" km \n \n");
 					output.append("Way was:\n");
 					try {
-						output.append(getFullWay(graphMap.get(end), graphMap));
+						output.append(getFullWay(treeMap.get(end), treeMap));
 					} catch (Exception e) {
 						output.append(e);
 					}
@@ -92,31 +95,33 @@ public class Dijkstra {
 
 	/**
 	 * @param vertex
-	 * @param graphMap
+	 * @param treeMap
 	 * @return Stringbuffer that list the way from a vertex back to the start vertex of the graphMap
 	 */
-	private static StringBuffer getFullWay(Vertex vertex, HashMap<Long, Vertex> graphMap) {
+	private static StringBuffer getFullWay(Vertex vertex, TreeMap<Long, Vertex> treeMap) {
 		StringBuffer output = new StringBuffer();
 		if (vertex.getPrevious() != null) {
-			Vertex previous = graphMap.get(vertex.getPrevious());
-			output.append(getFullWay(previous, graphMap));
+			Vertex previous = treeMap.get(vertex.getPrevious());
+			output.append(getFullWay(previous, treeMap));
 		}
-		output.append(vertex.getId());
-		output.append(" (name = ");
-		output.append(vertex.getName());
-		output.append(")");
-		output.append("\n");
+		if(vertex.getName().equals("null") == false){
+			output.append(vertex.getId());
+			output.append(" (name = ");
+			output.append(vertex.getName());
+			output.append(")");
+			output.append("\n");
+		}
 		return output;
 	}
 
 	/**
-	 * @param graphMap
+	 * @param treeMap
 	 * @return id of the nearest open Vertex
 	 */
-	private static Long getNext(HashMap<Long, Vertex> graphMap) {
+	private static Long getNext(TreeMap<Long, Vertex> treeMap) {
 		Long out = null;
 		int min = Integer.MAX_VALUE;
-		for (Entry<Long, Vertex> e : graphMap.entrySet()) {
+		for (Entry<Long, Vertex> e : treeMap.entrySet()) {
 			/// Wenn noch offene Knoten bestehen kleinsten weg ermitteln
 			if (!e.getValue().isVisited() && e.getValue().getWay_dist() < min) {
 				min = e.getValue().getWay_dist();
