@@ -40,29 +40,31 @@ class Map_Area extends JPanel {
         
         
     }
-    public void addLine(double d, double e, double f, double g){
-    	lines.add(new Line(d,e,f,g));
+    public void addLine(int x1, int y1, int x2, int y2){
+    	lines.add(new Line(x1,y1,x2,y2));
     	
     }
     public void addLine(int x1, int y1, int x2, int y2,Color color){
     	lines.add(new Line(x1,y1,x2,y2, color));
     	
     }
-    int height = 728;
-    int width = 574;
-    float minLon = 5.8667f;
-   	float minLat = 	47.2703f;
-   	float lon_diff = 15.0419f - minLon;
-   	float lat_diff = 55.0585f - minLat;
-	float scaleLon = height/lon_diff;
-	float scaleLat = width/lat_diff;
+    int height = 774;
+    int width = 739;
+    double minLon = 6.35017;
+    double minLat = 49.10868;
+   	double maxLon = 7.40979;
+   	double maxLat = 49.64072;
+   	double lon_diff = maxLon - minLon;
+   	double lat_diff = maxLat - minLat;
+   	double scaleLon = height/lon_diff;
+	double scaleLat = width/lat_diff;
     
-	public void addLine(float lon, float lat, float lon2, float lat2) {
+	public void addLine(double lon, double lat, double lon2, double lat2) {
 		
 		int x1 = (int)(scaleLon*(lon - minLon));
-		int y1 = (int)(scaleLat*(lat - minLat));
+		int y1 = (int) Math.abs((scaleLat*(lat - minLat)-height));
 		int x2 = (int)(scaleLon*(lon2 - minLon));
-		int y2 = (int)(scaleLat*(lat2 - minLat));
+		int y2 = (int)Math.abs((scaleLat*(lat2 - minLat)-height));
 		lines.add(new Line(x1,y1,x2,y2, Color.blue));
 		
 	}
@@ -90,9 +92,6 @@ class Line{
 		this.x2 = x2;
 		this.y2 = y2;
 		this.color = color;
-	}
-	public Line(double d, double e, double f, double g) {
-		// TODO Auto-generated constructor stub
 	}
 	
 	
