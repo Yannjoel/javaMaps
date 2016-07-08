@@ -2,6 +2,7 @@ package de.javamaps;
 
 import java.awt.EventQueue;
 import java.awt.Graphics;
+import java.util.Stack;
 
 import javax.swing.JFrame;
 
@@ -70,6 +71,19 @@ public class Gui {
 	
 	public void addLine(Vertex x1, Vertex x2){
 		map.addLine(x1.getLon(), x1.getLat(),x2.getLon(), x2.getLat());
+	}
+	public void addLine(Vertex x1, Vertex x2, Color color){
+		map.addLine(x1.getLon(), x1.getLat(),x2.getLon(), x2.getLat(), color);
+	}
+	public void drawRoute(Stack<Vertex> routeStack){
+		Vertex lastPoint = null;
+		for(Vertex point : routeStack){
+			if(lastPoint != null){
+				addLine(lastPoint, point ,Color.red);
+			}
+			lastPoint = point;
+		}
+		drawLines();
 	}
 	public void drawLines(){
 		map.drawLines();

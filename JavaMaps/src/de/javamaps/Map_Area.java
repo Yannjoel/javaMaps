@@ -68,6 +68,15 @@ class Map_Area extends JPanel {
 		lines.add(new Line(x1,y1,x2,y2, Color.blue));
 		
 	}
+	public void addLine(double lon, double lat, double lon2, double lat2, Color color) {
+		
+		int x1 = (int)(scaleLon*(lon - minLon));
+		int y1 = (int) Math.abs((scaleLat*(lat - minLat)-height));
+		int x2 = (int)(scaleLon*(lon2 - minLon));
+		int y2 = (int)Math.abs((scaleLat*(lat2 - minLat)-height));
+		lines.add(new Line(x1,y1,x2,y2, color));
+		
+	}
 	
 	public void drawLines(){
 		repaint();
