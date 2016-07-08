@@ -1,6 +1,7 @@
 package de.javamaps;
 
 import java.util.Map.Entry;
+import java.util.Stack;
 import java.util.TreeMap;
 
 import de.javamaps.items.*;
@@ -23,18 +24,19 @@ public class Dijkstra {
 		try {
 			/// start setzten - überprüft durch try catch auch automatisch on
 			/// der Punkt start überhaupt existiert
-			treeMap.get(start).setAsStart();
-
+			Vertex startV = treeMap.get(start);
+			Vertex endV = treeMap.get(end);
+			startV.setAsStart();
 			try {
 				// überprüfung ob end in der Map überhaupt existiert
-				treeMap.get(end).getName();
+				endV.getName();
 
 				try {
 					// solange der der end-Punkt noch nicht "besucht" wurde
 					// Funktion für
 					// Knoten mit der Kürzesten way_dist auswählen
-					long i = 0;
-					while (!treeMap.get(end).isVisited()) {
+					long i = 0; // für Number of Steps
+					while (!endV.isVisited()) {
 						i++;
 						Vertex inuse = treeMap.get(getNext(treeMap));
 						// nähsten Nachbarn auswählen
@@ -59,15 +61,15 @@ public class Dijkstra {
 					System.out.println("Number of Steps: " + i);
 					// Ausgabe nach Abschluss des Algorithmus
 					output.append("Total Distance from ");
-					output.append(treeMap.get(start).getName());
+					output.append(startV.getName());
 					output.append(" to ");
-					output.append(treeMap.get(end).getName());
+					output.append(endV.getName());
 					output.append(" is: ");
-					output.append((double) treeMap.get(end).getWay_dist() / 1000);
+					output.append((double) endV.getWay_dist() / 1000);
 					output.append(" km \n \n");
 					output.append("Way was:\n");
 					try {
-						output.append(getFullWay(treeMap.get(end), treeMap));
+						output.append(getFullWay(endV, treeMap));
 					} catch (Exception e) {
 						output.append(e);
 					}
@@ -129,5 +131,17 @@ public class Dijkstra {
 			}
 		}
 		return out;
+	}
+	
+	public static Stack<Vertex> getfullWayStack (TreeMap<Long, Vertex> map, Long end){
+		Stack<Vertex> output = new Stack<Vertex>();
+		Vertex v;
+		Long id = end;
+		do{
+		v = map.get(id);
+		output.push(v);
+		id = v.getPrevious();
+		}while(id != null);
+		return output;
 	}
 }
