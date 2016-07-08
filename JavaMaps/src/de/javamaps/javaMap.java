@@ -47,7 +47,7 @@ public class javaMap {
 		System.out.println("Dieser Vorgang kann einige Minuten in Anspruch nehmen");
 		StringBuffer output = Dijkstra.getshortestWay(start, end, XmlReader.vertexMap);
 		System.out.println(output);
-		Stack<Vertex> test = (Dijkstra.getfullWayList(XmlReader.vertexMap, end));
+		Stack<Vertex> test = (Dijkstra.getfullWayStack(XmlReader.vertexMap, end));
 	}
 
 }
