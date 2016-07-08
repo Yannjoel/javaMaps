@@ -34,9 +34,9 @@ public class DistanceCalc {
 				lon2 = nvertex.getLon();
 				lat1 = vertex.getLat();
 				lat2 = nvertex.getLat();
-				lat = Math.toRadians((lon1 + lon2) / 2);
-				dx = 111.3 * Math.cos(lat) * (lat1 - lat2);
-				dy = 111.3 * (lon1 - lon2); 
+				lat = Math.toRadians((lat1 + lat2) / 2);
+				dx = 111.3 * Math.cos(lat) * (lon1 - lon2);
+				dy = 111.3 * (lat1 - lat2); 
 				distance = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
 				distance = distance * 1000;
 				neighbor.setDis((int) distance);
