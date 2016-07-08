@@ -18,13 +18,15 @@ public class XmlParser {
 	private static String name;
 	private static boolean isJunction;
 	private static boolean isMotorway;
+	private static String source = "data/deutschland.osm.bz2";
+	private static String target = "data/deutschland.xml";
 	private static List<Long> ndList = new LinkedList<Long>();
 	//private static List<Long> nodes = new LinkedList<Long>();
 	private static Map<Long, Node> nodes = new TreeMap<Long, Node>();
 	
 	
 	public static void main(String[] args) throws XMLStreamException, IOException {
-		FileInputStream fin = new FileInputStream("data/saarland.osm.bz2");
+		FileInputStream fin = new FileInputStream(source);
 		BufferedInputStream in = new BufferedInputStream(fin);
 		BZip2CompressorInputStream datastream;
 		try {
@@ -36,7 +38,7 @@ public class XmlParser {
 		XMLStreamReader parser = factory.createXMLStreamReader(datastream);
 		
 		XMLOutputFactory outfactory = XMLOutputFactory.newInstance();
-		XMLStreamWriter writer = outfactory.createXMLStreamWriter(new FileOutputStream("data/saarland.xml"), "UTF-8");
+		XMLStreamWriter writer = outfactory.createXMLStreamWriter(new FileOutputStream(target), "UTF-8");
 
 		long id;
 		double lon;
@@ -82,7 +84,7 @@ public class XmlParser {
 		datastream.close();		
 		parser.close();
 		
-		fin = new FileInputStream("data/saarland.osm.bz2");
+		fin = new FileInputStream(source);
 		in = new BufferedInputStream(fin);
 		try {
 			datastream = new BZip2CompressorInputStream(in);
