@@ -10,6 +10,7 @@ public class Vertex {
 	private final double lon;
 	private final String name;
 	private Long previous = null;
+	public int waysIn;
 	private int way_dist = Integer.MAX_VALUE; /// ersatz für unendlich
 												/// //bisheriger Weg zu diesem
 												/// Knoten
@@ -75,33 +76,24 @@ public class Vertex {
 	public void setNeighbors(List<Neighbor> neighbors) {
 		this.neighbors = neighbors;
 	}
-	
+
 	public void addNeighbor(Neighbor newNeighbor) {
-		this.neighbors.add(newNeighbor);;
+		this.neighbors.add(newNeighbor);
 	}
-	
+
 	public void addNeighbor(long id) {
-		this.neighbors.add(new Neighbor(id,Integer.MAX_VALUE));
+		this.neighbors.add(new Neighbor(id, Integer.MAX_VALUE));
 	}
-	
-	public boolean hasNeighbors(){
-		if (this.neighbors.isEmpty()){
+
+	public void removeNeighbor(Neighbor neighbor) {
+		this.neighbors.remove(neighbor);
+	}
+
+	public boolean hasNeighbors() {
+		if (this.neighbors.isEmpty()) {
 			return false;
-		}
-		else{
+		} else {
 			return true;
 		}
-	}
-	public Neighbor nearestNeighbor(){
-		int min = Integer.MAX_VALUE;
-		Neighbor out = null;
-		for(Neighbor n :this.neighbors){
-			if (n.getDis() < min){
-				out = n;
-				min = n.getDis();
-			}
-		}
-		this.neighbors.remove(out);
-		return out;
 	}
 }
