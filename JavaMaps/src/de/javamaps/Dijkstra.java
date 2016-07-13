@@ -1,9 +1,9 @@
 package de.javamaps;
 
+import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Stack;
 import java.util.TreeMap;
-
 import de.javamaps.items.*;
 
 /**
@@ -24,8 +24,11 @@ public class Dijkstra {
 		try {
 			/// start setzten - überprüft durch try catch auch automatisch on
 			/// der Punkt start überhaupt existiert
+			
 			Vertex startV = treeMap.get(start);
 			Vertex endV = treeMap.get(end);
+			HashMap<Long, Vertex> reachableVertex = new HashMap();
+			reachableVertex.put(start, startV);
 			startV.setAsStart();
 			try {
 				// überprüfung ob end in der Map überhaupt existiert
@@ -38,25 +41,24 @@ public class Dijkstra {
 					long i = 0; // für Number of Steps
 					while (!endV.isVisited()) {
 						i++;
-						Vertex inuse = treeMap.get(getNext(treeMap));
+						Vertex inuse = getNext(reachableVertex);
 						// nähsten Nachbarn auswählen
 						if (inuse.hasNeighbors()) {
-							Neighbor nextN = inuse.nearestNeighbor();
-							Vertex nextV = treeMap.get(nextN.getName());
-							if (!nextV.isVisited()) {
-								int newDis = inuse.getWay_dist() + nextN.getDis();
-								if (newDis < nextV.getWay_dist()) {
-									nextV.setWay_dist(inuse.getWay_dist() + nextN.getDis());
-									nextV.setPrevious(inuse.getId());
+							for(Neighbor nextN : inuse.getNeighbors()){
+								Vertex nextV = treeMap.get(nextN.getName());
+								if (!nextV.isVisited()) {
+									int newDis = inuse.getWay_dist() + nextN.getDis();
+									if (newDis < nextV.getWay_dist()) {
+										nextV.setWay_dist(inuse.getWay_dist() + nextN.getDis());
+										nextV.setPrevious(inuse.getId());
+									}
+								reachableVertex.put(nextN.getName(), nextV);
 								}
 							}
-						} else {
-							// sobald der Knoten abgearbeitet ist (d.h. er hat
-							// keine
-							// offenen Nachbarn mehr) wird er als besucht
-							// gesetzt
-							inuse.setVisited(true);
 						}
+							inuse.setVisited(true);
+							reachableVertex.remove(inuse);
+						
 					}
 					System.out.println("Number of Steps: " + i);
 					// Ausgabe nach Abschluss des Algorithmus
@@ -117,17 +119,17 @@ public class Dijkstra {
 	}
 
 	/**
-	 * @param treeMap
+	 * @param reachableVertex
 	 * @return id of the nearest open Vertex
 	 */
-	private static Long getNext(TreeMap<Long, Vertex> treeMap) {
-		Long out = null;
+	private static Vertex getNext(HashMap<Long, Vertex> reachableVertex) {
+		Vertex out = null;
 		int min = Integer.MAX_VALUE;
-		for (Entry<Long, Vertex> e : treeMap.entrySet()) {
+		for (Entry<Long, Vertex> e : reachableVertex.entrySet()) {
 			/// Wenn noch offene Knoten bestehen kleinsten weg ermitteln
 			if (!e.getValue().isVisited() && e.getValue().getWay_dist() < min) {
 				min = e.getValue().getWay_dist();
-				out = e.getKey();
+				out = e.getValue();
 			}
 		}
 		return out;
