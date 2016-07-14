@@ -18,7 +18,7 @@ public class XmlParser {
 	private static String name;
 	private static boolean isJunction;
 	private static boolean isMotorway;
-	private static String source = "data/deutschland.osm.bz2";
+	private static String source = "data/deutschland.osm.bz2"; 
 	private static String target = "data/deutschland.xml";
 	private static List<Long> ndList = new LinkedList<Long>();
 	//private static List<Long> nodes = new LinkedList<Long>();
@@ -26,7 +26,7 @@ public class XmlParser {
 	
 	
 	public static void main(String[] args) throws XMLStreamException, IOException {
-		FileInputStream fin = new FileInputStream(source);
+		FileInputStream fin = new FileInputStream(source); //öffnen komprimierte Datei
 		BufferedInputStream in = new BufferedInputStream(fin);
 		BZip2CompressorInputStream datastream;
 		try {
@@ -47,7 +47,7 @@ public class XmlParser {
 		Node temp;
 		
 //---------------WAYS-------------------------------------------------
-		
+// holt relevante Nodes (alle moterways)
 		while (parser.hasNext()) {
 
 			if (parser.getEventType() == XMLStreamReader.START_ELEMENT) {				
@@ -78,7 +78,7 @@ public class XmlParser {
 		}
 
 //----------------RESTART STREAMS----------------------------------------------------------------------
-
+// informationen zu nodes
 		fin.close();
 		in.close();
 		datastream.close();		
@@ -94,6 +94,7 @@ public class XmlParser {
 		parser = factory.createXMLStreamReader(datastream);
 		
 //----------------NODES------------------------------------------------------------------------------
+//Schreibt neue xml-Datei
 		writer.writeStartDocument("UTF-8", "1.0");
 		writer.writeCharacters(System.getProperty("line.separator"));
 		writer.writeStartElement("data");
