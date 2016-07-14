@@ -39,7 +39,7 @@ public class MotorwayRamp {
 				singleId = null;
 			}
 		}
-		System.out.println("Name list created....");
+		System.out.println("Namenliste erzeugt....");
 		return out;
 	}
 }
