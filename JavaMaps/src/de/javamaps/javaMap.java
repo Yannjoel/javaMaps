@@ -2,13 +2,10 @@ package de.javamaps;
 
 import java.awt.EventQueue;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Stack;
 
 import javax.xml.stream.XMLStreamException;
 
-import de.javamaps.items.Neighbor;
 import de.javamaps.items.Vertex;
 
 public class javaMap {
@@ -37,7 +34,7 @@ public class javaMap {
 			e.printStackTrace();
 		}
 		DistanceCalc.distanceCalculation(XmlReader.vertexMap);
-		long start = 266399969; //Stuttgart Flughafen/Messe
+		long start = 104580839; //Stuttgart Flughafen/Messe
 		long end = 24557201; //Berlin-Spandau
 		/*
 		 * for(Vertex v : XmlReader.vertexMap){
