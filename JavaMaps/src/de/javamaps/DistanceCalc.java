@@ -35,9 +35,9 @@ public class DistanceCalc {
 				lat1 = vertex.getLat();
 				lat2 = nvertex.getLat();
 				lat = Math.toRadians((lat1 + lat2) / 2);
-				dx = 111.3 * Math.cos(lat) * (lon1 - lon2);
+				dx = 111.3 * Math.cos(lat) * (lon1 - lon2); // *111.3 für Erdkrümmung
 				dy = 111.3 * (lat1 - lat2); 
-				distance = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
+				distance = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2)); // vgl. Satz des Pythagoras
 				distance = distance * 1000;
 				neighbor.setDis((int) distance);
 			}
