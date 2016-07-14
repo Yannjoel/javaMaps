@@ -14,25 +14,23 @@ import de.javamaps.items.*;
 public class Dijkstra {
 
 	/**
-	 * @param start = id of the Startvertex
-	 * @param end = id of the Endvertex
-	 * @param treeMap - with all Vertex + Neighbors and calculated Neighbor-Distance
+	 * @param start
+	 *            = id of the Startvertex
+	 * @param end
+	 *            = id of the Endvertex
+	 * @param treeMap
+	 *            - with all Vertex + Neighbors and calculated Neighbor-Distance
 	 * @return StringBuffer which contains the console output
 	 */
 	public static StringBuffer getshortestWay(Long start, Long end, TreeMap<Long, Vertex> treeMap) {
 		StringBuffer output = new StringBuffer();
-		try {
-			/// start setzten - überprüft durch try catch auch automatisch on
-			/// der Punkt start überhaupt existiert
-			
-			Vertex startV = treeMap.get(start);
-			Vertex endV = treeMap.get(end);
-			HashMap<Long, Vertex> reachableVertex = new HashMap();
-			reachableVertex.put(start, startV);
-			startV.setAsStart();
-			try {
-				// überprüfung ob end in der Map überhaupt existiert
-				endV.getName();
+		if (treeMap.containsKey(start)) {
+			if (treeMap.containsKey(end)) {
+				Vertex startV = treeMap.get(start);
+				Vertex endV = treeMap.get(end);
+				HashMap<Long, Vertex> reachableVertex = new HashMap<Long, Vertex>();
+				reachableVertex.put(start, startV);
+				startV.setAsStart();
 
 				try {
 					// solange der der end-Punkt noch nicht "besucht" wurde
@@ -44,7 +42,7 @@ public class Dijkstra {
 						Vertex inuse = getNext(reachableVertex);
 						// nähsten Nachbarn auswählen
 						if (inuse.hasNeighbors()) {
-							for(Neighbor nextN : inuse.getNeighbors()){
+							for (Neighbor nextN : inuse.getNeighbors()) {
 								Vertex nextV = treeMap.get(nextN.getName());
 								if (!nextV.isVisited()) {
 									int newDis = inuse.getWay_dist() + nextN.getDis();
@@ -52,13 +50,13 @@ public class Dijkstra {
 										nextV.setWay_dist(inuse.getWay_dist() + nextN.getDis());
 										nextV.setPrevious(inuse.getId());
 									}
-								reachableVertex.put(nextN.getName(), nextV);
+									reachableVertex.put(nextN.getName(), nextV);
 								}
 							}
 						}
-							inuse.setVisited(true);
-							reachableVertex.remove(inuse);
-						
+						inuse.setVisited(true);
+						reachableVertex.remove(inuse);
+
 					}
 					System.out.println("Number of Steps: " + i);
 					// Ausgabe nach Abschluss des Algorithmus
@@ -82,13 +80,13 @@ public class Dijkstra {
 					output.append(end);
 					output.append("\n");
 				}
-			} catch (Exception e) {
+			} else {
 				output.append("Cant find ");
 				output.append(end);
 				output.append(" in our map");
 				output.append("\n");
 			}
-		} catch (Exception e) {
+		} else {
 			output.append("Cant find ");
 			output.append(start);
 			output.append(" in our map");
@@ -100,7 +98,8 @@ public class Dijkstra {
 	/**
 	 * @param vertex
 	 * @param treeMap
-	 * @return Stringbuffer that list the way from a vertex back to the start vertex of the graphMap
+	 * @return Stringbuffer that list the way from a vertex back to the start
+	 *         vertex of the graphMap
 	 */
 	private static StringBuffer getFullWay(Vertex vertex, TreeMap<Long, Vertex> treeMap) {
 		StringBuffer output = new StringBuffer();
@@ -108,7 +107,7 @@ public class Dijkstra {
 			Vertex previous = treeMap.get(vertex.getPrevious());
 			output.append(getFullWay(previous, treeMap));
 		}
-		if(vertex.getName().equals("null") == false){
+		if (vertex.getName().equals("null") == false) {
 			output.append(vertex.getId());
 			output.append(" (name = ");
 			output.append(vertex.getName());
@@ -134,16 +133,16 @@ public class Dijkstra {
 		}
 		return out;
 	}
-	
-	public static Stack<Vertex> getfullWayStack (TreeMap<Long, Vertex> map, Long end){
+
+	public static Stack<Vertex> getfullWayStack(TreeMap<Long, Vertex> map, Long end) {
 		Stack<Vertex> output = new Stack<Vertex>();
 		Vertex v;
 		Long id = end;
-		do{
-		v = map.get(id);
-		output.push(v);
-		id = v.getPrevious();
-		}while(id != null);
+		do {
+			v = map.get(id);
+			output.push(v);
+			id = v.getPrevious();
+		} while (id != null);
 		return output;
 	}
 }
