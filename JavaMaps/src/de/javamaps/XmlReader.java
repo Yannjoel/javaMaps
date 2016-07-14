@@ -18,7 +18,7 @@ public class XmlReader {
 	public static TreeMap<Long, Vertex> vertexMap = new TreeMap<Long, Vertex>();
 
 	public static void XmlReader(Gui gui) throws XMLStreamException, IOException {
-		FileInputStream fin = new FileInputStream("data/saarland.xml");
+		FileInputStream fin = new FileInputStream("data/deutschland.xml");
 		BufferedInputStream in = new BufferedInputStream(fin);
 
 		XMLInputFactory factory = XMLInputFactory.newInstance();
