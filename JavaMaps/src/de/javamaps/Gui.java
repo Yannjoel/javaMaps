@@ -2,6 +2,8 @@ package de.javamaps;
 
 import java.awt.EventQueue;
 import java.awt.Graphics;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 import java.util.Stack;
 
 import javax.swing.JFrame;
@@ -46,9 +48,10 @@ public class Gui {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 1000, 800);
+		frame.setBounds(100, 100, 1200, 900);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.addComponentListener(new FrameEvent());
 		
 		cb_start = new JComboBox();
 		cb_start.setBounds(10, 11, 180, 20);
@@ -63,11 +66,41 @@ public class Gui {
 		frame.getContentPane().add(btn_start);
 		
 		map = new Map_Area();
-		map.setBounds(200, 11, 774, 739);
+		map.setBounds(200, 11, 974, 839);
 		frame.getContentPane().add(map);
 		
 		
+		
 	}
+	 private class FrameEvent implements ComponentListener{
+	        
+	        public void componentResized(ComponentEvent arg0) {
+	        	
+	        	map.setSize(frame.getWidth() - 220, frame.getHeight()- 61);
+	        	map.resized();
+
+	        }
+
+			@Override
+			public void componentHidden(ComponentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void componentMoved(ComponentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void componentShown(ComponentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+	        
+	    }
+	
 	
 	public void addLine(Vertex x1, Vertex x2){
 		map.addLine(x1.getLon(), x1.getLat(),x2.getLon(), x2.getLat());
