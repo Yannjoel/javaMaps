@@ -10,7 +10,7 @@ import java.util.Map.Entry;
  * @since 1.8.0_91
  */
 public class DistanceCalc {
-	// Genauigkeit: 1m; Returnwert: int;
+	// Genauigkeit: 1m; Returnwert: kompletter Graph mit berechneten längen;
 	/**
 	 * @param graph
 	 * @return graph with calculated neighbours for each neighbour
