@@ -53,11 +53,13 @@ public class javaMap {
 		//window.drawRoute(routeStack);
 	}
 	
-	public static void calcRoute(long start, long end){
+	public static String calcRoute(long start, long end){
 		StringBuffer output = Dijkstra.getshortestWay(start, end, XmlReader.vertexMap);
 		System.out.println(output);
+		
 		Stack<Vertex> routeStack = (Dijkstra.getfullWayStack(XmlReader.vertexMap, end));
 		window.drawRoute(routeStack);
+		return output.toString();
 	}
 
 }

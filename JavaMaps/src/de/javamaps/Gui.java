@@ -10,6 +10,7 @@ import java.util.Stack;
 import java.util.TreeMap;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 import de.javamaps.items.ComboItem;
 import de.javamaps.items.Vertex;
@@ -61,9 +62,11 @@ public class Gui {
 		JButton btn_start = new JButton("Find Route");
 		btn_start.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				javaMap.calcRoute(((ComboItem) cb_start.getSelectedItem()).getId(), ((ComboItem) cb_target.getSelectedItem()).getId());
+				 map.removeRoute();
+				 JOptionPane.showMessageDialog(null, javaMap.calcRoute(((ComboItem) cb_start.getSelectedItem()).getId(), ((ComboItem) cb_target.getSelectedItem()).getId()));
 			}
 		});
+		
 		btn_start.setBounds(10, 90, 180, 33);
 		frame.getContentPane().add(btn_start);
 		

@@ -2,6 +2,7 @@ package de.javamaps;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.EventQueue;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -147,6 +148,24 @@ class Map_Area extends JPanel {
 		repaint();
 		
 		
+	}
+	
+	public void removeRoute(){
+		for(Line line : lines){
+			if(line.color == Color.RED){
+				EventQueue.invokeLater(new Runnable() {
+					public void run() {
+						try {
+
+							lines.remove(line);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+				});
+			}	
+		}
+		repaint();
 	}
 	
 }
