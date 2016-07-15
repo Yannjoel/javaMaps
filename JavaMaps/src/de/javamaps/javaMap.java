@@ -34,8 +34,9 @@ public class javaMap {
 			e.printStackTrace();
 		}
 		DistanceCalc.distanceCalculation(XmlReader.vertexMap);
-		long start = 104580839; //Stuttgart Flughafen/Messe
-		long end = 24557201; //Berlin-Spandau
+		BuildBridge.createBridge(XmlReader.vertexMap);
+		//long start = 104580839; //Stuttgart Flughafen/Messe
+		//long end = 24557201; //Berlin-Spandau
 		/*
 		 * for(Vertex v : XmlReader.vertexMap){
 		 * System.out.println(v.getNeighbors()); }
