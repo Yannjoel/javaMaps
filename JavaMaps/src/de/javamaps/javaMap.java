@@ -1,8 +1,14 @@
 package de.javamaps;
 
+
 import java.awt.EventQueue;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
+import java.util.TreeMap;
+import java.util.Map.Entry;
+
 
 import javax.xml.stream.XMLStreamException;
 
@@ -33,30 +39,51 @@ public class javaMap {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		DistanceCalc.distanceCalculation(XmlReader.vertexMap);
 		BuildBridge.createBridge(XmlReader.vertexMap);
-		//long start = 104580839; //Stuttgart Flughafen/Messe
-		//long end = 24557201; //Berlin-Spandau
+		DistanceCalc.distanceCalculation(XmlReader.vertexMap);
+
 		/*
 		 * for(Vertex v : XmlReader.vertexMap){
 		 * System.out.println(v.getNeighbors()); }
 		 */
 		System.out.println("Route wird berechnet...");
 		System.out.println("Dieser Vorgang kann einige Minuten in Anspruch nehmen");
-		window.addLocations(MotorwayRamp.getMotorwayRamps(XmlReader.vertexMap)); //Auswahlpunkte hinzufügen
-		
-		
-		
-		//StringBuffer output = Dijkstra.getshortestWay(start, end, XmlReader.vertexMap);
-		//System.out.println(output);
-		//Stack<Vertex> routeStack = (Dijkstra.getfullWayStack(XmlReader.vertexMap, end));
-		//window.drawRoute(routeStack);
+		window.addLocations(filter(MotorwayRamp.getMotorwayRamps(XmlReader.vertexMap))); // Auswahlpunkte
+
+		// StringBuffer output = Dijkstra.getshortestWay(start, end,
+		// XmlReader.vertexMap);
+		// System.out.println(output);
+		// Stack<Vertex> routeStack =
+		// (Dijkstra.getfullWayStack(XmlReader.vertexMap, end));
+		// window.drawRoute(routeStack);
 	}
-	
-	public static String calcRoute(long start, long end){
+
+	private static TreeMap<String, List<Long>> filter(TreeMap<String, List<Long>> graph) {
+		TreeMap<String, List<Long>> out = new TreeMap<String, List<Long>>();
+		String name = null;
+		Long singleId = null;
+
+		// Über den komplette Graphen iterieren
+		for (Entry<String, List<Long>> e : graph.entrySet()) {
+			name = e.getKey();
+			// Ist schon eine Auffahrt mit diesem Namen vorhanden, so soll
+			// die neue ID angehängt werden.
+			if (!out.containsKey(name)) {
+				out.put(e.getKey(), new ArrayList<Long>());
+				out.get(e.getKey()).add(e.getValue().get(0));
+			}
+			// Für die nächste Iteration wieder die names und IDs zurücksetzen
+			name = null;
+			singleId = null;
+		}
+
+		return out;
+	}
+
+	public static String calcRoute(long start, long end) {
 		StringBuffer output = Dijkstra.getshortestWay(start, end, XmlReader.vertexMap);
 		System.out.println(output);
-		
+
 		Stack<Vertex> routeStack = (Dijkstra.getfullWayStack(XmlReader.vertexMap, end));
 		window.drawRoute(routeStack);
 		return output.toString();

@@ -13,7 +13,7 @@ public class BuildBridge{
 				Vertex actual = graph.get(id);
 				for(Long idNewN:e.getValue()){
 					if (idNewN != id){
-						actual.addNeighbor(new Neighbor(idNewN,1));
+						actual.addNeighbor(idNewN);
 					}
 				}
 			}

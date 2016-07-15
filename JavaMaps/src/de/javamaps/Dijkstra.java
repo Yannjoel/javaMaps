@@ -23,6 +23,9 @@ public class Dijkstra {
 	 * @return StringBuffer which contains the console output
 	 */
 	public static StringBuffer getshortestWay(Long start, Long end, TreeMap<Long, Vertex> treeMap) {
+		System.out.println("Route wird berechnet...");
+		System.out.println("Dieser Vorgang kann einige Minuten in Anspruch nehmen");
+		init(treeMap);
 		StringBuffer output = new StringBuffer();
 		if (treeMap.containsKey(start)) {
 			if (treeMap.containsKey(end)) {
@@ -93,6 +96,14 @@ public class Dijkstra {
 			output.append("\n");
 		}
 		return output;
+	}
+
+	private static void init(TreeMap<Long, Vertex> treeMap) {
+		for(Entry<Long, Vertex> e:treeMap.entrySet()){
+			e.getValue().setWay_dist(Integer.MAX_VALUE);
+			e.getValue().setVisited(false);
+		}
+		
 	}
 
 	/**
