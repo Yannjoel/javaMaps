@@ -46,8 +46,6 @@ public class javaMap {
 		 * for(Vertex v : XmlReader.vertexMap){
 		 * System.out.println(v.getNeighbors()); }
 		 */
-		System.out.println("Route wird berechnet...");
-		System.out.println("Dieser Vorgang kann einige Minuten in Anspruch nehmen");
 		window.addLocations(filter(MotorwayRamp.getMotorwayRamps(XmlReader.vertexMap))); // Auswahlpunkte
 
 		// StringBuffer output = Dijkstra.getshortestWay(start, end,
