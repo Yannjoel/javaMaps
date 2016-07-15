@@ -42,6 +42,17 @@ public class javaMap {
 		 */
 		System.out.println("Route wird berechnet...");
 		System.out.println("Dieser Vorgang kann einige Minuten in Anspruch nehmen");
+		window.addLocations(MotorwayRamp.getMotorwayRamps(XmlReader.vertexMap)); //Auswahlpunkte hinzufügen
+		
+		
+		
+		//StringBuffer output = Dijkstra.getshortestWay(start, end, XmlReader.vertexMap);
+		//System.out.println(output);
+		//Stack<Vertex> routeStack = (Dijkstra.getfullWayStack(XmlReader.vertexMap, end));
+		//window.drawRoute(routeStack);
+	}
+	
+	public static void calcRoute(long start, long end){
 		StringBuffer output = Dijkstra.getshortestWay(start, end, XmlReader.vertexMap);
 		System.out.println(output);
 		Stack<Vertex> routeStack = (Dijkstra.getfullWayStack(XmlReader.vertexMap, end));

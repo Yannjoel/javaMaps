@@ -4,10 +4,14 @@ import java.awt.EventQueue;
 import java.awt.Graphics;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
+import java.util.List;
+import java.util.Map;
 import java.util.Stack;
+import java.util.TreeMap;
 
 import javax.swing.JFrame;
 
+import de.javamaps.items.ComboItem;
 import de.javamaps.items.Vertex;
 
 import javax.swing.JComboBox;
@@ -15,27 +19,20 @@ import java.awt.Canvas;
 import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Gui {
 
 	private JFrame frame;
+	private javaMap main;
 
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Gui window = new Gui();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+
 	/**
 	 * Create the application.
 	 */
 	public Gui() {
+		
 		initialize();
 		
 	}
@@ -62,6 +59,11 @@ public class Gui {
 		frame.getContentPane().add(cb_target);
 		
 		JButton btn_start = new JButton("Find Route");
+		btn_start.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				javaMap.calcRoute(((ComboItem) cb_start.getSelectedItem()).getId(), ((ComboItem) cb_target.getSelectedItem()).getId());
+			}
+		});
 		btn_start.setBounds(10, 90, 180, 33);
 		frame.getContentPane().add(btn_start);
 		
@@ -124,5 +126,16 @@ public class Gui {
 	public void setVisible(boolean b) {
 		frame.setVisible(b);
 		
+	}
+	
+	public void addLocations(TreeMap<String, List<Long>> positions){
+		for (Map.Entry<String, List<Long>> entry : positions.entrySet()) {
+			for(long id : entry.getValue()){
+				cb_start.addItem(new ComboItem(id,entry.getKey()));
+				cb_target.addItem(new ComboItem(id,entry.getKey()));
+			}
+		
+		
+		}
 	}
 }
