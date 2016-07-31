@@ -41,6 +41,7 @@ public class javaMap {
 		}
 		BuildBridge.createBridge(XmlReader.vertexMap);
 		DistanceCalc.distanceCalculation(XmlReader.vertexMap);
+		GraphOptimizer.uniteVertexs(XmlReader.vertexMap);
 
 		/*
 		 * for(Vertex v : XmlReader.vertexMap){

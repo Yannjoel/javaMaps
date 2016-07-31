@@ -76,7 +76,7 @@ public class Vertex {
 	public void setNeighbors(List<Neighbor> neighbors) {
 		this.neighbors = neighbors;
 	}
-
+	
 	public void addNeighbor(Neighbor newNeighbor) {
 		this.neighbors.add(newNeighbor);
 	}

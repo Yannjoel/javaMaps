@@ -1,8 +1,13 @@
 package de.javamaps.items;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Neighbor {
 	final private long id;	// long ID anstatt String Name
 	private int dis;
+	
+	public List<Long> onWay = new ArrayList<Long>();
 
 	public Neighbor(long idIn, int disIn) {
 		this.id = idIn;
