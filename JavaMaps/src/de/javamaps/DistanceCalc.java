@@ -15,34 +15,29 @@ public class DistanceCalc {
 	 * @param graph
 	 * @return graph with calculated neighbours for each neighbour
 	 */
-	public static TreeMap<Long, Vertex> distanceCalculation(TreeMap<Long, Vertex> graph) {
+	public static TreeMap<Long, Vertex> calculatAllDintancesOfGraph(TreeMap<Long, Vertex> graph) {
 
-		double distance = 0;
-		double dx = 0;
-		double dy = 0;
-		double lat = 0;
-		double lat1 = 0;
-		double lat2 = 0;
-		double lon1 = 0;
-		double lon2 = 0;
-		
-		for (Entry<Long, Vertex> e : graph.entrySet()) {
-			Vertex vertex = e.getValue(); // Vertex
-			for (Neighbor neighbor : vertex.getNeighbors()) {
-				Vertex nvertex = graph.get(neighbor.getName());
-				lon1 = vertex.getLon();
-				lon2 = nvertex.getLon();
-				lat1 = vertex.getLat();
-				lat2 = nvertex.getLat();
-				lat = Math.toRadians((lat1 + lat2) / 2);
-				dx = 111.3 * Math.cos(lat) * (lon1 - lon2); // *111.3 für Erdkrümmung
-				dy = 111.3 * (lat1 - lat2); 
-				distance = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2)); // vgl. Satz des Pythagoras
-				distance = distance * 1000;
-				neighbor.setDis((int) distance);
+	
+		for (Entry<Long, Vertex> entry : graph.entrySet()) {
+			Vertex currentVertex = entry.getValue(); // Vertex
+			for (Neighbor neighbor : currentVertex.getNeighbors()) {
+				Vertex nextVertex = graph.get(neighbor.getName());
+				long distance = distanceBetweenTwoVertexs(currentVertex,nextVertex);
+				neighbor.setDistance((int) distance);
 			}
 		}
 		return graph; //mit berechneter Länge
 
+	}
+	public static Long distanceBetweenTwoVertexs(Vertex vertex1, Vertex vertex2){
+		double longitude1 = vertex1.getLongitude();
+		double longitude2 = vertex2.getLongitude();
+		double latitude1 = vertex1.getLatitude();
+		double latitude2 = vertex2.getLatitude();
+		double lat = Math.toRadians((latitude1 + latitude2) / 2);
+		double differenceXaxis = 111.3 * Math.cos(lat) * (longitude1 - longitude2); // *111.3 für Erdkrümmung
+		double differenceYaxis = 111.3 * (latitude1 - latitude2); 
+		double distance = (Math.sqrt(Math.pow(differenceXaxis, 2) + Math.pow(differenceYaxis, 2))*1000); // vgl. Satz des Pythagoras
+		return (long) distance;
 	}
 }

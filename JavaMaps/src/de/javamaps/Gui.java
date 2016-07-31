@@ -26,7 +26,7 @@ import java.awt.event.ActionEvent;
 public class Gui {
 
 	private JFrame frame;
-	private javaMap main;
+	private Main main;
 
 
 	/**
@@ -37,9 +37,9 @@ public class Gui {
 		initialize();
 		
 	}
-	JComboBox cb_start;
-	JComboBox cb_target;
-	private Map_Area map;
+	JComboBox<ComboItem> cb_start;
+	JComboBox<ComboItem> cb_target;
+	private MapArea streetmap;
 	Graphics g_map;
 	/**
 	 * Initialize the contents of the frame.
@@ -62,17 +62,17 @@ public class Gui {
 		JButton btn_start = new JButton("Find Route");
 		btn_start.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				 map.removeRoute();
-				 JOptionPane.showMessageDialog(null, javaMap.calcRoute(((ComboItem) cb_start.getSelectedItem()).getId(), ((ComboItem) cb_target.getSelectedItem()).getId()));
+				 streetmap.removeRoute();
+				 JOptionPane.showMessageDialog(null, Main.calcRoute(((ComboItem) cb_start.getSelectedItem()).getId(), ((ComboItem) cb_target.getSelectedItem()).getId()));
 			}
 		});
 		
 		btn_start.setBounds(10, 90, 180, 33);
 		frame.getContentPane().add(btn_start);
 		
-		map = new Map_Area();
-		map.setBounds(200, 11, 974, 839);
-		frame.getContentPane().add(map);
+		streetmap = new MapArea();
+		streetmap.setBounds(200, 11, 974, 839);
+		frame.getContentPane().add(streetmap);
 		
 		
 		
@@ -81,8 +81,8 @@ public class Gui {
 	        
 	        public void componentResized(ComponentEvent arg0) {
 	        	
-	        	map.setSize(frame.getWidth() - 220, frame.getHeight()- 61);
-	        	map.resized();
+	        	streetmap.setSize(frame.getWidth() - 220, frame.getHeight()- 61);
+	        	streetmap.resized();
 
 	        }
 
@@ -108,10 +108,10 @@ public class Gui {
 	
 	
 	public void addLine(Vertex x1, Vertex x2){
-		map.addLine(x1.getLon(), x1.getLat(),x2.getLon(), x2.getLat());
+		streetmap.addLine(x1.getLongitude(), x1.getLatitude(),x2.getLongitude(), x2.getLatitude());
 	}
 	public void addLine(Vertex x1, Vertex x2, Color color){
-		map.addLine(x1.getLon(), x1.getLat(),x2.getLon(), x2.getLat(), color);
+		streetmap.addLine(x1.getLongitude(), x1.getLatitude(),x2.getLongitude(), x2.getLatitude(), color);
 	}
 	public void drawRoute(Stack<Vertex> routeStack){
 		Vertex lastPoint = null;
@@ -124,7 +124,7 @@ public class Gui {
 		drawLines();
 	}
 	public void drawLines(){
-		map.drawLines();
+		streetmap.drawLines();
 	}
 	public void setVisible(boolean b) {
 		frame.setVisible(b);

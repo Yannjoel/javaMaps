@@ -1,6 +1,7 @@
 package de.javamaps;
 
-import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map.Entry;
 import java.util.Stack;
 import java.util.TreeMap;
@@ -13,117 +14,81 @@ import de.javamaps.items.*;
  */
 public class Dijkstra {
 
+	private static List<Vertex> reachableVertex = new LinkedList<Vertex>();
+	private static final String NOTSET =  "null";
 	/**
-	 * @param start
+	 * @param startVertexID
 	 *            = id of the Startvertex
-	 * @param end
+	 * @param endVertexID
 	 *            = id of the Endvertex
-	 * @param treeMap
+	 * @param graph
 	 *            - with all Vertex + Neighbors and calculated Neighbor-Distance
 	 * @return StringBuffer which contains the console output
 	 */
-	public static StringBuffer getshortestWay(Long start, Long end, TreeMap<Long, Vertex> treeMap) {
-		System.out.println("Route wird berechnet...");
-		System.out.println("Dieser Vorgang kann einige Minuten in Anspruch nehmen");
-		init(treeMap);
+
+	public static StringBuffer calculate(Long startVertexID, Long endVertexID, TreeMap<Long, Vertex> graph) {
+		init(graph);
 		StringBuffer output = new StringBuffer();
-		if (treeMap.containsKey(start)) {
-			if (treeMap.containsKey(end)) {
-				Vertex startV = treeMap.get(start);
-				Vertex endV = treeMap.get(end);
-				HashMap<Long, Vertex> reachableVertex = new HashMap<Long, Vertex>();
-				reachableVertex.put(start, startV);
-				startV.setAsStart();
+		Vertex startVertex = graph.get(startVertexID);
+		Vertex endVertex = graph.get(endVertexID);
 
-				try {
-					// solange der der end-Punkt noch nicht "besucht" wurde
-					// Funktion für
-					// Knoten mit der Kürzesten way_dist auswählen
-					long i = 0; // für Number of Steps
-					while (!endV.isVisited()) {
-						i++;
-						Vertex inuse = getNext(reachableVertex);
-						// nähsten Nachbarn auswählen
-						if (inuse.hasNeighbors()) {
-							for (Neighbor nextN : inuse.getNeighbors()) {
-								Vertex nextV = treeMap.get(nextN.getName());
-								if (!nextV.isVisited()) {
-									int newDis = inuse.getWay_dist() + nextN.getDis();
-									if (newDis < nextV.getWay_dist()) {
-										nextV.setWay_dist(inuse.getWay_dist() + nextN.getDis());
-										nextV.setPrevious(inuse.getId());
-									}
-									reachableVertex.put(nextN.getName(), nextV);
-								}
+		reachableVertex.add(startVertex);
+		startVertex.setAsStart();
+
+		try {
+			while (!endVertex.isVisited()) {
+				Vertex inuse = getVertexWithLowestTotalDistance(reachableVertex);
+				System.out.println(inuse.getId());
+				// nähsten Nachbarn auswählen
+				if (inuse.hasNeighbors()) {
+					for (Neighbor nextNeighbor : inuse.getNeighbors()) {
+						Vertex nextVertex = graph.get(nextNeighbor.getName());
+						if (!nextVertex.isVisited()) {
+							int newDistance = inuse.getTotalDistance() + nextNeighbor.getDistance();
+							if (newDistance < nextVertex.getTotalDistance()) {
+								nextVertex.setTotalDistance(inuse.getTotalDistance() + nextNeighbor.getDistance());
+								nextVertex.setPrevious(inuse.getId());
 							}
+							reachableVertex.add(nextVertex);
 						}
-						inuse.setVisited(true);
-						reachableVertex.remove(inuse);
-
 					}
-					System.out.println("Number of Steps: " + i);
-					// Ausgabe nach Abschluss des Algorithmus
-					output.append("Total Distance from ");
-					output.append(startV.getName());
-					output.append(" to ");
-					output.append(endV.getName());
-					output.append(" is: ");
-					output.append((double) endV.getWay_dist() / 1000);
-					output.append(" km \n \n");
-					output.append("Way was:\n");
-					try {
-						output.append(getFullWay(endV, treeMap));
-					} catch (Exception e) {
-						output.append(e);
-					}
-
-				} catch (Exception e) { // wenn der Algorithmus nicht
-										// determiniert
-					output.append("cant reach ");
-					output.append(end);
-					output.append("\n");
 				}
-			} else {
-				output.append("Cant find ");
-				output.append(end);
-				output.append(" in our map");
-				output.append("\n");
+				inuse.setVisited(true);
+				reachableVertex.remove(inuse);
+
 			}
-		} else {
-			output.append("Cant find ");
-			output.append(start);
-			output.append(" in our map");
-			output.append("\n");
+			// Ausgabe nach Abschluss des Algorithmus
+			output.append("Total Distance from " + startVertex.getName() + " to " + endVertex.getName() + " is: "
+					+ (double) endVertex.getTotalDistance() / 1000 + " km \n \n" + "Way was:\n"
+					+ getFullWayOutputString(endVertexID, graph));
+
+		} catch (Exception exeption) {
+			output.append("cant reach " + endVertex.getName() + "\n");
 		}
 		return output;
 	}
 
-	private static void init(TreeMap<Long, Vertex> treeMap) {
-		for(Entry<Long, Vertex> e:treeMap.entrySet()){
-			e.getValue().setWay_dist(Integer.MAX_VALUE);
-			e.getValue().setVisited(false);
+	private static void init(TreeMap<Long, Vertex> graph) {
+		for (Entry<Long, Vertex> entry : graph.entrySet()) {
+			entry.getValue().setTotalDistance(Integer.MAX_VALUE);
+			entry.getValue().setVisited(false);
 		}
-		
+
 	}
 
 	/**
 	 * @param vertex
-	 * @param treeMap
-	 * @return Stringbuffer that list the way from a vertex back to the start
-	 *         vertex of the graphMap
+	 * @param graph
+	 * @return Text that lists the rout vertex of the graphMap
 	 */
-	private static StringBuffer getFullWay(Vertex vertex, TreeMap<Long, Vertex> treeMap) {
+	private static StringBuffer getFullWayOutputString(Long endVertexID, TreeMap<Long, Vertex> graph) {
 		StringBuffer output = new StringBuffer();
-		if (vertex.getPrevious() != null) {
-			Vertex previous = treeMap.get(vertex.getPrevious());
-			output.append(getFullWay(previous, treeMap));
-		}
-		if (vertex.getName().equals("null") == false) {
-			output.append(vertex.getId());
-			output.append(" (name = ");
-			output.append(vertex.getName());
-			output.append(")");
-			output.append("\n");
+		Stack<Vertex> fullWayAsStack = getfullWayAsStack(graph, endVertexID);
+		while(!fullWayAsStack.isEmpty()) {
+			String currentVertexName = fullWayAsStack.pop().getName();
+			if (!currentVertexName.equals(NOTSET)){
+				output.append(currentVertexName + "\n");
+			}
 		}
 		return output;
 	}
@@ -132,28 +97,28 @@ public class Dijkstra {
 	 * @param reachableVertex
 	 * @return id of the nearest open Vertex
 	 */
-	private static Vertex getNext(HashMap<Long, Vertex> reachableVertex) {
+	private static Vertex getVertexWithLowestTotalDistance(List<Vertex> reachableVertex) {
 		Vertex out = null;
 		int min = Integer.MAX_VALUE;
-		for (Entry<Long, Vertex> e : reachableVertex.entrySet()) {
-			/// Wenn noch offene Knoten bestehen kleinsten weg ermitteln
-			if (!e.getValue().isVisited() && e.getValue().getWay_dist() < min) {
-				min = e.getValue().getWay_dist();
-				out = e.getValue();
+		for (Vertex vertex : reachableVertex) {
+			if (vertex.getTotalDistance() < min) {
+				min = vertex.getTotalDistance();
+				out = vertex;
 			}
 		}
+		reachableVertex.remove(out);
 		return out;
 	}
 
-	public static Stack<Vertex> getfullWayStack(TreeMap<Long, Vertex> map, Long end) {
+	public static Stack<Vertex> getfullWayAsStack(TreeMap<Long, Vertex> graph, Long endVertexID) {
 		Stack<Vertex> output = new Stack<Vertex>();
-		Vertex v;
-		Long id = end;
+		Vertex currentVertex;
+		Long currentVertexId = endVertexID;
 		do {
-			v = map.get(id);
-			output.push(v);
-			id = v.getPrevious();
-		} while (id != null);
+			currentVertex = graph.get(currentVertexId);
+			output.push(currentVertex);
+			currentVertexId = currentVertex.getPrevious();
+		} while (currentVertexId != null);
 		return output;
 	}
 }

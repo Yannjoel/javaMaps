@@ -1,30 +1,27 @@
 package de.javamaps.items;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Vertex {
 
 	private final long id;
-	private final double lat;
-	private final double lon;
+	private final double latitude;
+	private final double longitude;
 	private final String name;
 	private Long previous = null;
-	public int waysIn;
-	private int way_dist = Integer.MAX_VALUE; /// ersatz für unendlich
-												/// //bisheriger Weg zu diesem
-												/// Knoten
+	private int totalDistance = Integer.MAX_VALUE; 
 	private boolean visited;
-	private List<Neighbor> neighbors = new ArrayList<Neighbor>();
+	private List<Neighbor> neighbors = new LinkedList<Neighbor>();
 
 	public void setAsStart() {
-		this.way_dist = 0;
+		this.totalDistance = 0;
 	}
 
-	public Vertex(String NameIn, long idIn, double latIn, double lonIn) {
+	public Vertex(String NameIn, long idIn, double latitudeIn, double longitudeIn) {
 		this.name = NameIn;
-		this.lat = latIn;
-		this.lon = lonIn;
+		this.latitude = latitudeIn;
+		this.longitude = longitudeIn;
 		this.id = idIn;
 		this.visited = false;
 	}
@@ -33,24 +30,24 @@ public class Vertex {
 		return previous;
 	}
 
-	public double getLat() {
-		return lat;
+	public double getLatitude() {
+		return latitude;
 	}
 
-	public double getLon() {
-		return lon;
+	public double getLongitude() {
+		return longitude;
 	}
 
 	public void setPrevious(Long previous) {
 		this.previous = previous;
 	}
 
-	public int getWay_dist() {
-		return way_dist;
+	public int getTotalDistance() {
+		return totalDistance;
 	}
 
-	public void setWay_dist(int way_dist) {
-		this.way_dist = way_dist;
+	public void setTotalDistance(int totalDistance) {
+		this.totalDistance = totalDistance;
 	}
 
 	public boolean isVisited() {
@@ -83,10 +80,6 @@ public class Vertex {
 
 	public void addNeighbor(long id) {
 		this.neighbors.add(new Neighbor(id, Integer.MAX_VALUE));
-	}
-
-	public void removeNeighbor(Neighbor neighbor) {
-		this.neighbors.remove(neighbor);
 	}
 
 	public boolean hasNeighbors() {

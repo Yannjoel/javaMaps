@@ -14,7 +14,7 @@ import javax.xml.stream.XMLStreamException;
 
 import de.javamaps.items.Vertex;
 
-public class javaMap {
+public class Main {
 	static Gui window;
 
 	public static void main(String[] args) {
@@ -31,7 +31,7 @@ public class javaMap {
 		});
 
 		try {
-			XmlReader.XmlReader(window);
+			XmlReader.initialize(window);
 		} catch (XMLStreamException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -39,28 +39,16 @@ public class javaMap {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		BuildBridge.createBridge(XmlReader.vertexMap);
-		DistanceCalc.distanceCalculation(XmlReader.vertexMap);
-		GraphOptimizer.uniteVertexs(XmlReader.vertexMap);
+		GraphOptimizer.connectMotorwayRampsWithSameNames(XmlReader.graphFromXmlFile);
+		DistanceCalc.calculatAllDintancesOfGraph(XmlReader.graphFromXmlFile);
+		GraphOptimizer.uniteVertexs(XmlReader.graphFromXmlFile);
 
-		/*
-		 * for(Vertex v : XmlReader.vertexMap){
-		 * System.out.println(v.getNeighbors()); }
-		 */
-		window.addLocations(filter(MotorwayRamp.getMotorwayRamps(XmlReader.vertexMap))); // Auswahlpunkte
-
-		// StringBuffer output = Dijkstra.getshortestWay(start, end,
-		// XmlReader.vertexMap);
-		// System.out.println(output);
-		// Stack<Vertex> routeStack =
-		// (Dijkstra.getfullWayStack(XmlReader.vertexMap, end));
-		// window.drawRoute(routeStack);
+		window.addLocations(filter(MotorwayRamp.getMotorwayRamps(XmlReader.graphFromXmlFile)));
 	}
 
 	private static TreeMap<String, List<Long>> filter(TreeMap<String, List<Long>> graph) {
 		TreeMap<String, List<Long>> out = new TreeMap<String, List<Long>>();
 		String name = null;
-		Long singleId = null;
 
 		// Über den komplette Graphen iterieren
 		for (Entry<String, List<Long>> e : graph.entrySet()) {
@@ -73,18 +61,17 @@ public class javaMap {
 			}
 			// Für die nächste Iteration wieder die names und IDs zurücksetzen
 			name = null;
-			singleId = null;
 		}
 
 		return out;
 	}
 
-	public static String calcRoute(long start, long end) {
-		StringBuffer output = Dijkstra.getshortestWay(start, end, XmlReader.vertexMap);
+	public static String calcRoute(long startVertexID, long endVertexID) {
+		StringBuffer output = Dijkstra.calculate(startVertexID, endVertexID, XmlReader.graphFromXmlFile);
 		System.out.println(output);
 
-		Stack<Vertex> routeStack = (Dijkstra.getfullWayStack(XmlReader.vertexMap, end));
-		window.drawRoute(routeStack);
+		Stack<Vertex> routeList = (Dijkstra.getfullWayAsStack(XmlReader.graphFromXmlFile, endVertexID));
+		window.drawRoute(routeList);
 		return output.toString();
 	}
 

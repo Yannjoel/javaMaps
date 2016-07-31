@@ -12,7 +12,7 @@ import java.util.List;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
-class Map_Area extends JPanel {
+class MapArea extends JPanel {
 
 	List<Line> lines = new ArrayList<Line>();
 	int height;
@@ -28,7 +28,7 @@ class Map_Area extends JPanel {
 	double scaleLon;
 	double scaleLat;
 
-	public Map_Area() {
+	public MapArea() {
 		setBorder(BorderFactory.createLineBorder(Color.black));
 		
 		height = this.getHeight();
