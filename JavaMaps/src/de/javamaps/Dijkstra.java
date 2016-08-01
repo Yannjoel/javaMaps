@@ -31,9 +31,9 @@ public class Dijkstra {
 		StringBuffer output = new StringBuffer();
 		Vertex startVertex = graph.get(startVertexID);
 		Vertex endVertex = graph.get(endVertexID);
-
-		reachableVertex.add(startVertex);
 		startVertex.setAsStart();
+		reachableVertex.add(startVertex);
+		
 
 		try {
 			while (!endVertex.isVisited()) {
