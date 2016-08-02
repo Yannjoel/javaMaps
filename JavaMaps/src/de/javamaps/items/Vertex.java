@@ -15,7 +15,8 @@ public class Vertex {
 	private List<Neighbor> neighbors = new LinkedList<Neighbor>();
 
 	public void setAsStart() {
-		this.totalDistance = 0;
+		this.setTotalDistance(0);
+		this.setPrevious(null);
 	}
 
 	public Vertex(String NameIn, long idIn, double latitudeIn, double longitudeIn) {

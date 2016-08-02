@@ -15,7 +15,8 @@ import de.javamaps.items.*;
 public class Dijkstra {
 
 	private static List<Vertex> reachableVertex = new LinkedList<Vertex>();
-	private static final String NOTSET =  "null";
+	private static final String NOTSET = "null";
+
 	/**
 	 * @param startVertexID
 	 *            = id of the Startvertex
@@ -27,19 +28,17 @@ public class Dijkstra {
 	 */
 
 	public static StringBuffer calculate(Long startVertexID, Long endVertexID, TreeMap<Long, Vertex> graph) {
-		init(graph);
-		StringBuffer output = new StringBuffer();
-		Vertex startVertex = graph.get(startVertexID);
-		Vertex endVertex = graph.get(endVertexID);
-		startVertex.setAsStart();
-		reachableVertex.add(startVertex);
-		
 
+		StringBuffer output = new StringBuffer();
 		try {
+			init(graph);
+			Vertex startVertex = graph.get(startVertexID);
+			Vertex endVertex = graph.get(endVertexID);
+			startVertex.setAsStart();
+			reachableVertex.add(startVertex);
+
 			while (!endVertex.isVisited()) {
 				Vertex inuse = getVertexWithLowestTotalDistance(reachableVertex);
-				System.out.println(inuse.getId());
-				// nähsten Nachbarn auswählen
 				if (inuse.hasNeighbors()) {
 					for (Neighbor nextNeighbor : inuse.getNeighbors()) {
 						Vertex nextVertex = graph.get(nextNeighbor.getName());
@@ -63,16 +62,18 @@ public class Dijkstra {
 					+ getFullWayOutputString(endVertexID, graph));
 
 		} catch (Exception exeption) {
-			output.append("cant reach " + endVertex.getName() + "\n");
+			output.append("Error 404- Way not found");
 		}
 		return output;
 	}
 
 	private static void init(TreeMap<Long, Vertex> graph) {
 		for (Entry<Long, Vertex> entry : graph.entrySet()) {
-			entry.getValue().setTotalDistance(Integer.MAX_VALUE);
-			entry.getValue().setVisited(false);
+			Vertex vertex = entry.getValue();
+			vertex.setTotalDistance(Integer.MAX_VALUE);
+			vertex.setVisited(false);
 		}
+		reachableVertex.clear();
 
 	}
 
@@ -84,9 +85,9 @@ public class Dijkstra {
 	private static StringBuffer getFullWayOutputString(Long endVertexID, TreeMap<Long, Vertex> graph) {
 		StringBuffer output = new StringBuffer();
 		Stack<Vertex> fullWayAsStack = getfullWayAsStack(graph, endVertexID);
-		while(!fullWayAsStack.isEmpty()) {
+		while (!fullWayAsStack.isEmpty()) {
 			String currentVertexName = fullWayAsStack.pop().getName();
-			if (!currentVertexName.equals(NOTSET)){
+			if (!currentVertexName.equals(NOTSET)) {
 				output.append(currentVertexName + "\n");
 			}
 		}
