@@ -18,12 +18,15 @@ public class Dijkstra {
 	private static final String NOTSET = "null";
 
 	/**
+	 * Calculats the shortest way form startVertex to endVertex
+	 * 
 	 * @param startVertexID
-	 *            = id of the Startvertex
+	 *            id of the Startvertex
 	 * @param endVertexID
-	 *            = id of the Endvertex
+	 *            id of the Endvertex
 	 * @param graph
-	 *            - with all Vertex + Neighbors and calculated Neighbor-Distance
+	 *            Treemap that contains all Vertexes with there Neighbors and
+	 *            calculated Neighbor-Distance
 	 * @return StringBuffer which contains the console output
 	 */
 
@@ -59,7 +62,7 @@ public class Dijkstra {
 			// Ausgabe nach Abschluss des Algorithmus
 			output.append("Total Distance from " + startVertex.getName() + " to " + endVertex.getName() + " is: "
 					+ (double) endVertex.getTotalDistance() / 1000 + " km \n \n" + "Way was:\n"
-					+ getFullWayOutputString(endVertexID, graph));
+					+ getFullWayAsOutputStringBuffer(endVertexID, graph));
 
 		} catch (Exception exeption) {
 			output.append("Error 404- Way not found");
@@ -67,6 +70,12 @@ public class Dijkstra {
 		return output;
 	}
 
+	/**
+	 * Reinitilitze all Elemntes that need to be reinitialitzed for Dijkstra
+	 * 
+	 * @param graph
+	 *            Treemap that contains all Vertexes
+	 */
 	private static void init(TreeMap<Long, Vertex> graph) {
 		for (Entry<Long, Vertex> entry : graph.entrySet()) {
 			Vertex vertex = entry.getValue();
@@ -74,15 +83,16 @@ public class Dijkstra {
 			vertex.setVisited(false);
 		}
 		reachableVertex.clear();
-
 	}
 
 	/**
-	 * @param vertex
+	 * @param endVertexID Id of the end Vertex
 	 * @param graph
-	 * @return Text that lists the rout vertex of the graphMap
+	 *            Treemap that contains all Vertexes with there Neighbors and
+	 *            calculated Neighbor-Distance
+	 * @return Text that lists the route vertex of the graphMap
 	 */
-	private static StringBuffer getFullWayOutputString(Long endVertexID, TreeMap<Long, Vertex> graph) {
+	private static StringBuffer getFullWayAsOutputStringBuffer(Long endVertexID, TreeMap<Long, Vertex> graph) {
 		StringBuffer output = new StringBuffer();
 		Stack<Vertex> fullWayAsStack = getfullWayAsStack(graph, endVertexID);
 		while (!fullWayAsStack.isEmpty()) {
@@ -95,22 +105,32 @@ public class Dijkstra {
 	}
 
 	/**
-	 * @param reachableVertex
+	 * Finds the vertex that should be used for the next step in Dijkstra and
+	 * remooves it from the reachableVertex List
+	 * 
+	 * @param reachableVertexs List that contains all Vertexes that are reachable in the current step of the Dijkstra algorithm
 	 * @return id of the nearest open Vertex
 	 */
-	private static Vertex getVertexWithLowestTotalDistance(List<Vertex> reachableVertex) {
+	private static Vertex getVertexWithLowestTotalDistance(List<Vertex> reachableVertexs) {
 		Vertex out = null;
 		int min = Integer.MAX_VALUE;
-		for (Vertex vertex : reachableVertex) {
+		for (Vertex vertex : reachableVertexs) {
 			if (vertex.getTotalDistance() < min) {
 				min = vertex.getTotalDistance();
 				out = vertex;
 			}
 		}
-		reachableVertex.remove(out);
+		reachableVertexs.remove(out);
 		return out;
 	}
 
+	/**
+	 * @param endVertexID Id of the end Vertex
+	 * @param graph
+	 *            Treemap that contains all Vertexes with there Neighbors and
+	 *            calculated Neighbor-Distance
+	 * @return Stack that contains all Vertexes from the startVertex to the EndVertex in the right order (startVertex as TopElement)
+	 */
 	public static Stack<Vertex> getfullWayAsStack(TreeMap<Long, Vertex> graph, Long endVertexID) {
 		Stack<Vertex> output = new Stack<Vertex>();
 		Vertex currentVertex;
