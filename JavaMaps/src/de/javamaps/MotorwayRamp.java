@@ -1,6 +1,5 @@
 package de.javamaps;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.TreeMap;
@@ -8,37 +7,39 @@ import java.util.TreeMap;
 import de.javamaps.items.Vertex;
 
 public class MotorwayRamp {
+	/**
+	 * Creates a Treemap that contains all Motorway ramps with theire names as
+	 * keys
+	 */
 	public static TreeMap<String, List<Long>> getMotorwayRamps(TreeMap<Long, Vertex> graph) {
-		TreeMap<String, List<Long>> out = new TreeMap<String, List<Long>>();
-		String name = null;
-		Long singleId = null;
-		
-		// Über den komplette Graphen iterieren
-		for (Entry<Long, Vertex> e : graph.entrySet()) {
+		TreeMap<String, List<Long>> allMotorwayRamps = new TreeMap<String, List<Long>>();
+		String currentVertexName = null;
+		Long currentVertexID = null;
 
+		// Über den komplette Graphen iterieren
+		for (Entry<Long, Vertex> entrySetOfGraph : graph.entrySet()) {
 			// Hat die Vertex einen Namen, so wird der Knoten als möglicher
 			// Startpunkt gewertet.
-			if (!e.getValue().getName().equals("null")) {
-				name = e.getValue().getName();
-				singleId = e.getKey();
+			if (!entrySetOfGraph.getValue().getName().equals("null")) {
+				currentVertexName = entrySetOfGraph.getValue().getName();
+				currentVertexID = entrySetOfGraph.getKey();
 
 				// Ist schon eine Auffahrt mit diesem Namen vorhanden, so soll
 				// die neue ID angehängt werden.
-				if (out.containsKey(name)) {
-					out.get(name).add(singleId);
+				if (allMotorwayRamps.containsKey(currentVertexName)) {
+					allMotorwayRamps.get(currentVertexName).add(currentVertexID);
 				}
 				// Ist noch keine Auffahrt mit diesem Namen vorhanden, so
 				// wird ein neuer Eintrag erstellt
 				else {
-					List<Long> temp = new ArrayList<Long>();
-					temp.add(singleId);
-					out.put(name, temp);
+					allMotorwayRamps.get(currentVertexName).add(currentVertexID);
 				}
-				//Für die nächste Iteration wieder die names und IDs zurücksetzen
-				name = null;
-				singleId = null;
+				// Für die nächste Iteration wieder die names und IDs
+				// zurücksetzen
+				currentVertexName = null;
+				currentVertexID = null;
 			}
 		}
-		return out;
+		return allMotorwayRamps;
 	}
 }
