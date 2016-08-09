@@ -10,10 +10,10 @@ import java.util.Map.Entry;
  * @since 1.8.0_91
  */
 public class DistanceCalc {
-	// Genauigkeit: 1m; Returnwert: kompletter Graph mit berechneten längen;
 	/**
-	 * @param graph
-	 * @return graph with calculated neighbours for each neighbour
+	 * Calculates the distanceses of all Vertexes to there neighbors with an accurity of 1m
+	 * @param graph TreeMap that contains all Vertexes with there Neighbours but without the right distances between the Neighbors
+	 * @return graph TreeMap that contains all Vertexes with there Neighbours including the right distances between the Neighbors
 	 */
 	public static TreeMap<Long, Vertex> calculatAllDintancesOfGraph(TreeMap<Long, Vertex> graph) {
 
@@ -29,13 +29,16 @@ public class DistanceCalc {
 		return graph; //mit berechneter Länge
 
 	}
+	/**
+	 * Calculates the distance between two Vertexes
+	 */
 	public static Long distanceBetweenTwoVertexs(Vertex vertex1, Vertex vertex2){
 		double longitude1 = vertex1.getLongitude();
 		double longitude2 = vertex2.getLongitude();
 		double latitude1 = vertex1.getLatitude();
 		double latitude2 = vertex2.getLatitude();
-		double lat = Math.toRadians((latitude1 + latitude2) / 2);
-		double differenceXaxis = 111.3 * Math.cos(lat) * (longitude1 - longitude2); // *111.3 für Erdkrümmung
+		double approximatelatitude = Math.toRadians((latitude1 + latitude2) / 2);
+		double differenceXaxis = 111.3 * Math.cos(approximatelatitude) * (longitude1 - longitude2); // *111.3 für Erdkrümmung
 		double differenceYaxis = 111.3 * (latitude1 - latitude2); 
 		double distance = (Math.sqrt(Math.pow(differenceXaxis, 2) + Math.pow(differenceYaxis, 2))*1000); // vgl. Satz des Pythagoras
 		return (long) distance;
