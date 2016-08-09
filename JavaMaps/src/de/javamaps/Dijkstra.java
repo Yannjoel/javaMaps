@@ -14,7 +14,7 @@ import de.javamaps.items.*;
  */
 public class Dijkstra {
 
-	private static List<Vertex> reachableVertex = new LinkedList<Vertex>();
+	private static List<Vertex> reachableVertexs = new LinkedList<Vertex>();
 	private static final String NOTSET = "null";
 
 	/**
@@ -38,10 +38,10 @@ public class Dijkstra {
 			Vertex startVertex = graph.get(startVertexID);
 			Vertex endVertex = graph.get(endVertexID);
 			startVertex.setAsStart();
-			reachableVertex.add(startVertex);
+			reachableVertexs.add(startVertex);
 
 			while (!endVertex.isVisited()) {
-				Vertex inuse = getVertexWithLowestTotalDistance(reachableVertex);
+				Vertex inuse = getVertexWithLowestTotalDistance(reachableVertexs);
 				if (inuse.hasNeighbors()) {
 					for (Neighbor nextNeighbor : inuse.getNeighbors()) {
 						Vertex nextVertex = graph.get(nextNeighbor.getName());
@@ -51,12 +51,12 @@ public class Dijkstra {
 								nextVertex.setTotalDistance(inuse.getTotalDistance() + nextNeighbor.getDistance());
 								nextVertex.setPrevious(inuse.getId());
 							}
-							reachableVertex.add(nextVertex);
+							reachableVertexs.add(nextVertex);
 						}
 					}
 				}
 				inuse.setVisited(true);
-				reachableVertex.remove(inuse);
+				reachableVertexs.remove(inuse);
 
 			}
 			// Ausgabe nach Abschluss des Algorithmus
@@ -71,10 +71,7 @@ public class Dijkstra {
 	}
 
 	/**
-	 * Reinitilitze all Elemntes that need to be reinitialitzed for Dijkstra
-	 * 
-	 * @param graph
-	 *            Treemap that contains all Vertexes
+	 * Reinitilitzes all Elemntes that need to be reinitialitzed for Dijkstra
 	 */
 	private static void init(TreeMap<Long, Vertex> graph) {
 		for (Entry<Long, Vertex> entry : graph.entrySet()) {
@@ -82,7 +79,7 @@ public class Dijkstra {
 			vertex.setTotalDistance(Integer.MAX_VALUE);
 			vertex.setVisited(false);
 		}
-		reachableVertex.clear();
+		reachableVertexs.clear();
 	}
 
 	/**
