@@ -1,5 +1,6 @@
 package de.javamaps;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.TreeMap;
@@ -32,7 +33,9 @@ public class MotorwayRamp {
 				// Ist noch keine Auffahrt mit diesem Namen vorhanden, so
 				// wird ein neuer Eintrag erstellt
 				else {
-					allMotorwayRamps.get(currentVertexName).add(currentVertexID);
+					List<Long> temp = new LinkedList<Long>();
+					temp.add(currentVertexID);
+					allMotorwayRamps.put(currentVertexName, temp);
 				}
 				// Für die nächste Iteration wieder die names und IDs
 				// zurücksetzen
