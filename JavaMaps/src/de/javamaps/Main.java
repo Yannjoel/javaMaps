@@ -43,33 +43,34 @@ public class Main {
 		DistanceCalc.calculatAllDintancesOfGraph(XmlReader.graphFromXmlFile);
 		GraphOptimizer.uniteVertexs(XmlReader.graphFromXmlFile);
 
-		window.addLocations(filter(MotorwayRamp.getMotorwayRamps(XmlReader.graphFromXmlFile)));
+		TreeMap<String, List<Long>> allMotorwayRamps = MotorwayRamp.getMotorwayRamps(XmlReader.graphFromXmlFile);
+		window.addLocations(filterOutDublicateNames(allMotorwayRamps));
 	}
 
-	private static TreeMap<String, List<Long>> filter(TreeMap<String, List<Long>> graph) {
-		TreeMap<String, List<Long>> out = new TreeMap<String, List<Long>>();
-		String name = null;
+	/**
+	 * Creates a TreeMap that contains all Names that are in a graph and the VertexIDs that are linked to this names and that is used as Namelist later 
+	 */
+	private static TreeMap<String, List<Long>> filterOutDublicateNames(TreeMap<String, List<Long>> graph) {
+		TreeMap<String, List<Long>> filteredVertexNames = new TreeMap<String, List<Long>>();
+		String currentVertexName = null;
 
 		// Über den komplette Graphen iterieren
-		for (Entry<String, List<Long>> e : graph.entrySet()) {
-			name = e.getKey();
+		for (Entry<String, List<Long>> entrySetOfGraph : graph.entrySet()) {
+			currentVertexName = entrySetOfGraph.getKey();
 			// Ist schon eine Auffahrt mit diesem Namen vorhanden, so soll
 			// die neue ID angehängt werden.
-			if (!out.containsKey(name)) {
-				out.put(e.getKey(), new ArrayList<Long>());
-				out.get(e.getKey()).add(e.getValue().get(0));
+			if (!filteredVertexNames.containsKey(currentVertexName)) {
+				filteredVertexNames.put(entrySetOfGraph.getKey(), new ArrayList<Long>());
+				filteredVertexNames.get(entrySetOfGraph.getKey()).add(entrySetOfGraph.getValue().get(0));
 			}
 			// Für die nächste Iteration wieder die names und IDs zurücksetzen
-			name = null;
+			currentVertexName = null;
 		}
-
-		return out;
+		return filteredVertexNames;
 	}
 
-	public static String calcRoute(long startVertexID, long endVertexID) {
+	public static String calcRouteWithDijkstra(long startVertexID, long endVertexID) {
 		StringBuffer output = Dijkstra.calculate(startVertexID, endVertexID, XmlReader.graphFromXmlFile);
-		System.out.println(output);
-
 		Stack<Vertex> routeList = (Dijkstra.getfullWayAsStack(XmlReader.graphFromXmlFile, endVertexID));
 		window.drawRoute(routeList);
 		return output.toString();

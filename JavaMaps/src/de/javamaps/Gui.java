@@ -63,7 +63,7 @@ public class Gui {
 		btn_start.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				 streetmap.removeRoute();
-				 JOptionPane.showMessageDialog(null, Main.calcRoute(((ComboItem) cb_start.getSelectedItem()).getId(), ((ComboItem) cb_target.getSelectedItem()).getId()));
+				 JOptionPane.showMessageDialog(null, Main.calcRouteWithDijkstra(((ComboItem) cb_start.getSelectedItem()).getId(), ((ComboItem) cb_target.getSelectedItem()).getId()));
 			}
 		});
 		
