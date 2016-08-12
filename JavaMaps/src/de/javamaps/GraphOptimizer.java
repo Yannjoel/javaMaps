@@ -13,6 +13,9 @@ public class GraphOptimizer {
 	private static final String NOTSET = "null";
 	private static List<Vertex> visitedVertexes = new LinkedList<Vertex>();
 
+	/**
+	 * Sums up all Vertexes that are in a row
+	 */
 	public static void uniteVertexs(TreeMap<Long, Vertex> graph) {
 		for (Entry<Long, Vertex> entryOfGraph : graph.entrySet()) {
 			if (!entryOfGraph.getValue().getName().equals(NOTSET)
@@ -47,7 +50,8 @@ public class GraphOptimizer {
 				Vertex actualMotorwayRampAsVertex = graph.get(currentID);
 				for (Long newNeighborID : entrySetOfAllMotorwayRamps.getValue()) {
 					if (newNeighborID != currentID) {
-						if (DistanceCalc.distanceBetweenTwoVertexs(graph.get(newNeighborID), graph.get(currentID)) < 600) {
+						if (DistanceCalc.distanceBetweenTwoVertexs(graph.get(newNeighborID),
+								graph.get(currentID)) < 600) {
 							actualMotorwayRampAsVertex.addNeighbor(newNeighborID);
 						}
 					}
