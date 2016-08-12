@@ -12,14 +12,12 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-import javax.swing.WindowConstants;
 
 import de.javamaps.items.ComboItem;
 import de.javamaps.items.Vertex;
 
 import javax.swing.JComboBox;
 import java.awt.Color;
-import java.awt.Dimension;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
