@@ -1,10 +1,12 @@
-import java.io.*;
-import javax.xml.stream.*;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import javax.xml.stream.XMLInputFactory;
+import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.XMLStreamReader;
 
 import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream;
-import org.apache.commons.compress.utils.IOUtils;
-
-import java.util.*;
 
 public class StAX_Test {
 	public static void main(String [ ] args) throws XMLStreamException, IOException{
@@ -19,10 +21,7 @@ public class StAX_Test {
 		System.out.println("Start");
 		XMLInputFactory factory = XMLInputFactory.newInstance();
 		XMLStreamReader parser = factory.createXMLStreamReader(datastream);
-		
-		List<List<String>> elements = new ArrayList<List<String>>();
-		String text;
-		
+				
 		while(parser.hasNext()){
 			switch(parser.getEventType()){
 				case XMLStreamReader.START_ELEMENT:

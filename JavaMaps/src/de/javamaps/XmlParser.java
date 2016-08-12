@@ -1,17 +1,25 @@
 package de.javamaps;
 
 
-import java.io.*;
-import javax.xml.stream.*;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.TreeMap;
+
+import javax.xml.stream.XMLInputFactory;
+import javax.xml.stream.XMLOutputFactory;
+import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.XMLStreamReader;
+import javax.xml.stream.XMLStreamWriter;
 
 import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream;
-import org.apache.commons.compress.utils.IOUtils;
 
-import java.util.*;
-
-import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream;
-
-import de.javamaps.items.*;
+import de.javamaps.items.Node;
 
 public class XmlParser {
 
@@ -107,7 +115,7 @@ public class XmlParser {
 					id = Long.parseLong(parser.getAttributeValue(0));
 					
 					if((temp = nodes.get(id)) != null){
-						isJunction = false;
+						setJunction(false);
 						lat = Double.parseDouble(parser.getAttributeValue(1));
 						lon = Double.parseDouble(parser.getAttributeValue(2));
 						getChildElements(parser);
@@ -166,7 +174,7 @@ public class XmlParser {
 							name = parser.getAttributeValue(1);
 						}
 						else if (Objects.equals(parser.getAttributeValue(0), "highway") && Objects.equals(parser.getAttributeValue(1), "motorway_junction")) {
-							isJunction = true;
+							setJunction(true);
 						}
 
 						break;
@@ -228,6 +236,14 @@ public class XmlParser {
 				} // switch ende
 			} // while ende
 		}
+	}
+
+	public static boolean isJunction() {
+		return isJunction;
+	}
+
+	public static void setJunction(boolean isJunction) {
+		XmlParser.isJunction = isJunction;
 	}
 }
 

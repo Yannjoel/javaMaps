@@ -1,6 +1,5 @@
 package de.javamaps;
 
-import java.awt.EventQueue;
 import java.awt.Graphics;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
@@ -16,17 +15,14 @@ import de.javamaps.items.ComboItem;
 import de.javamaps.items.Vertex;
 
 import javax.swing.JComboBox;
-import java.awt.Canvas;
 import java.awt.Color;
 import javax.swing.JButton;
-import javax.swing.JPanel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class Gui {
 
 	private JFrame frame;
-	private Main main;
 
 
 	/**
@@ -51,11 +47,11 @@ public class Gui {
 		frame.getContentPane().setLayout(null);
 		frame.addComponentListener(new FrameEvent());
 		
-		cb_start = new JComboBox();
+		cb_start = new JComboBox<ComboItem>();
 		cb_start.setBounds(10, 11, 180, 20);
 		frame.getContentPane().add(cb_start);
 		
-		cb_target = new JComboBox();
+		cb_target = new JComboBox<ComboItem>();
 		cb_target.setBounds(10, 42, 180, 20);
 		frame.getContentPane().add(cb_target);
 		
