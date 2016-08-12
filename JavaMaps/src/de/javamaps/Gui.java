@@ -23,6 +23,8 @@ import java.awt.Color;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.SystemColor;
+import javax.swing.JTextPane;
 
 public class Gui {
 
@@ -41,22 +43,24 @@ public class Gui {
 	JComboBox<ComboItem> chooseBox_target;
 	private MapArea streetmap;
 	Graphics g_map;
+	JTextArea ta_route;
+	private JScrollPane sp_route;
 	/**
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 1200, 900);
+		frame.setBounds(100, 100, 1250, 898);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.addComponentListener(new FrameEvent());
 		
 		chooseBox_start = new JComboBox<ComboItem>();
-		chooseBox_start.setBounds(10, 11, 180, 20);
+		chooseBox_start.setBounds(10, 11, 240, 20);
 		frame.getContentPane().add(chooseBox_start);
 		
 		chooseBox_target = new JComboBox<ComboItem>();
-		chooseBox_target.setBounds(10, 42, 180, 20);
+		chooseBox_target.setBounds(10, 42, 240, 20);
 		frame.getContentPane().add(chooseBox_target);
 		
 		JTextArea textArea = new JTextArea();
@@ -73,16 +77,25 @@ public class Gui {
 				 String dijkstraResult = Main.calcRouteWithDijkstra(startVertexID, endVertexID);
 				 textArea.setText(dijkstraResult);
 				 JScrollPane scrollPane = new JScrollPane(textArea);
+				 ta_route.setText(dijkstraResult);
 				 JOptionPane.showMessageDialog(null, scrollPane);
+				 
 			}
 		});
 		
-		startButton.setBounds(10, 90, 180, 33);
+		startButton.setBounds(10, 90, 240, 33);
 		frame.getContentPane().add(startButton);
 		
 		streetmap = new MapArea();
-		streetmap.setBounds(200, 11, 974, 839);
+		streetmap.setBounds(260, 11, 974, 839);
 		frame.getContentPane().add(streetmap);
+		
+		ta_route = new JTextArea();
+		sp_route = new JScrollPane(ta_route);
+		sp_route.setBounds(10, 134, 240, 716);
+		frame.getContentPane().add(sp_route);
+		
+
 		
 		
 		
