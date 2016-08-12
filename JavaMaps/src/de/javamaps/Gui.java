@@ -10,12 +10,17 @@ import java.util.TreeMap;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.WindowConstants;
 
 import de.javamaps.items.ComboItem;
 import de.javamaps.items.Vertex;
 
 import javax.swing.JComboBox;
 import java.awt.Color;
+import java.awt.Dimension;
+
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -33,8 +38,8 @@ public class Gui {
 		initialize();
 		
 	}
-	JComboBox<ComboItem> cb_start;
-	JComboBox<ComboItem> cb_target;
+	JComboBox<ComboItem> chooseBox_start;
+	JComboBox<ComboItem> chooseBox_target;
 	private MapArea streetmap;
 	Graphics g_map;
 	/**
@@ -47,24 +52,32 @@ public class Gui {
 		frame.getContentPane().setLayout(null);
 		frame.addComponentListener(new FrameEvent());
 		
-		cb_start = new JComboBox<ComboItem>();
-		cb_start.setBounds(10, 11, 180, 20);
-		frame.getContentPane().add(cb_start);
+		chooseBox_start = new JComboBox<ComboItem>();
+		chooseBox_start.setBounds(10, 11, 180, 20);
+		frame.getContentPane().add(chooseBox_start);
 		
-		cb_target = new JComboBox<ComboItem>();
-		cb_target.setBounds(10, 42, 180, 20);
-		frame.getContentPane().add(cb_target);
+		chooseBox_target = new JComboBox<ComboItem>();
+		chooseBox_target.setBounds(10, 42, 180, 20);
+		frame.getContentPane().add(chooseBox_target);
 		
-		JButton btn_start = new JButton("Find Route");
-		btn_start.addActionListener(new ActionListener() {
+		JTextArea textArea = new JTextArea(20, 80);
+		textArea.setEditable(false);
+			    
+		JButton startButton = new JButton("Find Route");
+		startButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				 streetmap.removeRoute();
-				 JOptionPane.showMessageDialog(null, Main.calcRouteWithDijkstra(((ComboItem) cb_start.getSelectedItem()).getId(), ((ComboItem) cb_target.getSelectedItem()).getId()));
+				 long startVertexID = ((ComboItem) chooseBox_start.getSelectedItem()).getId();
+				 long endVertexID = ((ComboItem) chooseBox_target.getSelectedItem()).getId();
+				 String dijkstraResult = Main.calcRouteWithDijkstra(startVertexID, endVertexID);
+				 textArea.setText(dijkstraResult);
+				 JScrollPane scrollPane = new JScrollPane(textArea);
+				 JOptionPane.showMessageDialog(null, scrollPane);
 			}
 		});
 		
-		btn_start.setBounds(10, 90, 180, 33);
-		frame.getContentPane().add(btn_start);
+		startButton.setBounds(10, 90, 180, 33);
+		frame.getContentPane().add(startButton);
 		
 		streetmap = new MapArea();
 		streetmap.setBounds(200, 11, 974, 839);
@@ -130,8 +143,8 @@ public class Gui {
 	public void addLocations(TreeMap<String, List<Long>> positions){
 		for (Map.Entry<String, List<Long>> entry : positions.entrySet()) {
 			for(long id : entry.getValue()){
-				cb_start.addItem(new ComboItem(id,entry.getKey()));
-				cb_target.addItem(new ComboItem(id,entry.getKey()));
+				chooseBox_start.addItem(new ComboItem(id,entry.getKey()));
+				chooseBox_target.addItem(new ComboItem(id,entry.getKey()));
 			}
 		
 		
