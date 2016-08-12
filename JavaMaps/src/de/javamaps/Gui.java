@@ -1,6 +1,7 @@
 package de.javamaps;
 
 import java.awt.Graphics;
+import java.awt.Insets;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 import java.util.List;
@@ -58,9 +59,11 @@ public class Gui {
 		chooseBox_target.setBounds(10, 42, 180, 20);
 		frame.getContentPane().add(chooseBox_target);
 		
-		JTextArea textArea = new JTextArea(20, 80);
+		JTextArea textArea = new JTextArea();
+		textArea.setRows(20);
 		textArea.setEditable(false);
-			    
+		textArea.setMargin(new Insets(3, 3, 3, 3));
+					    
 		JButton startButton = new JButton("Find Route");
 		startButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -143,9 +146,7 @@ public class Gui {
 			for(long id : entry.getValue()){
 				chooseBox_start.addItem(new ComboItem(id,entry.getKey()));
 				chooseBox_target.addItem(new ComboItem(id,entry.getKey()));
-			}
-		
-		
+			}		
 		}
 	}
 }
