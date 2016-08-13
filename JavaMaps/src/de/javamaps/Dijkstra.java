@@ -60,8 +60,7 @@ public class Dijkstra {
 
 			}
 			// Ausgabe nach Abschluss des Algorithmus
-			output.append("Total Distance from " + startVertex.getName() + " to " + endVertex.getName() + " is: "
-					+ (double) endVertex.getTotalDistance() / 1000 + " km \n \n" + "Way was:\n"
+			output.append("Total Distance: " + (double) endVertex.getTotalDistance() / 1000 + " km \n \n" + "Way was:\n"
 					+ getFullWayAsOutputStringBuffer(endVertexID, graph));
 
 		} catch (Exception exeption) {
@@ -83,7 +82,8 @@ public class Dijkstra {
 	}
 
 	/**
-	 * @param endVertexID Id of the end Vertex
+	 * @param endVertexID
+	 *            Id of the end Vertex
 	 * @param graph
 	 *            Treemap that contains all Vertexes with there Neighbors and
 	 *            calculated Neighbor-Distance
@@ -105,7 +105,9 @@ public class Dijkstra {
 	 * Finds the vertex that should be used for the next step in Dijkstra and
 	 * remooves it from the reachableVertex List
 	 * 
-	 * @param reachableVertexs List that contains all Vertexes that are reachable in the current step of the Dijkstra algorithm
+	 * @param reachableVertexs
+	 *            List that contains all Vertexes that are reachable in the
+	 *            current step of the Dijkstra algorithm
 	 * @return id of the nearest open Vertex
 	 */
 	private static Vertex getVertexWithLowestTotalDistance(List<Vertex> reachableVertexs) {
@@ -122,11 +124,13 @@ public class Dijkstra {
 	}
 
 	/**
-	 * @param endVertexID Id of the end Vertex
+	 * @param endVertexID
+	 *            Id of the end Vertex
 	 * @param graph
 	 *            Treemap that contains all Vertexes with there Neighbors and
 	 *            calculated Neighbor-Distance
-	 * @return Stack that contains all Vertexes from the startVertex to the EndVertex in the right order (startVertex as TopElement)
+	 * @return Stack that contains all Vertexes from the startVertex to the
+	 *         EndVertex in the right order (startVertex as TopElement)
 	 */
 	public static Stack<Vertex> getfullWayAsStack(TreeMap<Long, Vertex> graph, Long endVertexID) {
 		Stack<Vertex> output = new Stack<Vertex>();

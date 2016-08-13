@@ -10,7 +10,6 @@ import java.util.Stack;
 import java.util.TreeMap;
 
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
@@ -23,8 +22,6 @@ import java.awt.Color;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.awt.SystemColor;
-import javax.swing.JTextPane;
 
 public class Gui {
 
@@ -43,12 +40,13 @@ public class Gui {
 	JComboBox<ComboItem> chooseBox_target;
 	private MapArea streetmap;
 	Graphics g_map;
-	JTextArea ta_route;
+	JTextArea textArea_route;
 	private JScrollPane sp_route;
 	/**
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 1250, 898);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -62,11 +60,6 @@ public class Gui {
 		chooseBox_target = new JComboBox<ComboItem>();
 		chooseBox_target.setBounds(10, 42, 240, 20);
 		frame.getContentPane().add(chooseBox_target);
-		
-		JTextArea textArea = new JTextArea();
-		textArea.setRows(20);
-		textArea.setEditable(false);
-		textArea.setMargin(new Insets(3, 3, 3, 3));
 					    
 		JButton startButton = new JButton("Find Route");
 		startButton.addActionListener(new ActionListener() {
@@ -75,11 +68,9 @@ public class Gui {
 				 long startVertexID = ((ComboItem) chooseBox_start.getSelectedItem()).getId();
 				 long endVertexID = ((ComboItem) chooseBox_target.getSelectedItem()).getId();
 				 String dijkstraResult = Main.calcRouteWithDijkstra(startVertexID, endVertexID);
-				 textArea.setText(dijkstraResult);
-				 JScrollPane scrollPane = new JScrollPane(textArea);
-				 ta_route.setText(dijkstraResult);
-				 JOptionPane.showMessageDialog(null, scrollPane);
-				 
+				 textArea_route.setMargin(new Insets(3, 3, 3, 3));
+				 textArea_route.setEditable(false);
+				 textArea_route.setText(dijkstraResult);
 			}
 		});
 		
@@ -90,8 +81,8 @@ public class Gui {
 		streetmap.setBounds(260, 11, 974, 839);
 		frame.getContentPane().add(streetmap);
 		
-		ta_route = new JTextArea();
-		sp_route = new JScrollPane(ta_route);
+		textArea_route = new JTextArea();
+		sp_route = new JScrollPane(textArea_route);
 		sp_route.setBounds(10, 134, 240, 716);
 		frame.getContentPane().add(sp_route);
 		
