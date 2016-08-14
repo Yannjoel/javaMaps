@@ -25,7 +25,7 @@ public class DijkstraTest {
 	}
 	@Test
 	public void testAll() {
-		StringBuffer shouldBe = new StringBuffer("Total Distance from Stadt1 to Stadt3 is: 2.0 km \n \nWay was:\nStadt1\nStadt2\nStadt3\n");
+		StringBuffer shouldBe = new StringBuffer("Total Distance: 2.0 km \n \nWay was:\nStadt1\nStadt2\nStadt3\n");
 		StringBuffer is = new StringBuffer(Dijkstra.calculate((long)1,(long) 3,testData()));
 		assertEquals(shouldBe.toString(),is.toString());
 	}
