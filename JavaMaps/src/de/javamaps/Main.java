@@ -16,6 +16,7 @@ public class Main {
 	static Gui window;
 
 	public static void main(String[] args) {
+		long startTime = System.currentTimeMillis();
 		window = new Gui();
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -43,13 +44,20 @@ public class Main {
 
 		TreeMap<String, List<Long>> allMotorwayRamps = MotorwayRamp.getMotorwayRamps(XmlReader.graphFromXmlFile);
 		window.addLocations(GraphOptimizer.filterOutDublicateNames(allMotorwayRamps));
+		long endTime = System.currentTimeMillis();
+		System.out.println("total startup time = " + (endTime-startTime));
 	}
 
 
 	public static String calcRouteWithDijkstra(long startVertexID, long endVertexID) {
+		long startTime = System.currentTimeMillis();
 		StringBuffer output = Dijkstra.calculate(startVertexID, endVertexID, XmlReader.graphFromXmlFile);
 		Stack<Vertex> routeList = (Dijkstra.getfullWayAsStack(XmlReader.graphFromXmlFile, endVertexID));
 		window.drawRoute(routeList);
+
+		long endTime = System.currentTimeMillis();
+		System.out.println("total route calculation time = " + (endTime-startTime));
+		
 		return output.toString();
 	}
 

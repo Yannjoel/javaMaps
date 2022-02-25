@@ -13,6 +13,7 @@ public class XmlReader {
 	public static TreeMap<Long, Vertex> graphFromXmlFile = new TreeMap<Long, Vertex>();
 
 	public static void initialize(Gui gui) throws XMLStreamException, IOException {
+		//System.out.println("Working Directory = " + System.getProperty("user.dir"));
 		FileInputStream fin = new FileInputStream("data/deutschland.xml");
 		BufferedInputStream in = new BufferedInputStream(fin);
 
@@ -52,9 +53,9 @@ public class XmlReader {
 		while (iterator.hasNext()) {
 			Vertex tmp = graphFromXmlFile.get(iterator.next());
 			for(Neighbor neighbor : tmp.getNeighbors()){
-				gui.addLine(tmp, graphFromXmlFile.get(neighbor.getName()));
+				gui.addLine(tmp, graphFromXmlFile.get(neighbor.getName()), gui.getStreetmap());
 			}
 		}
-		gui.drawLines();
+		gui.getStreetmap().drawLines();
 	}
 }

@@ -1,13 +1,18 @@
 package de.javamaps;
 
+import de.javamaps.items.Line;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.geom.Line2D;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
@@ -48,6 +53,9 @@ class MapArea extends JPanel {
 		else{
 			scaleLon = ratio*scaleLat;
 		}
+
+		setOpaque(true);
+		setBackground(new Color(0,0,0,0));
 	}
 
 	public Dimension getPreferredSize() {
@@ -58,27 +66,16 @@ class MapArea extends JPanel {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
 		for (Line line : lines) {
 			g2d.setColor(line.color);
-			g2d.drawLine(line.x1, line.y1, line.x2, line.y2);
+			Line2D line2D = new Line2D.Double(line.x1, line.y1, line.x2, line.y2);
+			g2d.draw(line2D);
 		}
 
+		setOpaque(true);
+		setBackground(new Color(0,0,0,0));
 	}
 
-	public void addLine(int x1, int y1, int x2, int y2) {
-		lines.add(new Line(x1, y1, x2, y2));
-
-	}
-
-	public void addLine(int x1, int y1, int x2, int y2, Color color) {
-		lines.add(new Line(x1, y1, x2, y2, color));
-
-	}
-
-	
-	
-	
 
 	public void addLine(double lon, double lat, double lon2, double lat2) {
 		
@@ -97,11 +94,13 @@ class MapArea extends JPanel {
 	}
 
 	public void drawLines() {
+		long startTime = System.currentTimeMillis();
 		calcSizes();
-		for (Line line : lines) {
-			line = calcPosFromCoordinates(line);
-		}
-		repaint();
+		System.out.println(lines.size());
+		lines.parallelStream().forEach(this::calcPosFromCoordinates);
+		long endTime = System.currentTimeMillis();
+		paintComponent(getGraphics());
+		System.out.println("total pos calc time = " + (endTime-startTime));
 	}
 	
 	
@@ -112,7 +111,6 @@ class MapArea extends JPanel {
 			line.x2 = (int) (scaleLon * (line.pos_x2 - minLon));
 			line.y2 = (int) Math.abs((scaleLat * (line.pos_y2 - minLat) - height));
 		}
-		
 		return line;
 	}
 	
@@ -143,88 +141,14 @@ class MapArea extends JPanel {
 			
 		calcSizes();
 		for (Line line : lines) {
-			line = calcPosFromCoordinates(line);
+			calcPosFromCoordinates(line);
 		}
-		repaint();
-		
-		
-	}
-	
-	public void removeRoute(){
-		for(Line line : lines){
-			if(line.color == Color.RED){
-				EventQueue.invokeLater(new Runnable() {
-					public void run() {
-						try {
-
-							lines.remove(line);
-						} catch (Exception e) {
-							e.printStackTrace();
-						}
-					}
-				});
-			}	
-		}
-		repaint();
-	}
-	
-}
-
-class Line {
-	public int x1, x2, y1, y2;
-	double pos_x1, pos_x2, pos_y1, pos_y2;
-	Color color;
-
-	
-	public Line(int x1, int y1, int x2, int y2) {
-		this.x1 = x1;
-		this.y1 = y1;
-		this.x2 = x2;
-		this.y2 = y2;
-		this.pos_x1 = 0;
-		this.pos_x2 = 0;
-		this.pos_y1 = 0;
-		this.pos_y2 = 0;
-		
-		this.color = Color.BLACK;
-
-	}
-	
-
-	public Line(int x1, int y1, int x2, int y2, Color color) {
-		this.x1 = x1;
-		this.y1 = y1;
-		this.x2 = x2;
-		this.y2 = y2;
-		this.pos_x1 = 0;
-		this.pos_x2 = 0;
-		this.pos_y1 = 0;
-		this.pos_y2 = 0;
-		
-		this.color = color;
+		paintComponent(getGraphics());
 		
 	}
-	
-	public Line(double x1, double y1, double x2, double y2, Color color) {
 
-		this.pos_x1 = x1;
-		this.pos_x2 = x2;
-		this.pos_y1 = y1;
-		this.pos_y2 = y2;
-		
-		this.color = color;
-		
+	public void removeOldRoute() {
+		setSize(0, 0);
+		setEnabled(false);
 	}
-	public Line(double x1, double y1, double x2, double y2) {
-
-		this.pos_x1 = x1;
-		this.pos_x2 = x2;
-		this.pos_y1 = y1;
-		this.pos_y2 = y2;
-		
-		this.color = Color.BLACK;
-		
-	}
-	
-
 }
