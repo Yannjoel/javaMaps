@@ -3,62 +3,49 @@ package de.javamaps;
 
 import java.awt.EventQueue;
 import java.io.IOException;
-import java.util.List;
-import java.util.Stack;
-import java.util.TreeMap;
-
+import java.util.Map;
 
 import javax.xml.stream.XMLStreamException;
 
+import de.javamaps.exceptions.ApplicationInitializationException;
+import de.javamaps.exceptions.MapInitializationException;
+import de.javamaps.gui.Gui;
 import de.javamaps.items.Vertex;
+import de.javamaps.parser.XmlReader;
+import de.javamaps.route.DistanceCalc;
+import de.javamaps.parser.GraphOptimizer;
 
 public class Main {
-	static Gui window;
+	static GlobalApplicationStorage globalStorage = GlobalApplicationStorage.getGlobalStorage();
+	static Gui gui = globalStorage.getGui();
 
 	public static void main(String[] args) {
-		long startTime = System.currentTimeMillis();
-		window = new Gui();
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-
-					window.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+		EventQueue.invokeLater(() -> gui.setVisible(true));
 
 		try {
-			XmlReader.initialize(window);
-		} catch (XMLStreamException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			initializeMap();
+			gui.initializeMap();
+			gui.initializeFilters();
 		}
-		GraphOptimizer.connectMotorwayRampsWithSameNames(XmlReader.graphFromXmlFile);
-		DistanceCalc.calculatAllDintancesOfGraph(XmlReader.graphFromXmlFile);
-		GraphOptimizer.uniteVertexs(XmlReader.graphFromXmlFile);
-
-		TreeMap<String, List<Long>> allMotorwayRamps = MotorwayRamp.getMotorwayRamps(XmlReader.graphFromXmlFile);
-		window.addLocations(GraphOptimizer.filterOutDublicateNames(allMotorwayRamps));
-		long endTime = System.currentTimeMillis();
-		System.out.println("total startup time = " + (endTime-startTime));
+		catch (ApplicationInitializationException e){
+			//TODO Implement real Logging
+			System.out.println(e.getMessage());
+		}
 	}
 
-
-	public static String calcRouteWithDijkstra(long startVertexID, long endVertexID) {
-		long startTime = System.currentTimeMillis();
-		StringBuffer output = Dijkstra.calculate(startVertexID, endVertexID, XmlReader.graphFromXmlFile);
-		Stack<Vertex> routeList = (Dijkstra.getfullWayAsStack(XmlReader.graphFromXmlFile, endVertexID));
-		window.drawRoute(routeList);
-
-		long endTime = System.currentTimeMillis();
-		System.out.println("total route calculation time = " + (endTime-startTime));
-		
-		return output.toString();
+	/**
+	 * Initialize the data of the street map shown in the application form its xml file
+	 * @throws MapInitializationException if the data couldn't be loaded
+	 */
+	private static void initializeMap() throws MapInitializationException {
+		try {
+			Map<Long, Vertex> mapData = XmlReader.parseMapFromXmlFile();
+			GraphOptimizer.connectMotorwayRampsWithSameNames(mapData);
+			DistanceCalc.calculateAllDistancesOfGraph(mapData);
+			GraphOptimizer.uniteVertexes(mapData);
+			globalStorage.setMapData(mapData);
+		} catch (XMLStreamException | IOException e ) {
+			throw new MapInitializationException(e);
+		}
 	}
-
 }

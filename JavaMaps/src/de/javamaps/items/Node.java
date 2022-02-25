@@ -9,12 +9,8 @@ public class Node {
 	
 	public Node(long id, long neighbor){
 		this.id = id;
-		if(this.neighbor1 == 0){
-			neighbor1 = neighbor;
-		}
-		else{
-			neighbor2 = neighbor;
-		}
+		neighbor1 = neighbor;
+
 	}
 	
 	public Node(long id){

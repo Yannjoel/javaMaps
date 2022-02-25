@@ -1,6 +1,6 @@
 package de.javamaps.items;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Vertex {
@@ -12,7 +12,7 @@ public class Vertex {
 	private Long previous = null;
 	private int totalDistance = Integer.MAX_VALUE; 
 	private boolean visited;
-	private List<Neighbor> neighbors = new LinkedList<Neighbor>();
+	private List<Neighbor> neighbors = new ArrayList<>();
 
 	public void setAsStart() {
 		this.setTotalDistance(0);
@@ -51,8 +51,8 @@ public class Vertex {
 		this.totalDistance = totalDistance;
 	}
 
-	public boolean isVisited() {
-		return visited;
+	public boolean isUnVisited() {
+		return !visited;
 	}
 
 	public void setVisited(boolean visited) {
@@ -84,10 +84,6 @@ public class Vertex {
 	}
 
 	public boolean hasNeighbors() {
-		if (this.neighbors.isEmpty()) {
-			return false;
-		} else {
-			return true;
-		}
+		return !this.neighbors.isEmpty();
 	}
 }
