@@ -8,15 +8,15 @@ public class MotorwayRamp {
 	 * Creates a map that contains all ramps with their names as
 	 * keys
 	 */
-	public static Map<String, List<Long>> getMotorwayRamps(Map<Long, Vertex> graph) {
-		Map<String, List<Long>> allMotorwayRamps = new HashMap<>();
+	public static Map<String, List<String>> getMotorwayRamps(Map<String, Vertex> graph) {
+		Map<String, List<String>> allMotorwayRamps = new HashMap<>();
 
-		for (Entry<Long, Vertex> entrySetOfGraph : graph.entrySet()) {
+		for (Entry<String, Vertex> entrySetOfGraph : graph.entrySet()) {
 			String currentVertexName = null;
-			Long currentVertexID = null;
+			String currentVertexID = null;
 
 			// Only vertexes with a name are used as potential start vertexes
-			if (entrySetOfGraph.getValue().getName().equals("null")) {
+			if (entrySetOfGraph.getValue().getName() == null) {
 				continue;
 			}
 			currentVertexName = entrySetOfGraph.getValue().getName();
@@ -26,9 +26,9 @@ public class MotorwayRamp {
 				allMotorwayRamps.get(currentVertexName).add(currentVertexID);
 			}
 			else {
-				List<Long> temp = new LinkedList<Long>();
-				temp.add(currentVertexID);
-				allMotorwayRamps.put(currentVertexName, temp);
+				List<String> moterwayIdsWithSameName = new ArrayList<>();
+				moterwayIdsWithSameName.add(currentVertexID);
+				allMotorwayRamps.put(currentVertexName, moterwayIdsWithSameName);
 			}
 
 		}

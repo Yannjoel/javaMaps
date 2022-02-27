@@ -1,21 +1,41 @@
 package de.javamaps.items;
 
-public class Neighbor {
-	final private long id;
-	private int distance;
+import java.io.Serializable;
+import java.math.BigDecimal;
 
-	public Neighbor(long idIn, int disIn) {
+public class Neighbor implements Serializable {
+
+	//default serialVersion id
+	private static final long serialVersionUID = 1L;
+
+	final private String id;
+	private BigDecimal distance;
+	private transient Vertex vertex;
+
+	public Neighbor(String idIn, BigDecimal distance) {
 		this.id = idIn;
-		this.distance = disIn;
+		this.distance = distance;
+	}
+
+	public Neighbor(String id){
+		this.id = id;
 	}
 	
-	public long getName(){
+	public String getID(){
 		return this.id;
 	}
-	public int getDistance(){
+	public BigDecimal getDistance(){
 		return this.distance;
 	}
-	public void setDistance(int disIn){
+	public void setDistance(BigDecimal disIn){
 		this.distance = disIn;
+	}
+
+	public Vertex getVertex() {
+		return vertex;
+	}
+
+	public void setVertex(Vertex vertex) {
+		this.vertex = vertex;
 	}
 }

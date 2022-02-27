@@ -1,5 +1,6 @@
 package de.javamaps.route;
 
+import java.math.BigDecimal;
 import java.util.*;
 import java.util.Map.Entry;
 
@@ -27,8 +28,8 @@ public class Dijkstra {
 	 * @return StringBuffer which contains the console output
 	 */
 
-	public static StringBuilder calculate(Long startVertexID, Long endVertexID) {
-		Map<Long, Vertex> mapData = GlobalApplicationStorage.getGlobalStorage().getMapData();
+	public static StringBuilder calculate(String startVertexID, String endVertexID) {
+		Map<String, Vertex> mapData = GlobalApplicationStorage.getGlobalStorage().getMapData();
 		StringBuilder output = new StringBuilder();
 		init(mapData);
 		Vertex startVertex = mapData.get(startVertexID);
@@ -40,11 +41,11 @@ public class Dijkstra {
 			Vertex currentVertex = getVertexWithLowestTotalDistance();
 			if (currentVertex.hasNeighbors()) {
 				for (Neighbor nextNeighbor : currentVertex.getNeighbors()) {
-					Vertex nextVertex = mapData.get(nextNeighbor.getName());
+					Vertex nextVertex = mapData.get(nextNeighbor.getID());
 					if (nextVertex.isUnVisited()) {
-						int newDistance = currentVertex.getTotalDistance() + nextNeighbor.getDistance();
-						if (newDistance < nextVertex.getTotalDistance()) {
-							nextVertex.setTotalDistance(currentVertex.getTotalDistance() + nextNeighbor.getDistance());
+						BigDecimal newDistance = currentVertex.getTotalDistance().add(nextNeighbor.getDistance());
+						if (nextVertex.getTotalDistance() == null || newDistance.compareTo(nextVertex.getTotalDistance()) < 0) {
+							nextVertex.setTotalDistance(currentVertex.getTotalDistance().add(nextNeighbor.getDistance()));
 							nextVertex.setPrevious(currentVertex.getId());
 						}
 						reachableVertexes.add(nextVertex);
@@ -56,7 +57,7 @@ public class Dijkstra {
 
 		}
 		//prepare text output containing route details
-		output.append("Total Distance: ").append((double) endVertex.getTotalDistance() / 1000).append(" km \n \n").append("Way was:\n")
+		output.append("Total Distance: ").append(endVertex.getTotalDistance().doubleValue() / 1000).append(" km \n \n").append("Way was:\n")
 				.append(getFullWayAsOutputStringBuffer(endVertexID));
 
 		return output;
@@ -65,10 +66,10 @@ public class Dijkstra {
 	/**
 	 * Reinitialize all elements that need to be reinitialized for Dijkstra algorithm
 	 */
-	private static void init(Map<Long, Vertex> graph) {
-		for (Entry<Long, Vertex> entry : graph.entrySet()) {
+	private static void init(Map<String, Vertex> graph) {
+		for (Entry<String, Vertex> entry : graph.entrySet()) {
 			Vertex vertex = entry.getValue();
-			vertex.setTotalDistance(Integer.MAX_VALUE);
+			vertex.setTotalDistance(null);
 			vertex.setVisited(false);
 		}
 		reachableVertexes.clear();
@@ -80,12 +81,12 @@ public class Dijkstra {
 
 	 * @return Text that lists the route vertex of the graphMap
 	 */
-	private static StringBuffer getFullWayAsOutputStringBuffer(Long endVertexID) {
+	private static StringBuffer getFullWayAsOutputStringBuffer(String endVertexID) {
 		StringBuffer output = new StringBuffer();
 		Stack<Vertex> fullWayAsStack = getFullWayAsStack(endVertexID);
 		while (!fullWayAsStack.isEmpty()) {
 			String currentVertexName = fullWayAsStack.pop().getName();
-			if (!currentVertexName.equals(NOT_SET)) {
+			if (currentVertexName != null) {
 				output.append(currentVertexName).append("\n");
 			}
 		}
@@ -102,8 +103,8 @@ public class Dijkstra {
 		Vertex currentNearestVertex = null;
 		int distanceToCurrentNearestVertex = Integer.MAX_VALUE;
 		for (Vertex vertex : reachableVertexes) {
-			if (vertex.getTotalDistance() < distanceToCurrentNearestVertex) {
-				distanceToCurrentNearestVertex = vertex.getTotalDistance();
+			if (vertex.getTotalDistance() != null && vertex.getTotalDistance().intValue() < distanceToCurrentNearestVertex) {
+				distanceToCurrentNearestVertex = vertex.getTotalDistance().intValue();
 				currentNearestVertex = vertex;
 			}
 		}
@@ -117,11 +118,11 @@ public class Dijkstra {
 	 * @return Stack that contains all Vertexes from the startVertex to the
 	 *         EndVertex in the right order (startVertex as TopElement)
 	 */
-	public static Stack<Vertex> getFullWayAsStack(long endVertexID) {
-		Map<Long, Vertex> mapData = GlobalApplicationStorage.getGlobalStorage().getMapData();
+	public static Stack<Vertex> getFullWayAsStack(String endVertexID) {
+		Map<String, Vertex> mapData = GlobalApplicationStorage.getGlobalStorage().getMapData();
 		Stack<Vertex> output = new Stack<>();
 		Vertex currentVertex;
-		Long currentVertexId = endVertexID;
+		String currentVertexId = endVertexID;
 		do {
 			currentVertex = mapData.get(currentVertexId);
 			output.push(currentVertex);

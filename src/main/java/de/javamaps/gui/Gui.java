@@ -93,8 +93,8 @@ public class Gui {
         routeMap.removeOldRoute();
         routeMap = new MapArea();
         addMapArea(routeMap);
-        long startVertexID = ((DropDownEntry) startLocationSelectBox.getSelectedItem()).getId();
-        long endVertexID = ((DropDownEntry) targetLocationSelectBox.getSelectedItem()).getId();
+        String startVertexID = ((DropDownEntry) startLocationSelectBox.getSelectedItem()).getId();
+        String endVertexID = ((DropDownEntry) targetLocationSelectBox.getSelectedItem()).getId();
         
         StringBuilder dijkstraResult = Dijkstra.calculate(startVertexID, endVertexID);
         routeTextArea.setMargin(new Insets(3, 3, 3, 3));
@@ -108,14 +108,14 @@ public class Gui {
     public void initializeMap() {
         for (Vertex vertex: GlobalApplicationStorage.getGlobalStorage().getMapData().values()) {
             for(Neighbor neighbor : vertex.getNeighbors()){
-                addLine(vertex, GlobalApplicationStorage.getGlobalStorage().getMapData().get(neighbor.getName()), allStreets);
+                addLine(vertex, GlobalApplicationStorage.getGlobalStorage().getMapData().get(neighbor.getID()), allStreets);
             }
         }
         allStreets.drawLines();
     }
 
     public void initializeFilters() {
-        Map<String, List<Long>> allMotorwayRamps = MotorwayRamp.getMotorwayRamps(GlobalApplicationStorage.getGlobalStorage().getMapData());
+        Map<String, List<String>> allMotorwayRamps = MotorwayRamp.getMotorwayRamps(GlobalApplicationStorage.getGlobalStorage().getMapData());
         addLocations(GraphOptimizer.filterOutDuplicateNames(allMotorwayRamps));
     }
 
@@ -152,11 +152,11 @@ public class Gui {
     }
 
     public void addLine(Vertex x1, Vertex x2, MapArea map) {
-        map.addLine(x1.getLongitude(), x1.getLatitude(), x2.getLongitude(), x2.getLatitude());
+        map.addLine(x1.getLongitude().doubleValue(), x1.getLatitude().doubleValue(), x2.getLongitude().doubleValue(), x2.getLatitude().doubleValue());
     }
 
     public void addLine(Vertex x1, Vertex x2, Color color, MapArea map) {
-        map.addLine(x1.getLongitude(), x1.getLatitude(), x2.getLongitude(), x2.getLatitude(), color);
+        map.addLine(x1.getLongitude().doubleValue(), x1.getLatitude().doubleValue(), x2.getLongitude().doubleValue(), x2.getLatitude().doubleValue(), color);
     }
 
     public void drawRoute(Stack<Vertex> routeStack) {
@@ -174,12 +174,12 @@ public class Gui {
         frame.setVisible(b);
     }
 
-    public void addLocations(Map<String, List<Long>> positions) {
+    public void addLocations(Map<String, List<String>> positions) {
         positions.keySet().stream().sorted().forEach(locationName -> addSelectBox(locationName, positions.get(locationName)));
     }
 
-    private void addSelectBox(String locationName, List<Long> locationIds) {
-        for (long id : locationIds) {
+    private void addSelectBox(String locationName, List<String> locationIds) {
+        for (String id : locationIds) {
             startLocationSelectBox.addItem(new DropDownEntry(id, locationName));
             targetLocationSelectBox.addItem(new DropDownEntry(id, locationName));
         }

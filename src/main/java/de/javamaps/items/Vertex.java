@@ -1,89 +1,92 @@
 package de.javamaps.items;
 
+import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Vertex {
+public class Vertex implements Serializable {
 
-	private final long id;
-	private final double latitude;
-	private final double longitude;
-	private final String name;
-	private Long previous = null;
-	private int totalDistance = Integer.MAX_VALUE; 
-	private boolean visited;
-	private List<Neighbor> neighbors = new ArrayList<>();
+    //default serialVersion id
+    private static final long serialVersionUID = 1L;
 
-	public void setAsStart() {
-		this.setTotalDistance(0);
-		this.setPrevious(null);
-	}
+    private final String id;
+    private final BigDecimal latitude;
+    private final BigDecimal longitude;
+    private final String name;
+    private final List<Neighbor> neighbors = new ArrayList<>();
+    private String previous;
+    private BigDecimal totalDistance = null;
+    private boolean visited;
 
-	public Vertex(String NameIn, long idIn, double latitudeIn, double longitudeIn) {
-		this.name = NameIn;
-		this.latitude = latitudeIn;
-		this.longitude = longitudeIn;
-		this.id = idIn;
-		this.visited = false;
-	}
+    public Vertex(String name, String id, BigDecimal latitude, BigDecimal longitude) {
+        this.name = name;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.id = id;
+        this.visited = false;
+    }
 
-	public Long getPrevious() {
-		return previous;
-	}
+    public void setAsStart() {
+        this.setTotalDistance(BigDecimal.ZERO);
+        this.setPrevious(null);
+    }
 
-	public double getLatitude() {
-		return latitude;
-	}
+    public String getPrevious() {
+        return previous;
+    }
 
-	public double getLongitude() {
-		return longitude;
-	}
+    public void setPrevious(String previous) {
+        this.previous = previous;
+    }
 
-	public void setPrevious(Long previous) {
-		this.previous = previous;
-	}
+    public BigDecimal getLatitude() {
+        return latitude;
+    }
 
-	public int getTotalDistance() {
-		return totalDistance;
-	}
+    public BigDecimal getLongitude() {
+        return longitude;
+    }
 
-	public void setTotalDistance(int totalDistance) {
-		this.totalDistance = totalDistance;
-	}
+    public BigDecimal getTotalDistance() {
+        return totalDistance;
+    }
 
-	public boolean isUnVisited() {
-		return !visited;
-	}
+    public void setTotalDistance(BigDecimal totalDistance) {
+        this.totalDistance = totalDistance;
+    }
 
-	public void setVisited(boolean visited) {
-		this.visited = visited;
-	}
+    public boolean isUnVisited() {
+        return !visited;
+    }
 
-	public long getId() {
-		return id;
-	}
+    public void setVisited(boolean visited) {
+        this.visited = visited;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public List<Neighbor> getNeighbors() {
-		return neighbors;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setNeighbors(List<Neighbor> neighbors) {
-		this.neighbors = neighbors;
-	}
-	
-	public void addNeighbor(Neighbor newNeighbor) {
-		this.neighbors.add(newNeighbor);
-	}
+    public List<Neighbor> getNeighbors() {
+        return neighbors;
+    }
 
-	public void addNeighbor(long id) {
-		this.neighbors.add(new Neighbor(id, Integer.MAX_VALUE));
-	}
+    public void addNeighbor(Neighbor newNeighbor) {
+        this.neighbors.add(newNeighbor);
+    }
 
-	public boolean hasNeighbors() {
-		return !this.neighbors.isEmpty();
-	}
+    public void addNeighbor(String id) {
+        this.neighbors.add(new Neighbor(id));
+    }
+
+    public boolean hasNeighbors() {
+        return !this.neighbors.isEmpty();
+    }
+
+
 }

@@ -12,7 +12,7 @@ public class GlobalApplicationStorage {
 
     //global attributes
     protected final Gui gui;
-    protected Map<Long, Vertex> mapData;
+    protected Map<String, Vertex> mapData;
 
     /**
      * Singleton initialization factory
@@ -28,7 +28,7 @@ public class GlobalApplicationStorage {
         gui = new Gui();
     }
 
-    public Map<Long, Vertex> getMapData() {
+    public Map<String, Vertex> getMapData() {
         return mapData;
     }
 
@@ -36,7 +36,7 @@ public class GlobalApplicationStorage {
         return gui;
     }
 
-    public void setMapData(Map<Long, Vertex> mapData) {
+    public void setMapData(Map<String, Vertex> mapData) {
         this.mapData = mapData;
     }
 }

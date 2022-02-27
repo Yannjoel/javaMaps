@@ -2,15 +2,15 @@ package de.javamaps.items;
 
 public class DropDownEntry {
 
-    private final long nodeId;
+    private final String nodeId;
     private final String text;
 
-    public DropDownEntry(long id, String text) {
+    public DropDownEntry(String id, String text) {
         this.nodeId = id;
         this.text = text;
     }
 
-    public long getId() {
+    public String getId() {
         return nodeId;
     }
 
