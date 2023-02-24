@@ -10,7 +10,7 @@ import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream;
 
 public class StAX_Test {
 	public static void main(String [ ] args) throws XMLStreamException, IOException{
-		FileInputStream fin = new FileInputStream("data/saarland.osm.bz2");
+		FileInputStream fin = new FileInputStream("data/saarland.overpassql.bz2");
 		BufferedInputStream in = new BufferedInputStream(fin);
 		BZip2CompressorInputStream datastream;
 		try {

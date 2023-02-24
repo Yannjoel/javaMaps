@@ -23,7 +23,7 @@ public class XmlParser {
 	private static String name;
 	private static boolean isJunction;
 	private static boolean isMotorway;
-	private static String source = "data/deutschland.osm.bz2";
+	private static String source = "data/deutschland.overpassql.bz2";
 	private static URL sourceUrl = XmlParser.class.getResource(source);
 
 	private static String target = "data/deutschland.xml";
